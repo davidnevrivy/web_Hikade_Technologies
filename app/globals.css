@@ -1,26 +1,228 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-hikade-mint: #63C3B5;
+  --color-forest-black: #18261D;
+  --color-copper-brown: #3C271E;
+  --color-charcoal: #1F2019;
+  --color-background: #18261D;
+  --color-foreground: #FFFFFF;
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), 'JetBrains Mono', monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --color-hikade-mint: #63C3B5;
+  --color-deep-forest-black: #18261D;
+  --color-white: #FFFFFF;
+  --color-dark-copper-brown: #3C271E;
+  --color-charcoal-brown-black: #1F2019;
+  --color-black: #000000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #18261D;
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Technical grid background */
+.tech-grid {
+  background-image:
+    linear-gradient(rgba(99, 195, 181, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99, 195, 181, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.tech-grid-fine {
+  background-image:
+    linear-gradient(rgba(99, 195, 181, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99, 195, 181, 0.03) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Mint accent border */
+.mint-border-l {
+  border-left: 2px solid #63C3B5;
+}
+
+/* Telemetry badge */
+.telemetry-badge {
+  background: rgba(99, 195, 181, 0.1);
+  border: 1px solid rgba(99, 195, 181, 0.3);
+  color: #63C3B5;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 2px;
+  letter-spacing: 0.05em;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #1F2019;
+}
+::-webkit-scrollbar-thumb {
+  background: #63C3B5;
+  border-radius: 3px;
+}
+
+/* Fade in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Pulse mint */
+@keyframes pulseMint {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.pulse-mint {
+  animation: pulseMint 2s ease-in-out infinite;
+}
+
+/* Scan line overlay */
+.scan-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.03) 2px,
+    rgba(0, 0, 0, 0.03) 4px
+  );
+  pointer-events: none;
+}
+
+/* Product card hover */
+.product-card {
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(99, 195, 181, 0.5);
+}
+
+/* Table styles */
+.tech-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tech-table th {
+  background: rgba(99, 195, 181, 0.1);
+  color: #63C3B5;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 10px 16px;
+  text-align: left;
+  border-bottom: 1px solid rgba(99, 195, 181, 0.2);
+}
+
+.tech-table td {
+  padding: 10px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 0.875rem;
+  vertical-align: top;
+}
+
+.tech-table tr:last-child td {
+  border-bottom: none;
+}
+
+.tech-table td:first-child {
+  color: #63C3B5;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.tech-table td:nth-child(2) {
+  color: #fff;
+  font-weight: 500;
+}
+
+.tech-table td:nth-child(3) {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+/* Navigation active state */
+.nav-link {
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #63C3B5;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Hero typing animation */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor-blink::after {
+  content: '|';
+  animation: blink 1s step-end infinite;
+  color: #63C3B5;
+}
+
+/* Slow 360° Y-axis gimbal rotation */
+@keyframes spin-y {
+  from { transform: rotateY(0deg); }
+  to   { transform: rotateY(360deg); }
+}
+
+.spin-slow {
+  animation: spin-y 28s linear infinite;
+}
+
+.patron-stage {
+  perspective: 1100px;
+  perspective-origin: 50% 50%;
 }

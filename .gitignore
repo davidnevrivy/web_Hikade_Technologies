@@ -39,3 +39,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+/chrome/
+public/assets/products/patron/gimbal-frames/
