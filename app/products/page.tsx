@@ -191,7 +191,7 @@ export default function ProductsPage() {
                     src="/assets/products/cryolyze/cryolyze-3.png"
                     alt="CryoLyze"
                     fill
-                    className="object-contain p-2 group-hover:scale-105 transition-transform duration-500"
+                    className="object-contain p-0.5 group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="w-px bg-gray-200 flex-shrink-0" />
@@ -200,7 +200,7 @@ export default function ProductsPage() {
                     src="/assets/products/cryolyze/cryolyze-1.png"
                     alt="CryoLyze open"
                     fill
-                    className="object-contain p-2 group-hover:scale-105 transition-transform duration-500"
+                    className="object-contain p-0.5 group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
               </div>
