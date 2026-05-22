@@ -13,7 +13,7 @@ const T = {
     heroSub1: "Precision two-axis gimbal platforms built for the stratosphere. PATRON handles payloads up to 18 kg at 18–25 km altitude. BEETLE delivers the same core technology for lighter, more compact missions — both designed for HAPS.",
     heroSub2: "",
     cta1: "Explore Portfolio", cta2: "About Us", cta3: "Request Consultation",
-    stat1: "Altitude", stat2: "Temperature", stat3: "Pressure", stat4: "Platforms",
+    stat1: "Altitude", stat2: "Temperature", stat3: "Pressure",
     scroll: "SCROLL",
     whatBadge: "Engineering Portfolio", whatTitle: "What We Build",
     whatDesc: "Hikade Technologies focuses on complete technical systems for demanding applications where standard catalog solutions are not sufficient.",
@@ -77,7 +77,7 @@ const T = {
     heroSub1: "Přesné dvouosé gimbalové platformy konstruované pro stratosféru. PATRON nese payloady až 18 kg ve výšce 18–25 km. BEETLE přináší stejnou technologii pro lehčí a kompaktnější mise — obě platformy navrženy pro HAPS.",
     heroSub2: "",
     cta1: "Prozkoumat portfolio", cta2: "O nás", cta3: "Technická konzultace",
-    stat1: "Výška", stat2: "Teplota", stat3: "Tlak", stat4: "Platformy",
+    stat1: "Výška", stat2: "Teplota", stat3: "Tlak",
     scroll: "SCROLL",
     whatBadge: "Hlavní oblasti engineeringu", whatTitle: "Co vyvíjíme",
     whatDesc: "Hikade Technologies se zaměřuje na kompletní technické systémy pro náročné aplikace, kde standardní katalogová řešení nestačí.",
@@ -197,12 +197,11 @@ export default function HomePage() {
                 <Link href="/about" className="px-5 py-2.5 border border-white/30 text-white font-semibold rounded hover:border-[#63C3B5]/60 hover:text-[#63C3B5] transition-colors text-sm">{t.cta2}</Link>
                 <Link href="/contact" className="px-5 py-2.5 border border-white/15 text-white/55 font-semibold rounded hover:border-white/35 hover:text-white transition-colors text-sm">{t.cta3}</Link>
               </div>
-              <div className="mt-10 grid grid-cols-4 gap-3 border-t border-white/10 pt-7">
+              <div className="mt-10 grid grid-cols-3 gap-3 border-t border-white/10 pt-7">
                 {[
-                  { val: "18–25 km",         label: t.stat1 },
-                  { val: "−60 / +80 °C",     label: t.stat2 },
-                  { val: "2.5–7.5 kPa",      label: t.stat3 },
-                  { val: "PATRON · BEETLE",  label: t.stat4 },
+                  { val: "18–25 km",     label: t.stat1 },
+                  { val: "−60 / +80 °C", label: t.stat2 },
+                  { val: "2.5–7.5 kPa",  label: t.stat3 },
                 ].map((s) => (
                   <div key={s.val}>
                     <div className="text-base font-bold font-mono text-[#63C3B5]">{s.val}</div>

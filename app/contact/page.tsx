@@ -42,7 +42,7 @@ export default function ContactPage() {
 
   return (
     <div className="text-white pt-20">
-      <section className="py-20 bg-[#1F2019] tech-grid">
+      <section className="py-20 tech-grid">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <span className="telemetry-badge mb-4 inline-block">{t.badge}</span>
           <h1 className="text-4xl lg:text-5xl font-bold mb-4">{t.h1}</h1>

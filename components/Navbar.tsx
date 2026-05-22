@@ -33,34 +33,34 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#18261D]/50 backdrop-blur-md border-b border-white/10"
-          : "bg-transparent"
+          ? "bg-[#18261D]/80 backdrop-blur-md border-b border-white/15 shadow-lg"
+          : "bg-[#18261D]/40 backdrop-blur-sm border-b border-white/5"
       }`}
     >
-      <nav className="max-w-7xl mx-auto px-6 xl:px-8 flex items-center justify-between py-3">
+      <nav className="max-w-7xl mx-auto px-6 xl:px-8 flex items-center justify-between py-4">
         <Link href="/" className="flex items-center flex-shrink-0">
           <Image
             src="/assets/logo/hikade-logo-transparent.png"
             alt="Hikade Technologies"
             width={360}
             height={140}
-            className="h-[84px] w-auto"
+            className="h-[88px] w-auto"
             style={{ filter: "invert(1)" }}
             priority
           />
         </Link>
 
-        <div className="hidden lg:flex items-center gap-1">
+        <div className="hidden lg:flex items-center gap-2">
           {navLinks.map((link) => {
             const isActive = link.exact ? pathname === link.href : pathname === link.href || pathname.startsWith(link.href + "/");
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`px-3 py-1.5 rounded border text-sm whitespace-nowrap transition-all duration-150 ${
+                className={`px-4 py-2 rounded border text-sm font-medium whitespace-nowrap transition-all duration-150 ${
                   isActive
                     ? "text-[#63C3B5] font-semibold border-[#63C3B5]/40 bg-[#63C3B5]/5"
-                    : "text-white/70 font-medium border-transparent hover:text-white hover:font-semibold hover:border-white/25 hover:bg-white/5"
+                    : "text-white/80 border-transparent hover:text-white hover:font-semibold hover:border-white/25 hover:bg-white/5"
                 }`}
               >
                 {link[lang]}
@@ -69,25 +69,33 @@ export default function Navbar() {
           })}
         </div>
 
-        <div className="hidden lg:flex items-center gap-4">
-          <div className="flex items-center gap-1 text-xs font-mono">
+        <div className="hidden lg:flex items-center gap-3">
+          <div className="flex items-center gap-0.5 border border-white/20 rounded-md overflow-hidden">
             <button
               onClick={() => setLang("en")}
-              className={`transition-colors ${lang === "en" ? "text-[#63C3B5] font-semibold" : "text-white/40 hover:text-white/70"}`}
+              className={`px-3 py-2 text-sm font-semibold transition-all ${
+                lang === "en"
+                  ? "bg-[#63C3B5] text-black"
+                  : "text-white/60 hover:text-white hover:bg-white/10"
+              }`}
             >
               EN
             </button>
-            <span className="text-white/30">/</span>
+            <div className="w-px h-5 bg-white/15" />
             <button
               onClick={() => setLang("cs")}
-              className={`transition-colors ${lang === "cs" ? "text-[#63C3B5] font-semibold" : "text-white/40 hover:text-white/70"}`}
+              className={`px-3 py-2 text-sm font-semibold transition-all ${
+                lang === "cs"
+                  ? "bg-[#63C3B5] text-black"
+                  : "text-white/60 hover:text-white hover:bg-white/10"
+              }`}
             >
               CS
             </button>
           </div>
           <Link
             href="/contact"
-            className="px-4 py-2 bg-[#63C3B5] text-black text-sm font-semibold rounded hover:bg-[#63C3B5]/90 transition-colors"
+            className="px-5 py-2.5 bg-[#63C3B5] text-black text-sm font-semibold rounded hover:bg-[#63C3B5]/90 transition-colors"
           >
             {lang === "en" ? "Contact" : "Kontakt"}
           </Link>

@@ -9,32 +9,27 @@ export default function ProductsPage() {
   const en = lang === "en";
 
   return (
-    <div className="text-white pt-20">
-
-      {/* ── HEADER ── */}
-      <section className="py-20 bg-[#1F2019] tech-grid">
+    <div className="text-white">
+      {/* ── HERO + STRATOSPHERIC GIMBALS ── */}
+      <section className="pt-36 pb-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <span className="telemetry-badge mb-4 inline-block">
-            {en ? "Portfolio & Projects" : "Portfolio & Projekty"}
-          </span>
-          <h1 className="text-4xl lg:text-5xl font-bold mb-4">
-            {en ? "Products & Projects" : "Produkty & Projekty"}
-          </h1>
-          <p className="text-lg text-white/60 max-w-2xl">
-            {en
-              ? "Proprietary platforms, validated engineering systems and custom technology solutions for HAPS, aerospace, clean processing and industrial R&D applications."
-              : "Vlastní platformy, validované inženýrské systémy a zakázková technologická řešení pro HAPS, letectví, čisté zpracování a průmyslové R&D aplikace."}
-          </p>
-        </div>
-      </section>
-
-      {/* ── STRATOSPHERIC GIMBALS ── */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="mb-10">
-            <span className="telemetry-badge">{en ? "Stratospheric Gimbals" : "Stratosférické gimbaly"}</span>
-            <h2 className="text-3xl font-bold mt-3 mb-2">
-              {en ? "HAPS Gimbal Platforms" : "HAPS Gimbalové platformy"}
+          <div className="mb-12">
+            <span className="telemetry-badge mb-4 inline-block">
+              {en ? "Portfolio & Projects" : "Portfolio & Projekty"}
+            </span>
+            <h1 className="text-4xl lg:text-5xl font-bold mb-4">
+              {en ? "Products & Projects" : "Produkty & Projekty"}
+            </h1>
+            <p className="text-lg text-white/60 max-w-2xl mb-10">
+              {en
+                ? "Proprietary platforms, validated engineering systems and custom technology solutions for HAPS, aerospace, clean processing and industrial R&D applications."
+                : "Vlastní platformy, validované inženýrské systémy a zakázková technologická řešení pro HAPS, letectví, čisté zpracování a průmyslové R&D aplikace."}
+            </p>
+            <div className="flex items-center gap-3 mb-1">
+              <span className="telemetry-badge">{en ? "Stratospheric Gimbals" : "Stratosférické gimbaly"}</span>
+            </div>
+            <h2 className="text-2xl font-bold mt-2 mb-1">
+              {en ? "Gimbal for HAPS Platforms" : "Gimbal pro HAPS platformy"}
             </h2>
             <p className="text-white/50 max-w-xl text-sm">
               {en
@@ -87,13 +82,14 @@ export default function ProductsPage() {
 
             {/* BEETLE */}
             <Link href="/products/beetle" className="group flex flex-col border border-white/10 rounded-lg overflow-hidden bg-[#1F2019]/60 product-card hover:border-[#63C3B5]/40">
-              <div className="relative h-64 bg-[#efefed] overflow-hidden flex items-center justify-center">
+              <div className="relative h-64 overflow-hidden">
                 <Image
-                  src="/assets/products/beetle/beetle-transparent-1.png"
+                  src="/assets/products/beetle/beetle-ai-1.png"
                   alt="BEETLE Gimbal"
                   fill
-                  className="object-contain p-6 group-hover:scale-105 transition-transform duration-500"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#1F2019]/80" />
               </div>
               <div className="p-5 flex flex-col flex-1">
                 <div className="flex items-start justify-between mb-2">
@@ -126,11 +122,18 @@ export default function ProductsPage() {
             </Link>
 
             {/* MICRO BEETLE */}
-            <div className="flex flex-col border border-white/10 rounded-lg overflow-hidden bg-[#1F2019]/60 border-dashed">
-              <div className="relative h-64 bg-[#1a1a1a] overflow-hidden flex items-center justify-center">
-                <div className="text-center text-white/20">
-                  <div className="text-4xl mb-3">◈</div>
-                  <div className="text-xs font-mono uppercase tracking-widest">{en ? "In Development" : "Ve vývoji"}</div>
+            <Link href="/contact" className="group flex flex-col border border-white/10 rounded-lg overflow-hidden bg-[#1F2019]/60 border-dashed hover:border-white/25 transition-all">
+              <div className="relative h-64 bg-white overflow-hidden">
+                <Image
+                  src="/assets/products/beetle/beetle-cad.png"
+                  alt="Micro BEETLE concept"
+                  fill
+                  className="object-contain p-4 opacity-60 group-hover:opacity-80 transition-opacity duration-300"
+                />
+                <div className="absolute inset-0 flex items-end justify-center pb-4">
+                  <div className="text-xs font-mono uppercase tracking-widest text-white bg-black/50 px-3 py-1 rounded">
+                    {en ? "In Development" : "Ve vývoji"}
+                  </div>
                 </div>
               </div>
               <div className="p-5 flex flex-col flex-1">
@@ -141,16 +144,29 @@ export default function ProductsPage() {
                   </div>
                   <span className="w-2 h-2 rounded-full mt-1.5 bg-white/20 flex-shrink-0" />
                 </div>
-                <p className="text-sm text-white/40 leading-relaxed mb-4 flex-1">
+                <p className="text-sm text-white/40 leading-relaxed mb-3 flex-1">
                   {en
-                    ? "Early-stage development direction for ultra-lightweight two-axis pointing for very small payloads and micro-balloon platforms."
-                    : "Raně vývojový směr pro ultra-lehké dvouosé polohování pro velmi malé payloady a mikrobalonové platformy."}
+                    ? "Low-SWaP 2-axis EO stabilization module for lightweight EO payloads. Target ~400 g total mass, integrated control PCB, 28 V supply, ~7 W power — focused on low cost, compactness and simple integration."
+                    : "Dvouosý EO stabilizační modul s nízkým SWaP pro lehké EO payloady. Cílová hmotnost ~400 g, integrovaná řídící PCB, 28 V napájení, ~7 W — zaměřeno na nízké náklady, kompaktnost a jednoduchou integraci."}
                 </p>
+                <div className="grid grid-cols-2 gap-2 mb-3">
+                  {[
+                    { l: en ? "Mass" : "Hmotnost", v: "~400 g" },
+                    { l: en ? "Power" : "Příkon", v: "~7 W" },
+                    { l: en ? "Supply" : "Napájení", v: "28 V" },
+                    { l: en ? "Axes" : "Osy", v: "2-axis" },
+                  ].map(s => (
+                    <div key={s.l} className="bg-white/3 border border-white/8 rounded p-2">
+                      <div className="text-[9px] font-mono text-white/30 uppercase mb-0.5">{s.l}</div>
+                      <div className="text-xs font-semibold text-white/50">{s.v}</div>
+                    </div>
+                  ))}
+                </div>
                 <div className="text-xs text-white/25 font-mono uppercase tracking-wider border border-white/10 rounded px-3 py-2 text-center">
                   {en ? "In Development — Details on Request" : "Ve vývoji — Podrobnosti na vyžádání"}
                 </div>
               </div>
-            </div>
+            </Link>
 
           </div>
         </div>
@@ -169,13 +185,24 @@ export default function ProductsPage() {
 
             {/* CryoLyze */}
             <Link href="/products/cryolyze" className="group flex flex-col border border-white/10 rounded-lg overflow-hidden bg-[#18261D]/40 product-card hover:border-[#63C3B5]/40">
-              <div className="relative h-56 overflow-hidden bg-white">
-                <Image
-                  src="/assets/products/cryolyze/cryolyze-2.png"
-                  alt="CryoLyze"
-                  fill
-                  className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
-                />
+              <div className="h-80 overflow-hidden bg-white flex gap-0">
+                <div className="relative flex-1 overflow-hidden">
+                  <Image
+                    src="/assets/products/cryolyze/cryolyze-3.png"
+                    alt="CryoLyze"
+                    fill
+                    className="object-contain p-2 group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="w-px bg-gray-200 flex-shrink-0" />
+                <div className="relative flex-1 overflow-hidden">
+                  <Image
+                    src="/assets/products/cryolyze/cryolyze-1.png"
+                    alt="CryoLyze open"
+                    fill
+                    className="object-contain p-2 group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
               </div>
               <div className="p-5 flex flex-col flex-1">
                 <div className="flex items-start justify-between mb-2">
@@ -209,14 +236,13 @@ export default function ProductsPage() {
 
             {/* AVPS */}
             <Link href="/products/avps" className="group flex flex-col border border-white/10 rounded-lg overflow-hidden bg-[#18261D]/40 product-card hover:border-[#63C3B5]/40">
-              <div className="relative h-56 overflow-hidden bg-[#3C271E]/20">
+              <div className="relative h-80 overflow-hidden bg-[#e8e8e8]">
                 <Image
-                  src="/assets/hero/svetlomet-side.jpg"
+                  src="/assets/products/avps/avps-1.png"
                   alt="AVPS"
                   fill
-                  className="object-cover opacity-80 group-hover:scale-105 transition-transform duration-500"
+                  className="object-contain p-6 group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#18261D]/60" />
               </div>
               <div className="p-5 flex flex-col flex-1">
                 <div className="flex items-start justify-between mb-2">
@@ -298,39 +324,39 @@ export default function ProductsPage() {
               </div>
             </Link>
 
-            {/* Gimbal Odysseus */}
-            <div className="flex flex-col border border-white/10 rounded-lg overflow-hidden bg-[#1F2019]/60 product-card">
-              <div className="relative h-44 overflow-hidden">
+            {/* Gimbal Odysseus for CRYTUT */}
+            <Link href="/contact" className="group flex flex-col border border-white/10 rounded-lg overflow-hidden bg-[#1F2019]/60 product-card hover:border-[#63C3B5]/40">
+              <div className="relative h-44 overflow-hidden bg-white">
                 <Image
                   src="/assets/products/industrial/odysseus-side.jpg"
-                  alt="Gimbal Odysseus"
+                  alt="Gimbal Odysseus for CRYTUT"
                   fill
-                  className="object-cover opacity-80"
+                  className="object-contain p-3"
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#1F2019]/60" />
               </div>
               <div className="p-5">
-                <h3 className="text-lg font-bold mb-1">Gimbal Odysseus</h3>
+                <h3 className="text-lg font-bold mb-1">Gimbal Odysseus for CRYTUT</h3>
                 <p className="text-xs text-white/40 mb-3">
-                  {en ? "Automotive Adaptive Lighting Gimbal" : "Gimbal pro adaptivní automobilové osvětlení"}
+                  {en ? "Adaptive Lighting Gimbal — CRYTUT" : "Gimbal pro adaptivní osvětlení — CRYTUT"}
                 </p>
                 <p className="text-sm text-white/55 leading-relaxed">
                   {en
-                    ? "Custom gimbal platform for precise directional control of high-power automotive lighting systems. Developed for industrial automotive R&D application."
-                    : "Zakázková gimbalová platforma pro přesné směrové řízení vysokovýkonných automobilových osvětlovacích systémů."}
+                    ? "Custom gimbal platform for precise directional control of high-power lighting systems. Developed for CRYTUT as an industrial R&D application."
+                    : "Zakázková gimbalová platforma pro přesné směrové řízení vysokovýkonných osvětlovacích systémů. Vyvinuto pro CRYTUT jako průmyslová R&D aplikace."}
                 </p>
               </div>
-            </div>
+            </Link>
 
             {/* Custom Engineering */}
-            <div className="flex flex-col border border-white/10 rounded-lg bg-[#1F2019]/60 product-card" id="custom-engineering">
-              <div className="h-44 bg-[#18261D]/50 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-3xl text-[#63C3B5]/30 mb-2">◈</div>
-                  <div className="text-xs font-mono text-[#63C3B5]/40 uppercase tracking-widest">
-                    {en ? "Custom Projects" : "Zakázkové projekty"}
-                  </div>
-                </div>
+            <Link href="/contact" className="group flex flex-col border border-white/10 rounded-lg bg-[#1F2019]/60 product-card hover:border-[#63C3B5]/40" id="custom-engineering">
+              <div className="relative h-44 overflow-hidden">
+                <Image
+                  src="/assets/products/industrial/testing-station.png"
+                  alt="Custom Engineering"
+                  fill
+                  className="object-cover object-right opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#1F2019]/80 via-[#1F2019]/40 to-transparent" />
               </div>
               <div className="p-5 flex flex-col flex-1">
                 <h3 className="text-lg font-bold mb-1">
@@ -344,11 +370,11 @@ export default function ProductsPage() {
                     ? "End-to-end development of custom mechatronic systems, single-purpose machines and industrial prototypes where catalog solutions are not sufficient."
                     : "Kompletní vývoj zakázkových mechatronických systémů, jednoúčelových strojů a průmyslových prototypů, kde katalogová řešení nestačí."}
                 </p>
-                <Link href="/contact" className="text-xs text-[#63C3B5] hover:text-white transition-colors">
+                <span className="text-xs text-[#63C3B5] group-hover:translate-x-1 transition-transform inline-block">
                   {en ? "Discuss your project →" : "Diskutovat projekt →"}
-                </Link>
+                </span>
               </div>
-            </div>
+            </Link>
 
           </div>
         </div>
@@ -369,123 +395,153 @@ export default function ProductsPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div className="flex flex-col gap-3 mb-8">
 
             {/* TAČR */}
-            <div className="p-6 border border-white/10 rounded-lg bg-[#18261D]/40 hover:border-[#63C3B5]/30 transition-colors">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="flex-shrink-0 px-2.5 py-1 bg-[#63C3B5]/10 border border-[#63C3B5]/20 rounded text-[10px] font-mono text-[#63C3B5] uppercase tracking-wider">TAČR</div>
-                <div>
-                  <h3 className="font-semibold text-white leading-tight">
-                    {en ? "Commercial Strategy for Implementing Gimbal in Multisensor Communication" : "Komerční strategie pro implementaci gimbalu v multisenzorové komunikaci"}
-                  </h3>
+            <details className="group border border-white/10 rounded-lg bg-[#18261D]/40 hover:bg-[#18261D]/70 hover:border-[#63C3B5]/30 transition-all duration-200 overflow-hidden">
+              <summary className="flex items-center justify-between gap-4 p-5 cursor-pointer list-none">
+                <div className="flex items-center gap-5 flex-1 min-w-0">
+                  <div className="flex-shrink-0 w-20 h-10 relative">
+                    <Image src="/assets/logos/grants/tacr.png" alt="TAČR" fill className="object-contain" />
+                  </div>
+                  <div className="min-w-0">
+                    <div className="text-[10px] font-mono text-[#63C3B5] uppercase tracking-wider mb-0.5">TAČR — {en ? "Technology Agency of the Czech Republic" : "Technologická agentura ČR"}</div>
+                    <h3 className="font-semibold text-white text-sm leading-tight">
+                      {en ? "Commercial Strategy for Implementing Gimbal in Multisensor Communication" : "Komerční strategie pro implementaci gimbalu v multisenzorové komunikaci"}
+                    </h3>
+                  </div>
                 </div>
-              </div>
-              <p className="text-sm text-white/50 leading-relaxed">
-                {en
-                  ? "Technology Agency of the Czech Republic funded project focused on developing a commercial strategy for deploying PATRON gimbal technology in multisensor communication platforms."
-                  : "Projekt financovaný Technologickou agenturou ČR zaměřený na vypracování komerční strategie pro nasazení technologie gimbalu PATRON v multisenzorových komunikačních platformách."}
-              </p>
-            </div>
-
-            {/* ESA SPARK */}
-            <div className="p-6 border border-white/10 rounded-lg bg-[#18261D]/40 hover:border-[#63C3B5]/30 transition-colors">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="flex-shrink-0 px-2.5 py-1 bg-[#63C3B5]/10 border border-[#63C3B5]/20 rounded text-[10px] font-mono text-[#63C3B5] uppercase tracking-wider">ESA SPARK</div>
-                <div>
-                  <h3 className="font-semibold text-white leading-tight">CryoLyze</h3>
-                </div>
-              </div>
-              <p className="text-sm text-white/50 leading-relaxed">
-                {en
-                  ? "European Space Agency SPARK programme supported development of the CryoLyze cryo-vacuum chamber and freeze-drying system. ESA SPARK accelerates early-stage space-related technology commercialisation."
-                  : "Program ESA SPARK podpořil vývoj kryovakuové komory a lyofilizačního systému CryoLyze. ESA SPARK urychluje komercionalizaci technologií v raném stádiu vývoje."}
-              </p>
-            </div>
-
-            {/* ESA BIC */}
-            <div className="p-6 border border-white/10 rounded-lg bg-[#18261D]/40 hover:border-[#63C3B5]/30 transition-colors">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="flex-shrink-0 px-2.5 py-1 bg-[#63C3B5]/10 border border-[#63C3B5]/20 rounded text-[10px] font-mono text-[#63C3B5] uppercase tracking-wider">ESA BIC</div>
-                <div>
-                  <h3 className="font-semibold text-white leading-tight">{en ? "Gimbal PATRON" : "Gimbál PATRON"}</h3>
-                </div>
-              </div>
-              <p className="text-sm text-white/50 leading-relaxed">
-                {en
-                  ? "ESA Business Incubation Centre Prague supported the development and commercialisation of PATRON — a precision stratospheric gimbal platform for HAPS payloads."
-                  : "Podnikatelské inkubační centrum ESA Praha podpořilo vývoj a komercionalizaci PATRONu — precizní stratosferické gimbalové platformy pro HAPS payloady."}
-              </p>
-            </div>
-
-            {/* Technology Incubation */}
-            <div className="p-6 border border-white/10 rounded-lg bg-[#18261D]/40 hover:border-[#63C3B5]/30 transition-colors">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="flex-shrink-0 px-2.5 py-1 bg-[#63C3B5]/10 border border-[#63C3B5]/20 rounded text-[10px] font-mono text-[#63C3B5] uppercase tracking-wider">
-                  {en ? "TECH INCUB." : "TECH INKUB."}
-                </div>
-                <div>
-                  <h3 className="font-semibold text-white leading-tight">{en ? "Gimbal PATRON — Technology Incubation" : "Gimbál PATRON — Technologická inkubace"}</h3>
-                </div>
-              </div>
-              <p className="text-sm text-white/50 leading-relaxed">
-                {en
-                  ? "Technology incubation programme supporting the maturation of the PATRON gimbal platform from prototype to validated system ready for commercial deployment."
-                  : "Program technologické inkubace podporující zrání gimbalové platformy PATRON od prototypu po validovaný systém připravený k nasazení."}
-              </p>
-            </div>
-
-          </div>
-
-          {/* EU Bending Fixture — full description */}
-          <div className="border border-[#63C3B5]/20 rounded-lg bg-[#18261D]/60 overflow-hidden">
-            <div className="p-6 border-b border-white/10">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 px-2.5 py-1 bg-[#63C3B5]/10 border border-[#63C3B5]/20 rounded text-[10px] font-mono text-[#63C3B5] uppercase tracking-wider">EU</div>
-                <div>
-                  <h3 className="font-semibold text-white text-lg leading-tight">
-                    {en ? "Bending Fixture for Material Testing" : "Přípravek pro zkoušení materiálů v ohybu"}
-                  </h3>
-                  <p className="text-xs text-white/40 mt-1">
-                    {en ? "National Recovery Plan · European Union" : "Národní plán obnovy · Evropská unie"}
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="p-6">
-              <p className="text-sm text-white/60 leading-relaxed mb-4">
-                {en
-                  ? "This project is implemented with the financial support of the European Union within the framework of the National Recovery Plan."
-                  : "Tento projekt je realizován s finanční podporou Evropské unie v rámci Národního plánu obnovy."}
-              </p>
-              <div className="bg-[#63C3B5]/5 border border-[#63C3B5]/10 rounded p-4 mb-4">
-                <p className="text-sm text-white/70 leading-relaxed">
-                  <span className="font-semibold text-[#63C3B5]">
-                    {en ? "Main objective: " : "Hlavní cíl: "}
-                  </span>
+                <span className="text-white/30 group-open:rotate-180 transition-transform duration-200 flex-shrink-0 text-lg">↓</span>
+              </summary>
+              <div className="px-5 pb-5 pt-0 border-t border-white/5">
+                <p className="text-sm text-white/50 leading-relaxed mt-4">
                   {en
-                    ? "Preparation for foreign expansion through the development of an innovative device for precise measurement of material deflection according to ISO 178. The project contributes to increasing the competitiveness of Hikade Technologies s.r.o. on international markets, thereby supporting the development of innovation and internationalisation of Czech companies."
-                    : "Příprava na zahraniční expanzi prostřednictvím vývoje inovativního přístroje pro přesné měření průhybu materiálu dle ISO 178. Projekt přispívá ke zvyšování konkurenceschopnosti Hikade Technologies s.r.o. na mezinárodních trzích."}
+                    ? "TAČR (Technology Agency of the Czech Republic) funds applied research, experimental development and innovation in the Czech Republic. This project developed a commercial strategy for deploying PATRON gimbal technology in multisensor communication platforms for HAPS and stratospheric applications."
+                    : "TAČR (Technologická agentura ČR) financuje aplikovaný výzkum, experimentální vývoj a inovace v ČR. Tento projekt vypracoval komerční strategii pro nasazení technologie gimbalu PATRON v multisenzorových komunikačních platformách pro HAPS a stratosferické aplikace."}
                 </p>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs text-white/40">
-                <div>
-                  <div className="text-[#63C3B5] font-mono uppercase tracking-wider mb-1">{en ? "Project name" : "Název projektu"}</div>
-                  <div>{en ? "Bending fixture for material testing (according to ISO 178) with very precise deflection measurement" : "Přípravek pro zkoušení materiálů v ohybu (dle ISO 178) s velmi přesným měřením průhybu"}</div>
+            </details>
+
+            {/* ESA SPARK */}
+            <details className="group border border-white/10 rounded-lg bg-[#18261D]/40 hover:bg-[#18261D]/70 hover:border-[#63C3B5]/30 transition-all duration-200 overflow-hidden">
+              <summary className="flex items-center justify-between gap-4 p-5 cursor-pointer list-none">
+                <div className="flex items-center gap-5 flex-1 min-w-0">
+                  <div className="flex-shrink-0 w-32 h-10 relative">
+                    <Image src="/assets/logos/grants/esa-spark.png" alt="ESA Technology Broker Czech Republic" fill className="object-contain object-left" />
+                  </div>
+                  <div className="min-w-0">
+                    <div className="text-[10px] font-mono text-[#63C3B5] uppercase tracking-wider mb-0.5">ESA SPARK — {en ? "ESA Technology Broker Czech Republic" : "ESA Technology Broker Česká republika"}</div>
+                    <h3 className="font-semibold text-white text-sm leading-tight">CryoLyze</h3>
+                  </div>
                 </div>
-                <div>
-                  <div className="text-[#63C3B5] font-mono uppercase tracking-wider mb-1">{en ? "Registration No." : "Reg. číslo"}</div>
-                  <div>2425000008</div>
-                </div>
-                <div>
-                  <div className="text-[#63C3B5] font-mono uppercase tracking-wider mb-1">{en ? "Purpose" : "Účel dotace"}</div>
-                  <div>{en ? "Preparation for foreign expansion and related activities" : "Příprava na zahraniční expanzi a související aktivity"}</div>
-                </div>
+                <span className="text-white/30 group-open:rotate-180 transition-transform duration-200 flex-shrink-0 text-lg">↓</span>
+              </summary>
+              <div className="px-5 pb-5 pt-0 border-t border-white/5">
+                <p className="text-sm text-white/50 leading-relaxed mt-4">
+                  {en
+                    ? "CryoLyze executed by Hikade Technologies s.r.o. has been supported by the ESA Technology Broker Czech Republic through the ESA Spark Funding initiative. ESA SPARK accelerates early-stage commercialisation of space-related technologies by providing funding and support to innovative companies."
+                    : "CryoLyze realizovaný společností Hikade Technologies s.r.o. byl podpořen prostřednictvím ESA Technology Broker Česká republika v rámci iniciativy ESA Spark Funding. ESA SPARK urychluje komercionalizaci vesmírných technologií v raném stádiu vývoje."}
+                </p>
               </div>
-              <p className="text-xs text-white/30 mt-4 italic">
-                {en ? "This project is co-financed by the European Union." : "Tento projekt je spolufinancován Evropskou unií."}
-              </p>
-            </div>
+            </details>
+
+            {/* ESA BIC+ (ESA BIC + Technology Incubation) */}
+            <details className="group border border-white/10 rounded-lg bg-[#18261D]/40 hover:bg-[#18261D]/70 hover:border-[#63C3B5]/30 transition-all duration-200 overflow-hidden">
+              <summary className="flex items-center justify-between gap-4 p-5 cursor-pointer list-none">
+                <div className="flex items-center gap-5 flex-1 min-w-0">
+                  <div className="flex flex-col gap-1.5 flex-shrink-0">
+                    <div className="w-28 h-7 relative">
+                      <Image src="/assets/logos/grants/esa-bic.png" alt="ESA BIC" fill className="object-contain object-left" />
+                    </div>
+                    <div className="w-28 h-6 relative">
+                      <Image src="/assets/logos/grants/tech-incub.png" alt="Technology Incubation" fill className="object-contain object-left" />
+                    </div>
+                  </div>
+                  <div className="min-w-0">
+                    <div className="text-[10px] font-mono text-[#63C3B5] uppercase tracking-wider mb-0.5">ESA BIC+ — {en ? "ESA Business Incubation Centre Prague" : "ESA Podnikatelské inkubační centrum Praha"}</div>
+                    <h3 className="font-semibold text-white text-sm leading-tight">
+                      {en ? "Gimbal PATRON — ESA BIC + Technology Incubation" : "Gimbál PATRON — ESA BIC + Technologická inkubace"}
+                    </h3>
+                  </div>
+                </div>
+                <span className="text-white/30 group-open:rotate-180 transition-transform duration-200 flex-shrink-0 text-lg">↓</span>
+              </summary>
+              <div className="px-5 pb-5 pt-0 border-t border-white/5">
+                <p className="text-sm text-white/50 leading-relaxed mt-4 mb-3">
+                  {en
+                    ? "ESA Business Incubation Centre Prague (ESA BIC Prague) supports innovative startups and SMEs in commercialising space technologies. ESA BIC supported the development and commercialisation of PATRON — a precision stratospheric gimbal platform for HAPS payloads."
+                    : "ESA Business Incubation Centre Praha (ESA BIC Praha) podporuje inovativní startupy a malé podniky v komercionalizaci vesmírných technologií. ESA BIC podpořil vývoj a komercionalizaci PATRONu — precizní stratosferické gimbalové platformy pro HAPS payloady."}
+                </p>
+                <p className="text-sm text-white/50 leading-relaxed">
+                  {en
+                    ? "The Technology Incubation programme further supported the maturation of PATRON from prototype to validated system ready for commercial deployment in stratospheric and HAPS missions."
+                    : "Program technologické inkubace dále podpořil zrání PATRONu od prototypu po validovaný systém připravený k nasazení ve stratosferických a HAPS misích."}
+                </p>
+              </div>
+            </details>
+
+            {/* EU / NPO — Bending Fixture */}
+            <details className="group border border-[#63C3B5]/20 rounded-lg bg-[#18261D]/50 hover:bg-[#18261D]/80 hover:border-[#63C3B5]/40 transition-all duration-200 overflow-hidden">
+              <summary className="flex items-center justify-between gap-4 p-5 cursor-pointer list-none">
+                <div className="flex items-center gap-5 flex-1 min-w-0">
+                  <div className="flex flex-col gap-1.5 flex-shrink-0">
+                    <div className="w-28 h-7 relative">
+                      <Image src="/assets/logos/grants/nextgen-eu.png" alt="NextGenerationEU" fill className="object-contain object-left" />
+                    </div>
+                    <div className="w-16 h-6 relative">
+                      <Image src="/assets/logos/grants/npo.svg" alt="NPO" fill className="object-contain object-left" />
+                    </div>
+                  </div>
+                  <div className="min-w-0">
+                    <div className="text-[10px] font-mono text-[#63C3B5] uppercase tracking-wider mb-0.5">
+                      {en ? "EU · National Recovery Plan" : "EU · Národní plán obnovy"}
+                    </div>
+                    <h3 className="font-semibold text-white text-sm leading-tight">
+                      {en ? "Bending Fixture for Material Testing" : "Přípravek pro zkoušení materiálů v ohybu"}
+                    </h3>
+                  </div>
+                </div>
+                <span className="text-white/30 group-open:rotate-180 transition-transform duration-200 flex-shrink-0 text-lg">↓</span>
+              </summary>
+              <div className="px-5 pb-5 pt-0 border-t border-white/5">
+                <p className="text-sm text-white/60 leading-relaxed mt-4 mb-4">
+                  {en
+                    ? "This project is implemented with the financial support of the European Union within the framework of the National Recovery Plan."
+                    : "Tento projekt je realizován s finanční podporou Evropské unie v rámci Národního plánu obnovy."}
+                </p>
+                <div className="bg-[#63C3B5]/5 border border-[#63C3B5]/10 rounded p-4 mb-4">
+                  <p className="text-sm text-white/70 leading-relaxed">
+                    <span className="font-semibold text-[#63C3B5]">
+                      {en ? "Main objective: " : "Hlavní cíl: "}
+                    </span>
+                    {en
+                      ? "Preparation for foreign expansion through the development of an innovative device for precise measurement of material deflection according to ISO 178. The project contributes to increasing the competitiveness of Hikade Technologies s.r.o. on international markets, thereby supporting the development of innovation and internationalisation of Czech companies."
+                      : "Příprava na zahraniční expanzi prostřednictvím vývoje inovativního přístroje pro přesné měření průhybu materiálu dle ISO 178. Projekt přispívá ke zvyšování konkurenceschopnosti Hikade Technologies s.r.o. na mezinárodních trzích, čímž podporuje rozvoj inovací a internacionalizaci českých společností."}
+                  </p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs text-white/40 mb-4">
+                  <div>
+                    <div className="text-[#63C3B5] font-mono uppercase tracking-wider mb-1">{en ? "Project name" : "Název projektu"}</div>
+                    <div>{en ? "Bending fixture for material testing (according to ISO 178) with very precise deflection measurement" : "Přípravek pro zkoušení materiálů v ohybu (dle ISO 178) s velmi přesným měřením průhybu"}</div>
+                  </div>
+                  <div>
+                    <div className="text-[#63C3B5] font-mono uppercase tracking-wider mb-1">{en ? "Registration No." : "Registrační číslo"}</div>
+                    <div>2425000008</div>
+                  </div>
+                  <div>
+                    <div className="text-[#63C3B5] font-mono uppercase tracking-wider mb-1">{en ? "Purpose of the subsidy" : "Účel dotace"}</div>
+                    <div>{en ? "Preparation for foreign expansion and related activities" : "Příprava na zahraniční expanzi a související aktivity"}</div>
+                  </div>
+                </div>
+                <p className="text-xs text-white/40 mt-2">
+                  {en ? "Financováno z prostředků Evropské unie." : "Financováno z prostředků Evropské unie."}
+                </p>
+                <p className="text-xs text-white/30 mt-1 italic">
+                  {en ? "This project is co-financed by the European Union." : "Tento projekt je spolufinancován Evropskou unií."}
+                </p>
+              </div>
+            </details>
+
           </div>
 
         </div>

@@ -101,14 +101,30 @@ const T = {
       },
       {
         phase: "08",
-        title: "ESA BIC Program",
-        period: "External validation",
-        summary: "ESA Business Incubation Centre Czech Republic participant",
-        desc: "Hikade Technologies became a participant in the ESA Business Incubation Centre Czech Republic (ESA BIC Prague) program — an external validation of the technical relevance and commercial potential of the stratospheric positioning development direction. ESA BIC is one of Europe's leading space technology incubation networks. Acceptance into the program reflects the assessment that Hikade's core technology has credible application in the European space and HAPS ecosystem.",
-        details: ["ESA BIC Czech Republic — part of the pan-European ESA BIC network", "Program focus: space technology application and development", "Validates technical relevance of stratospheric positioning work", "Access to European aerospace ecosystem connections", "May support selected development activities"],
+        title: "TAČR — Commercial Strategy",
+        period: "Technology Agency of the Czech Republic",
+        summary: "Commercial Strategy for Implementing Gimbal in Multisensor Communication",
+        desc: "Hikade Technologies received TAČR (Technology Agency of the Czech Republic) funding for a project focused on developing a commercial strategy for deploying PATRON gimbal technology in multisensor communication platforms. This project validated the market approach and commercialisation roadmap for the stratospheric positioning technology in the context of HAPS and multisensor systems.",
+        details: ["TAČR applied research and innovation funding", "Project: Commercial Strategy for Implementing Gimbal in Multisensor Communication", "Market analysis and commercialisation roadmap for PATRON", "Multisensor communication platform deployment strategy", "Strengthened industry and market positioning"],
       },
       {
         phase: "09",
+        title: "ESA SPARK — CryoLyze",
+        period: "ESA Technology Broker Czech Republic",
+        summary: "CryoLyze supported by ESA Spark Funding initiative",
+        desc: "CryoLyze executed by Hikade Technologies s.r.o. was supported by the ESA Technology Broker Czech Republic through the ESA Spark Funding initiative. ESA SPARK accelerates early-stage commercialisation of space-related technologies. The CryoLyze cryo-vacuum chamber and freeze-drying system received this support as a technology with direct relevance to space applications — including sample processing for aerospace and research missions.",
+        details: ["ESA Technology Broker Czech Republic — ESA Spark Funding", "CryoLyze: cryo-vacuum chamber and freeze-drying system", "Space-relevant technology: sample processing for aerospace applications", "Accelerates early-stage commercialisation of CryoLyze platform", "Strengthened connection to ESA technology ecosystem"],
+      },
+      {
+        phase: "10",
+        title: "ESA BIC + Technology Incubation",
+        period: "External validation & incubation",
+        summary: "ESA BIC Prague participant + Technology Incubation programme for PATRON",
+        desc: "Hikade Technologies became a participant in the ESA Business Incubation Centre Czech Republic (ESA BIC Prague) — an external validation of the technical relevance and commercial potential of the stratospheric positioning development. Simultaneously, the PATRON gimbal platform was supported through the Technology Incubation programme, which supported the maturation of the platform from early prototype toward a validated, commercially deployable system.",
+        details: ["ESA BIC Czech Republic — pan-European ESA BIC network", "Validates technical relevance of stratospheric positioning work", "Access to European aerospace ecosystem and ESA connections", "Technology Incubation: PATRON from prototype toward validated system", "Technology Incubation: supports maturation to commercial readiness", "Combined: ESA BIC + Technology Incubation = ESA BIC+"],
+      },
+      {
+        phase: "11",
         title: "Current Direction",
         period: "2025 and forward",
         summary: "Platform maturation, flight validation partnerships, portfolio expansion",
@@ -213,14 +229,30 @@ const T = {
       },
       {
         phase: "08",
-        title: "Program ESA BIC",
-        period: "Externí validace",
-        summary: "Účastník ESA Business Incubation Centre Czech Republic",
-        desc: "Hikade Technologies se stala účastníkem programu ESA Business Incubation Centre Czech Republic (ESA BIC Prague) — externího potvrzení technické relevance a komerčního potenciálu vývojového směru stratosferického polohování. ESA BIC je jednou z předních sítí pro inkubaci kosmických technologií v Evropě. Přijetí do programu odráží hodnocení, že základní technologie Hikade má věrohodné uplatnění v evropském kosmickém a HAPS ekosystému.",
-        details: ["ESA BIC Czech Republic — součást celoevropské sítě ESA BIC", "Zaměření programu: aplikace a vývoj kosmických technologií", "Validuje technickou relevanci práce v oblasti stratosferického polohování", "Přístup k propojení s evropským leteckým ekosystémem", "Může podpořit vybrané vývojové aktivity"],
+        title: "TAČR — Komerční strategie",
+        period: "Technologická agentura České republiky",
+        summary: "Komerční strategie pro implementaci gimbalu v multisenzorové komunikaci",
+        desc: "Hikade Technologies získala financování od TAČR (Technologická agentura České republiky) pro projekt zaměřený na vývoj komerční strategie pro nasazení gimbalové technologie PATRON na multisenzorových komunikačních platformách. Tento projekt validoval tržní přístup a komercionalizační plán pro stratosferickou polohovací technologii v kontextu HAPS a multisenzorových systémů.",
+        details: ["Financování aplikovaného výzkumu a inovací TAČR", "Projekt: Komerční strategie pro implementaci gimbalu v multisenzorové komunikaci", "Analýza trhu a komercionalizační plán pro PATRON", "Strategie nasazení na multisenzorové komunikační platformy", "Posílení průmyslového a tržního postavení"],
       },
       {
         phase: "09",
+        title: "ESA SPARK — CryoLyze",
+        period: "ESA Technology Broker Česká republika",
+        summary: "CryoLyze podpořen iniciativou ESA Spark Funding",
+        desc: "CryoLyze realizovaný Hikade Technologies s.r.o. byl podpořen ESA Technology Broker Česká republika prostřednictvím iniciativy ESA Spark Funding. ESA SPARK urychluje ranou komercializaci technologií souvisejících s kosmickým sektorem. Kryovakuová komora a lyofilizační systém CryoLyze získaly tuto podporu jako technologie s přímou relevancí pro kosmické aplikace — včetně zpracování vzorků pro letecké a výzkumné mise.",
+        details: ["ESA Technology Broker Česká republika — ESA Spark Funding", "CryoLyze: kryovakuová komora a lyofilizační systém", "Technologie relevantní pro kosmický sektor: zpracování vzorků pro letecké aplikace", "Urychluje ranou komercializaci platformy CryoLyze", "Posílení vazby na ekosystém ESA technologií"],
+      },
+      {
+        phase: "10",
+        title: "ESA BIC + Technologická inkubace",
+        period: "Externí validace a inkubace",
+        summary: "Účastník ESA BIC Prague + program technologické inkubace pro PATRON",
+        desc: "Hikade Technologies se stala účastníkem programu ESA Business Incubation Centre Czech Republic (ESA BIC Prague) — externího potvrzení technické relevance a komerčního potenciálu vývojového směru stratosferického polohování. Paralelně byla gimbalová platforma PATRON podpořena programem technologické inkubace, který podpořil zrání platformy od raného prototypu směrem k validovanému, komerčně nasaditelnému systému.",
+        details: ["ESA BIC Czech Republic — součást celoevropské sítě ESA BIC", "Validuje technickou relevanci práce v oblasti stratosferického polohování", "Přístup k evropskému leteckému ekosystému a kontaktům ESA", "Technologická inkubace: PATRON od prototypu směrem k validovanému systému", "Technologická inkubace: podpora zrání k připravenosti pro komerční nasazení", "Kombinace: ESA BIC + Technologická inkubace = ESA BIC+"],
+      },
+      {
+        phase: "11",
         title: "Současný směr",
         period: "2025 a dál",
         summary: "Zrání platforem, partnerství pro letovou validaci, rozšíření portfolia",
@@ -238,7 +270,7 @@ export default function HistoryPage() {
   return (
     <div className="text-white pt-20">
       {/* ── HERO ── */}
-      <section className="py-24 bg-[#1F2019] tech-grid">
+      <section className="py-24 tech-grid">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl">
             <span className="telemetry-badge mb-4 inline-block">{t.heroBadge}</span>
@@ -291,7 +323,7 @@ export default function HistoryPage() {
                     <div className="p-6 lg:p-8">
                       <div className="flex flex-wrap items-start justify-between gap-4 mb-5">
                         <div className="flex items-center gap-4">
-                          <span className="text-3xl font-mono font-bold text-[#63C3B5]/15">{item.phase}</span>
+                          <span className="text-3xl font-mono font-bold text-[#63C3B5]/60">{item.phase}</span>
                           <div>
                             <h3 className="text-xl font-bold">{item.title}</h3>
                             <span className="text-xs font-mono text-white/30">{item.period}</span>

@@ -151,7 +151,7 @@ export default function AboutPage() {
   return (
     <div className="text-white pt-20">
       {/* ── HERO ── */}
-      <section className="py-24 bg-[#1F2019] tech-grid">
+      <section className="py-24 tech-grid">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <span className="telemetry-badge mb-4 inline-block">{t.heroBadge}</span>
           <h1 className="text-4xl lg:text-5xl font-bold mb-4 max-w-3xl">{t.h1}</h1>
