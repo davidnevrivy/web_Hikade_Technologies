@@ -323,7 +323,7 @@ export default function HistoryPage() {
                     <div className="p-6 lg:p-8">
                       <div className="flex flex-wrap items-start justify-between gap-4 mb-5">
                         <div className="flex items-center gap-4">
-                          <span className="text-3xl font-mono font-bold text-[#63C3B5]/60">{item.phase}</span>
+                          <span className="text-4xl font-mono font-bold text-[#63C3B5]">{item.phase}</span>
                           <div>
                             <h3 className="text-xl font-bold">{item.title}</h3>
                             <span className="text-xs font-mono text-white/30">{item.period}</span>
