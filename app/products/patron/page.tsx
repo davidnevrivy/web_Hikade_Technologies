@@ -109,10 +109,10 @@ export default function PatronPage() {
         </div>
       </section>
 
-      {/* Description */}
+      {/* Description + Photo */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
               <h2 className="text-2xl font-bold mb-6">Designed for Demanding Payloads</h2>
               <div className="space-y-4 text-white leading-relaxed">
@@ -129,7 +129,6 @@ export default function PatronPage() {
                   Embedded control, encoder feedback, actuator integration and communication interfaces are developed as part of the complete system — not as separate components added at the end.
                 </p>
               </div>
-
               <div className="mt-8 p-4 border border-[#82D5CA]/20 rounded bg-[#82D5CA]/5">
                 <p className="text-xs text-white leading-relaxed">
                   <span className="text-white font-mono">NOTE:</span> PATRON is a development platform approximately at TRL 5. Parameters may vary depending on configuration, customer requirements and validation scope. The system is not presented as flight-proven.
@@ -137,27 +136,13 @@ export default function PatronPage() {
               </div>
             </div>
 
-            <div>
-              <h2 className="text-2xl font-bold mb-6">Technical Focus</h2>
-              <ul className="space-y-3">
-                {techFocus.map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm text-white">
-                    <span className="text-[#82D5CA] mt-0.5 flex-shrink-0">→</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-8">
-                <h3 className="text-sm font-mono text-white mb-4 tracking-widest uppercase">Target Applications</h3>
-                <div className="flex flex-wrap gap-2">
-                  {applications.map((app) => (
-                    <span key={app} className="px-3 py-1.5 bg-[#1F2019] border border-white/10 rounded text-xs text-white">
-                      {app}
-                    </span>
-                  ))}
-                </div>
-              </div>
+            <div className="bg-white rounded-lg overflow-hidden h-[420px] lg:h-[520px] relative">
+              <Image
+                src="/assets/products/patron/patron-slide-3.png"
+                alt="PATRON Gimbal"
+                fill
+                className="object-contain p-6"
+              />
             </div>
           </div>
         </div>

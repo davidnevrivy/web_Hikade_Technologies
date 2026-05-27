@@ -353,7 +353,7 @@ export default function HistoryPage() {
 
       {/* ── LAB ── */}
       <section className="relative h-64 lg:h-80 overflow-hidden">
-        <Image src="/assets/lab/lab-electronics.jpg" alt="Hikade Technologies Engineering Lab" fill className="object-cover" />
+        <Image src="/assets/team/czech-space-stand.jpg" alt="Hikade Technologies Engineering Lab" fill className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#18261D] via-[#18261D]/70 to-transparent" />
         <div className="relative z-10 h-full flex items-center px-6 lg:px-8 max-w-7xl mx-auto">
           <div className="max-w-lg">

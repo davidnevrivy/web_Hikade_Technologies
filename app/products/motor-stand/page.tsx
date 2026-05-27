@@ -57,7 +57,7 @@ export default function MotorStandPage() {
 
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
               <h2 className="text-2xl font-bold mb-6">Full Engineering Scope for Motor Testing</h2>
               <div className="space-y-4 text-white leading-relaxed">
@@ -85,34 +85,43 @@ export default function MotorStandPage() {
               </div>
             </div>
 
-            <div>
-              <div className="relative aspect-video rounded-lg overflow-hidden border border-white/10 mb-6">
-                <Image src="/assets/products/testing/ball-joint-full.png" alt="Motor stand reference" fill className="object-contain p-4 bg-white/95" />
-              </div>
-
-              <h3 className="text-sm font-mono text-white mb-4 tracking-widest uppercase">Reference Specifications</h3>
-              <div className="border border-white/10 rounded-lg overflow-hidden">
-                <table className="tech-table">
-                  <thead>
-                    <tr>
-                      <th>Parameter</th>
-                      <th>Known / Target Value</th>
-                      <th>Note</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {specs.map((row) => (
-                      <tr key={row.param}>
-                        <td>{row.param}</td>
-                        <td>{row.value}</td>
-                        <td>{row.note}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-              <p className="text-xs text-white mt-3 font-mono">Reference values from completed project. Custom systems are defined per customer requirements.</p>
+            <div className="bg-white rounded-lg overflow-hidden h-[420px] lg:h-[520px] relative">
+              <Image
+                src="/assets/products/industrial/motor-stand.png"
+                alt="Motor Test Stand"
+                fill
+                className="object-contain p-6"
+              />
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <h3 className="text-sm font-mono text-white mb-4 tracking-widest uppercase">Reference Specifications</h3>
+            <div className="border border-white/10 rounded-lg overflow-hidden">
+              <table className="tech-table">
+                <thead>
+                  <tr>
+                    <th>Parameter</th>
+                    <th>Known / Target Value</th>
+                    <th>Note</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {specs.map((row) => (
+                    <tr key={row.param}>
+                      <td>{row.param}</td>
+                      <td>{row.value}</td>
+                      <td>{row.note}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-xs text-white mt-3 font-mono">Reference values from completed project. Custom systems are defined per customer requirements.</p>
           </div>
         </div>
       </section>

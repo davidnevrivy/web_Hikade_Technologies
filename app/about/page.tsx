@@ -134,14 +134,12 @@ const T = {
 } as const;
 
 const galleryImages = [
-  { src: "/assets/products/patron/patron-dark-1.png", alt: "PATRON Gimbal", bg: "bg-[#3C271E]/30" },
-  { src: "/assets/products/patron/patron-prototype.jpg", alt: "Patron prototype", bg: "bg-[#1F2019]" },
-  { src: "/assets/products/beetle/beetle-ai-1.png", alt: "BEETLE Gimbal", bg: "bg-[#3C271E]/30" },
-  { src: "/assets/products/patron/patron-drawing.jpg", alt: "Technical drawing", bg: "bg-[#1F2019]" },
-  { src: "/assets/products/testing/3b-bend.png", alt: "Testing fixture", bg: "bg-white" },
-  { src: "/assets/products/patron/patron-bearing.jpg", alt: "Bearing housing", bg: "bg-[#1F2019]" },
-  { src: "/assets/products/testing/m18-fixture.png", alt: "M18 fixture", bg: "bg-white" },
-  { src: "/assets/products/patron/patron-motor.jpg", alt: "Drive detail", bg: "bg-[#1F2019]" },
+  { src: "/assets/products/patron/patron-dark-1.png",              alt: "PATRON Gimbal",           bg: "bg-[#3C271E]/30", scale: ""           },
+  { src: "/assets/about/motorstand-2.png",                         alt: "Motor Test Stand",        bg: "bg-white",        scale: ""           },
+  { src: "/assets/products/beetle/beetle-ai-1.png",                alt: "BEETLE Gimbal",           bg: "bg-[#3C271E]/30", scale: ""           },
+  { src: "/assets/products/testing/3b-bend.png",                   alt: "Testing fixture",         bg: "bg-white",        scale: "scale-[2.2]"},
+  { src: "/assets/about/svetlomet-167.jpg",                        alt: "Gimbal Odysseus",         bg: "bg-white",        scale: ""           },
+  { src: "/assets/products/industrial/custom-engineering-johny-512.png", alt: "Custom Engineering", bg: "bg-[#1F2019]",   scale: ""           },
 ];
 
 export default function AboutPage() {
@@ -171,13 +169,15 @@ export default function AboutPage() {
                 <p>{t.whoP3}</p>
               </div>
             </div>
-            <div>
-              <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10">
-                <Image src="/assets/lab/lab-electronics.jpg" alt="Hikade Technologies lab" fill className="object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#18261D]/60 to-transparent" />
+            <div className="flex flex-col gap-4">
+              <div className="relative aspect-[3/2] rounded-lg overflow-hidden border border-white/10 bg-black">
+                <Image src="/assets/team/hikade-booth-team.jpg" alt="Hikade Technologies team at trade show" fill className="object-contain" />
                 <div className="absolute bottom-4 left-4">
                   <span className="telemetry-badge">{t.whoImgBadge}</span>
                 </div>
+              </div>
+              <div className="relative aspect-[3/2] rounded-lg overflow-hidden border border-white/10 bg-black">
+                <Image src="/assets/team/hikade-team-2.jpg" alt="Hikade Technologies team" fill className="object-contain" />
               </div>
             </div>
           </div>
@@ -248,10 +248,15 @@ export default function AboutPage() {
       <section className="py-14">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <h2 className="text-sm font-mono text-white mb-6 tracking-widest uppercase">{t.galleryLabel}</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
             {galleryImages.map((img, i) => (
               <div key={i} className={`relative aspect-square rounded-lg overflow-hidden border border-white/10 group ${img.bg}`}>
-                <Image src={img.src} alt={img.alt} fill className="object-contain p-3 group-hover:scale-105 transition-transform duration-300" />
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  className={`object-cover object-center transition-transform duration-300 group-hover:scale-105 ${img.scale}`}
+                />
               </div>
             ))}
           </div>

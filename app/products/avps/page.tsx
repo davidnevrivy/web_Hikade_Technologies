@@ -91,10 +91,10 @@ export default function AVPSPage() {
         </div>
       </section>
 
-      {/* Zone diagram */}
+      {/* Zone diagram + Photo */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
               <h2 className="text-2xl font-bold mb-6">Cleanliness Zone Concept</h2>
               <p className="text-white leading-relaxed mb-8">
@@ -127,28 +127,13 @@ export default function AVPSPage() {
               </div>
             </div>
 
-            <div>
-              <h2 className="text-2xl font-bold mb-6">Process Modules</h2>
-              <p className="text-white leading-relaxed mb-6">
-                The AVPS workstation supports a configurable set of process modules, allowing the workflow to be adapted to the specific component type, cleanliness requirements and validation needs.
-              </p>
-              <div className="grid grid-cols-2 gap-2">
-                {processModules.map((mod) => (
-                  <div key={mod} className="flex items-start gap-2 p-3 border border-white/10 rounded bg-[#1F2019]/50 text-xs text-white">
-                    <span className="text-white flex-shrink-0 mt-0.5">◎</span>
-                    {mod}
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-6">
-                <h3 className="text-sm font-mono text-white mb-3 tracking-widest uppercase">Compatible Components</h3>
-                <div className="flex flex-wrap gap-2">
-                  {["Precision bearings", "Vacuum-compatible mechanical parts", "Aerospace mechanical components", "Optical assemblies", "Selected PCB assemblies", "Precision mechanical parts"].map((c) => (
-                    <span key={c} className="px-3 py-1.5 bg-[#1F2019] border border-white/10 rounded text-xs text-white">{c}</span>
-                  ))}
-                </div>
-              </div>
+            <div className="bg-white rounded-lg overflow-hidden h-[420px] lg:h-[520px] relative">
+              <Image
+                src="/assets/products/avps/avps-1.png"
+                alt="AeroVac Precision System"
+                fill
+                className="object-contain p-6"
+              />
             </div>
           </div>
         </div>

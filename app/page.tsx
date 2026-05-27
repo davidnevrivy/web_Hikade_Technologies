@@ -167,7 +167,7 @@ export default function HomePage() {
   const whatWeBuild = [
     { label: "01", title: t.w1t, desc: t.w1d, href: "/products", icon: "⊕" },
     { label: "02", title: t.w2t, desc: t.w2d, href: "/products/avps", icon: "◎" },
-    { label: "03", title: t.w3t, desc: t.w3d, href: "/products#custom-engineering", icon: "◈" },
+    { label: "03", title: t.w3t, desc: t.w3d, href: "/products#industrial-systems", icon: "◈" },
     { label: "04", title: t.w4t, desc: t.w4d, href: "/products/testing-fixtures", icon: "◇" },
   ];
 
@@ -325,7 +325,7 @@ export default function HomePage() {
                   </li>
                 ))}
               </ul>
-              <Link href="/products#custom-engineering" className="inline-block px-6 py-3 bg-[#82D5CA] text-black font-semibold rounded hover:bg-[#82D5CA]/90 transition-colors">
+              <Link href="/products#industrial-systems" className="inline-block px-6 py-3 bg-[#82D5CA] text-black font-semibold rounded hover:bg-[#82D5CA]/90 transition-colors">
                 {t.ceCta}
               </Link>
             </div>
@@ -415,7 +415,7 @@ export default function HomePage() {
 
       {/* ── LAB PHOTO ── */}
       <section className="relative h-72 lg:h-96 overflow-hidden">
-        <Image src="/assets/lab/lab-electronics.jpg" alt="Hikade Technologies Lab" fill className="object-cover" />
+        <Image src="/assets/team/czech-space-stand.jpg" alt="Hikade Technologies Lab" fill className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#18261D] via-[#18261D]/70 to-transparent" />
         <div className="relative z-10 h-full flex items-center px-6 lg:px-8 max-w-7xl mx-auto">
           <div className="max-w-lg">

@@ -93,10 +93,10 @@ export default function BeetlePage() {
         </div>
       </section>
 
-      {/* Description */}
+      {/* Description + Photo */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
               <h2 className="text-2xl font-bold mb-6">Compact, Cost-Sensitive, Configurable</h2>
               <div className="space-y-4 text-white leading-relaxed">
@@ -110,7 +110,6 @@ export default function BeetlePage() {
                   Like all Hikade Technologies platforms, BEETLE is not a fixed catalog product. The payload interface, control architecture and integration approach are adapted to the specific mission and platform requirements.
                 </p>
               </div>
-
               <div className="mt-8 p-4 border border-yellow-400/20 rounded bg-yellow-400/5">
                 <p className="text-xs text-white leading-relaxed">
                   <span className="text-yellow-400 font-mono">STATUS:</span> BEETLE is a development / demonstration platform. Parameters may vary depending on configuration and validation scope. The system is not presented as flight-proven unless explicitly validated.
@@ -118,37 +117,13 @@ export default function BeetlePage() {
               </div>
             </div>
 
-            <div>
-              <h3 className="text-sm font-mono text-white mb-4 tracking-widest uppercase">Target Applications</h3>
-              <div className="flex flex-wrap gap-2 mb-8">
-                {applications.map((app) => (
-                  <span key={app} className="px-3 py-1.5 bg-[#1F2019] border border-white/10 rounded text-xs text-white">{app}</span>
-                ))}
-              </div>
-
-              <h3 className="text-sm font-mono text-white mb-4 tracking-widest uppercase">Key Differentiators vs. PATRON</h3>
-              <ul className="space-y-3">
-                {[
-                  "Lower total system mass (~2.5 kg vs. 6.5 kg)",
-                  "Smaller payload envelope (up to ~4.5 kg)",
-                  "Lower nominal power (~30 W vs. 200–400 W)",
-                  "Cost-sensitive configuration for early validation",
-                  "Faster integration for demonstration missions",
-                  "Suitable for R&D, university and low-budget platforms",
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm text-white">
-                    <span className="text-[#82D5CA] mt-0.5 flex-shrink-0">→</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-8 p-4 border border-[#82D5CA]/20 rounded bg-[#82D5CA]/5">
-                <p className="text-xs text-white font-mono mb-1">ALSO IN THE FAMILY</p>
-                <p className="text-xs text-white">
-                  PATRON is the larger and higher-precision variant for heavier payloads. Micro BEETLE is an early concept for ultra-lightweight pointing below 400 g system mass.
-                </p>
-              </div>
+            <div className="bg-white rounded-lg overflow-hidden h-[420px] lg:h-[520px] relative">
+              <Image
+                src="/assets/products/beetle/beetle-ai-3.png"
+                alt="BEETLE Gimbal"
+                fill
+                className="object-contain p-6"
+              />
             </div>
           </div>
         </div>

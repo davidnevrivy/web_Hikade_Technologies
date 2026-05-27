@@ -42,13 +42,14 @@ export default function ProductsPage() {
 
             {/* PATRON */}
             <Link href="/products/patron" className="group flex flex-col border border-white/10 rounded-lg overflow-hidden bg-[#1F2019]/60 product-card hover:border-[#82D5CA]/40">
-              <div className="relative h-64 bg-[#efefed] overflow-hidden flex items-center justify-center">
+              <div className="relative h-64 overflow-hidden">
                 <Image
-                  src="/assets/products/patron/patron-slide-3.png"
+                  src="/assets/products/patron/patron-real-bg.png"
                   alt="PATRON Gimbal"
                   fill
-                  className="object-contain p-6 group-hover:scale-105 transition-transform duration-500"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#1F2019]/60" />
               </div>
               <div className="p-5 flex flex-col flex-1">
                 <div className="flex items-start justify-between mb-2">
@@ -122,18 +123,15 @@ export default function ProductsPage() {
             </Link>
 
             {/* MICRO BEETLE */}
-            <Link href="/contact" className="group flex flex-col border border-white/10 rounded-lg overflow-hidden bg-[#1F2019]/60 border-dashed hover:border-white/25 transition-all">
-              <div className="relative h-64 bg-white overflow-hidden">
-                <Image
-                  src="/assets/products/beetle/beetle-cad.png"
-                  alt="Micro BEETLE concept"
-                  fill
-                  className="object-contain p-4 opacity-60 group-hover:opacity-80 transition-opacity duration-300"
-                />
-                <div className="absolute inset-0 flex items-end justify-center pb-4">
-                  <div className="text-xs font-mono uppercase tracking-widest text-white bg-black/50 px-3 py-1 rounded">
-                    {en ? "In Development" : "Ve vývoji"}
+            <div className="flex flex-col border border-white/15 border-dashed rounded-lg overflow-hidden bg-[#1F2019]/40">
+              <div className="relative h-64 bg-[#18261D] overflow-hidden flex items-center justify-center tech-grid">
+                <div className="flex flex-col items-center gap-3 text-center px-6">
+                  <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center">
+                    <span className="text-white/50 text-lg">○</span>
                   </div>
+                  <span className="text-xs font-mono uppercase tracking-widest text-white/50">
+                    {en ? "Image not yet available" : "Fotka zatím není k dispozici"}
+                  </span>
                 </div>
               </div>
               <div className="p-5 flex flex-col flex-1">
@@ -142,31 +140,20 @@ export default function ProductsPage() {
                     <h3 className="text-xl font-bold text-white">Micro BEETLE</h3>
                     <p className="text-xs text-white">{en ? "Ultra-Lightweight Concept" : "Ultra-lehký koncept"}</p>
                   </div>
-                  <span className="w-2 h-2 rounded-full mt-1.5 bg-white/20 flex-shrink-0" />
+                  <span className="text-[10px] font-mono uppercase tracking-wider text-white border border-white/20 rounded px-2 py-0.5 flex-shrink-0">
+                    {en ? "Planned" : "Plánováno"}
+                  </span>
                 </div>
                 <p className="text-sm text-white leading-relaxed mb-3 flex-1">
                   {en
-                    ? "Low-SWaP 2-axis EO stabilization module for lightweight EO payloads. Target ~400 g total mass, integrated control PCB, 28 V supply, ~7 W power — focused on low cost, compactness and simple integration."
-                    : "Dvouosý EO stabilizační modul s nízkým SWaP pro lehké EO payloady. Cílová hmotnost ~400 g, integrovaná řídící PCB, 28 V napájení, ~7 W — zaměřeno na nízké náklady, kompaktnost a jednoduchou integraci."}
+                    ? "Low-SWaP 2-axis EO stabilization module for lightweight EO payloads. Concept phase — not currently in active development."
+                    : "Dvouosý EO stabilizační modul s nízkým SWaP pro lehké EO payloady. Fáze konceptu — v současné době není aktivně vyvíjen."}
                 </p>
-                <div className="grid grid-cols-2 gap-2 mb-3">
-                  {[
-                    { l: en ? "Mass" : "Hmotnost", v: "~400 g" },
-                    { l: en ? "Power" : "Příkon", v: "~7 W" },
-                    { l: en ? "Supply" : "Napájení", v: "28 V" },
-                    { l: en ? "Axes" : "Osy", v: "2-axis" },
-                  ].map(s => (
-                    <div key={s.l} className="bg-white/3 border border-white/8 rounded p-2">
-                      <div className="text-[9px] font-mono text-white uppercase mb-0.5">{s.l}</div>
-                      <div className="text-xs font-semibold text-white">{s.v}</div>
-                    </div>
-                  ))}
-                </div>
-                <div className="text-xs text-white font-mono uppercase tracking-wider border border-white/10 rounded px-3 py-2 text-center">
-                  {en ? "In Development — Details on Request" : "Ve vývoji — Podrobnosti na vyžádání"}
+                <div className="text-sm font-semibold text-white border border-white/30 rounded-md px-4 py-3 text-center bg-white/5">
+                  {en ? "Intended for HTA — In Development Process" : "Určeno pro HTA — v procesu vývoje"}
                 </div>
               </div>
-            </Link>
+            </div>
 
           </div>
         </div>
@@ -191,7 +178,7 @@ export default function ProductsPage() {
                     src="/assets/products/cryolyze/cryolyze-3.png"
                     alt="CryoLyze"
                     fill
-                    className="object-contain p-0.5 group-hover:scale-105 transition-transform duration-500"
+                    className="object-contain scale-[2.5] group-hover:scale-[2.6] transition-transform duration-500"
                   />
                 </div>
                 <div className="w-px bg-gray-200 flex-shrink-0" />
@@ -200,7 +187,7 @@ export default function ProductsPage() {
                     src="/assets/products/cryolyze/cryolyze-1.png"
                     alt="CryoLyze open"
                     fill
-                    className="object-contain p-0.5 group-hover:scale-105 transition-transform duration-500"
+                    className="object-contain scale-[2.1] group-hover:scale-[2.2] transition-transform duration-500"
                   />
                 </div>
               </div>
@@ -279,7 +266,7 @@ export default function ProductsPage() {
       </section>
 
       {/* ── INDUSTRIAL PROJECTS ── */}
-      <section className="py-16">
+      <section id="industrial-systems" className="py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="mb-10">
             <span className="telemetry-badge">{en ? "Industrial Projects" : "Průmyslové projekty"}</span>
@@ -397,15 +384,20 @@ export default function ProductsPage() {
 
           <div className="flex flex-col gap-3 mb-8">
 
-            {/* TAČR */}
+            {/* TAČR + SIGMA */}
             <details className="group border border-white/10 rounded-lg bg-[#18261D]/40 hover:bg-[#18261D]/70 hover:border-[#82D5CA]/30 transition-all duration-200 overflow-hidden">
               <summary className="flex items-center justify-between gap-4 p-5 cursor-pointer list-none">
                 <div className="flex items-center gap-5 flex-1 min-w-0">
-                  <div className="flex-shrink-0 w-20 h-10 relative">
-                    <Image src="/assets/logos/grants/tacr.png" alt="TAČR" fill className="object-contain" />
+                  <div className="flex flex-col gap-1.5 flex-shrink-0">
+                    <div className="w-20 h-8 relative">
+                      <Image src="/assets/logos/grants/tacr.png" alt="TAČR" fill className="object-contain object-left" />
+                    </div>
+                    <div className="w-24 h-7 relative">
+                      <Image src="/assets/logos/grants/sigma.png" alt="SIGMA" fill className="object-contain object-left" />
+                    </div>
                   </div>
                   <div className="min-w-0">
-                    <div className="text-[10px] font-mono text-white uppercase tracking-wider mb-0.5">TAČR — {en ? "Technology Agency of the Czech Republic" : "Technologická agentura ČR"}</div>
+                    <div className="text-[10px] font-mono text-white uppercase tracking-wider mb-0.5">TAČR / SIGMA — {en ? "Technology Agency of the Czech Republic" : "Technologická agentura ČR"}</div>
                     <h3 className="font-semibold text-white text-sm leading-tight">
                       {en ? "Commercial Strategy for Implementing Gimbal in Multisensor Communication" : "Komerční strategie pro implementaci gimbalu v multisenzorové komunikaci"}
                     </h3>

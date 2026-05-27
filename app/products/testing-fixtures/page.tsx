@@ -78,10 +78,10 @@ export default function TestingFixturesPage() {
         </div>
       </section>
 
-      {/* Description */}
+      {/* Description + Photo */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
               <h2 className="text-2xl font-bold mb-6">Precision Test Hardware for R&D and QC</h2>
               <div className="space-y-4 text-white leading-relaxed">
@@ -92,58 +92,52 @@ export default function TestingFixturesPage() {
                   Each fixture is designed with precise mechanical geometry, reliable load paths, repeatability and compatibility with standard test machines in mind. Manufacturing documentation, test reports and optional assembly instructions are available as part of the delivery scope.
                 </p>
               </div>
-              <div className="mt-8">
-                <h3 className="text-sm font-mono text-white mb-4 tracking-widest uppercase">Typical Applications</h3>
-                <div className="flex flex-wrap gap-2">
-                  {["Bending tests (3-point, 4-point)", "ISO 178-related testing", "Connector testing", "Component pull-out tests", "Polymer / food material testing", "Shear tests", "Pressure tests", "Cage / housing testing", "R&D laboratories", "Quality control", "Industrial testing", "Prototype validation"].map((a) => (
-                    <span key={a} className="px-3 py-1.5 bg-[#1F2019] border border-white/10 rounded text-xs text-white">{a}</span>
-                  ))}
-                </div>
-              </div>
             </div>
 
-            <div>
-              <h3 className="text-sm font-mono text-white mb-4 tracking-widest uppercase">Technical Focus</h3>
-              <ul className="space-y-3 mb-8">
+            <div className="bg-white rounded-lg overflow-hidden h-[420px] lg:h-[520px]">
+              <div className="grid grid-cols-3 h-full">
                 {[
-                  "Precise mechanical geometry and load paths",
-                  "Repeatability across test runs",
-                  "Compatibility with standard test machines",
-                  "Custom fixture geometry and clamping",
-                  "Deflection and load measurement compatibility",
-                  "Manufacturing documentation included",
-                  "Optional test reports",
-                  "Simple operation and serviceability",
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm text-white">
-                    <span className="text-[#82D5CA] mt-0.5 flex-shrink-0">→</span>
-                    {item}
-                  </li>
+                  { src: "/assets/products/testing/bend-fixture.png", alt: "Bending fixture" },
+                  { src: "/assets/products/testing/3b4b-bend-1.png", alt: "3b/4b bending fixture" },
+                  { src: "/assets/products/testing/ball-joint-full.png", alt: "Ball joint fixture" },
+                ].map((img, i) => (
+                  <div key={img.src} className={`relative ${i < 2 ? "border-r border-gray-200" : ""}`}>
+                    <Image src={img.src} alt={img.alt} fill className="object-contain p-4" />
+                  </div>
                 ))}
-              </ul>
-
-              <div className="border border-white/10 rounded-lg overflow-hidden">
-                <table className="tech-table">
-                  <thead>
-                    <tr>
-                      <th>Parameter</th>
-                      <th>Value</th>
-                      <th>Note</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {specs.map((row) => (
-                      <tr key={row.param}>
-                        <td>{row.param}</td>
-                        <td>{row.value}</td>
-                        <td>{row.note}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
               </div>
-              <p className="text-xs text-white mt-3 font-mono">Parameters may vary depending on configuration and customer requirements.</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Specs */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <span className="telemetry-badge mb-4 inline-block">Technical Data</span>
+            <h2 className="text-2xl font-bold mb-8">Testing Fixtures — Specifications</h2>
+            <div className="border border-white/10 rounded-lg overflow-hidden">
+              <table className="tech-table">
+                <thead>
+                  <tr>
+                    <th>Parameter</th>
+                    <th>Value</th>
+                    <th>Note</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {specs.map((row) => (
+                    <tr key={row.param}>
+                      <td>{row.param}</td>
+                      <td>{row.value}</td>
+                      <td>{row.note}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-xs text-white mt-3 font-mono">Parameters may vary depending on configuration and customer requirements.</p>
           </div>
         </div>
       </section>
