@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 const specs = [
   { param: "Platform type", value: "Two-axis gimbal", note: "Configurable" },
   { param: "Application", value: "HAPS / stratospheric payloads", note: "Customer-specific" },
-  { param: "Payload capacity", value: "up to approx. 18 kg", note: "Depending on configuration" },
-  { param: "System mass", value: "approx. 8 kg", note: "Depending on configuration" },
+  { param: "Payload capacity", value: "up to approx. 15 kg", note: "Depending on configuration" },
+  { param: "System mass", value: "approx. 6.5 kg", note: "Depending on configuration" },
   { param: "Power", value: "approx. 200–400 W", note: "Mission-profile dependent" },
   { param: "Pointing accuracy", value: "arcminute / hundredths of degree class", note: "Target, configuration-dependent" },
   { param: "Number of axes", value: "2", note: "Azimuth + elevation" },
@@ -74,12 +74,12 @@ export default function PatronPage() {
         {/* Telemetry overlays */}
         <div className="absolute top-16 left-6 lg:left-8 z-20 space-y-2">
           {[
-            { label: "PAYLOAD", val: "≤ 18 kg" },
-            { label: "SYSTEM MASS", val: "~8 kg" },
+            { label: "PAYLOAD", val: "≤ 15 kg" },
+            { label: "SYSTEM MASS", val: "6.5 kg" },
             { label: "AXES", val: "2-axis" },
           ].map((b) => (
             <div key={b.label} className="telemetry-badge flex items-center gap-2">
-              <span className="text-white/50">{b.label}</span>
+              <span className="text-white">{b.label}</span>
               <span>{b.val}</span>
             </div>
           ))}
@@ -87,21 +87,21 @@ export default function PatronPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pb-16 w-full">
           <div className="max-w-2xl">
-            <nav className="text-xs font-mono text-white/40 mb-6 flex items-center gap-2">
-              <Link href="/products" className="hover:text-[#63C3B5] transition-colors">Products</Link>
+            <nav className="text-xs font-mono text-[#82D5CA]/70 mb-6 flex items-center gap-2">
+              <Link href="/products" className="hover:text-[#82D5CA] transition-colors">Products</Link>
               <span>/</span>
-              <span className="text-[#63C3B5]">PATRON Gimbal</span>
+              <span className="text-white">PATRON Gimbal</span>
             </nav>
             <span className="telemetry-badge mb-4 inline-block">High-precision HAPS gimbal platform</span>
             <h1 className="text-5xl lg:text-6xl font-bold mb-4">PATRON</h1>
-            <p className="text-lg text-white/70 leading-relaxed mb-8">
+            <p className="text-lg text-white leading-relaxed mb-8">
               Configurable two-axis gimbal platform for demanding HAPS and stratospheric payloads requiring precise pointing, robust mechanical design and customer-specific integration.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Link href="/contact" className="px-6 py-3 bg-[#63C3B5] text-black font-semibold rounded hover:bg-[#63C3B5]/90 transition-colors">
+              <Link href="/contact" className="px-6 py-3 bg-[#82D5CA] text-black font-semibold rounded hover:bg-[#82D5CA]/90 transition-colors">
                 Discuss Your Payload
               </Link>
-              <Link href="#specs" className="px-6 py-3 border border-white/30 text-white font-semibold rounded hover:border-[#63C3B5]/50 transition-colors">
+              <Link href="#specs" className="px-6 py-3 border border-white/30 text-white font-semibold rounded hover:border-[#82D5CA]/50 transition-colors">
                 Technical Specifications
               </Link>
             </div>
@@ -115,7 +115,7 @@ export default function PatronPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
               <h2 className="text-2xl font-bold mb-6">Designed for Demanding Payloads</h2>
-              <div className="space-y-4 text-white/65 leading-relaxed">
+              <div className="space-y-4 text-white leading-relaxed">
                 <p>
                   PATRON is a high-precision two-axis gimbal platform developed for payload stabilization and pointing in HAPS, stratospheric and aerospace-relevant environments. The design focuses on accurate two-axis control, mechanical stiffness and reliable operation where payload mass, power and pointing constraints define the engineering challenge.
                 </p>
@@ -130,9 +130,9 @@ export default function PatronPage() {
                 </p>
               </div>
 
-              <div className="mt-8 p-4 border border-[#63C3B5]/20 rounded bg-[#63C3B5]/5">
-                <p className="text-xs text-white/50 leading-relaxed">
-                  <span className="text-[#63C3B5] font-mono">NOTE:</span> PATRON is a development platform approximately at TRL 5. Parameters may vary depending on configuration, customer requirements and validation scope. The system is not presented as flight-proven.
+              <div className="mt-8 p-4 border border-[#82D5CA]/20 rounded bg-[#82D5CA]/5">
+                <p className="text-xs text-white leading-relaxed">
+                  <span className="text-white font-mono">NOTE:</span> PATRON is a development platform approximately at TRL 5. Parameters may vary depending on configuration, customer requirements and validation scope. The system is not presented as flight-proven.
                 </p>
               </div>
             </div>
@@ -141,18 +141,18 @@ export default function PatronPage() {
               <h2 className="text-2xl font-bold mb-6">Technical Focus</h2>
               <ul className="space-y-3">
                 {techFocus.map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm text-white/70">
-                    <span className="text-[#63C3B5] mt-0.5 flex-shrink-0">→</span>
+                  <li key={item} className="flex items-start gap-3 text-sm text-white">
+                    <span className="text-[#82D5CA] mt-0.5 flex-shrink-0">→</span>
                     {item}
                   </li>
                 ))}
               </ul>
 
               <div className="mt-8">
-                <h3 className="text-sm font-mono text-[#63C3B5] mb-4 tracking-widest uppercase">Target Applications</h3>
+                <h3 className="text-sm font-mono text-white mb-4 tracking-widest uppercase">Target Applications</h3>
                 <div className="flex flex-wrap gap-2">
                   {applications.map((app) => (
-                    <span key={app} className="px-3 py-1.5 bg-[#1F2019] border border-white/10 rounded text-xs text-white/60">
+                    <span key={app} className="px-3 py-1.5 bg-[#1F2019] border border-white/10 rounded text-xs text-white">
                       {app}
                     </span>
                   ))}
@@ -167,11 +167,11 @@ export default function PatronPage() {
       <section className="py-10 bg-[#1F2019]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <h2 className="text-xl font-bold mb-8 flex items-center gap-3">
-            <span className="text-[#63C3B5] font-mono text-sm">RENDERS & PROTOTYPES</span>
+            <span className="text-white font-mono text-sm">RENDERS & PROTOTYPES</span>
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
             {galleryImages.map((img, i) => (
-              <div key={i} className="relative aspect-square bg-[#3C271E]/30 rounded-lg overflow-hidden group border border-white/5 hover:border-[#63C3B5]/30 transition-colors">
+              <div key={i} className="relative aspect-square bg-[#3C271E]/30 rounded-lg overflow-hidden group border border-white/5 hover:border-[#82D5CA]/30 transition-colors">
                 <Image
                   src={img.src}
                   alt={img.alt}
@@ -211,7 +211,7 @@ export default function PatronPage() {
                 </tbody>
               </table>
             </div>
-            <p className="text-xs text-white/35 mt-3 font-mono">
+            <p className="text-xs text-white mt-3 font-mono">
               Parameters may vary depending on configuration, customer requirements and validation scope.
             </p>
           </div>
@@ -223,14 +223,14 @@ export default function PatronPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-2xl">
             <h2 className="text-2xl lg:text-3xl font-bold mb-4">Discuss your payload requirements</h2>
-            <p className="text-white/60 leading-relaxed mb-8">
+            <p className="text-white leading-relaxed mb-8">
               Discuss your payload requirements with us and define a gimbal configuration around your platform, mass, power and pointing constraints. We will help identify a technically realistic development path from requirements to prototype.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link href="/contact" className="px-6 py-3 bg-[#63C3B5] text-black font-semibold rounded hover:bg-[#63C3B5]/90 transition-colors">
+              <Link href="/contact" className="px-6 py-3 bg-[#82D5CA] text-black font-semibold rounded hover:bg-[#82D5CA]/90 transition-colors">
                 Start Technical Discussion
               </Link>
-              <Link href="/products/beetle" className="px-6 py-3 border border-white/30 text-white font-semibold rounded hover:border-[#63C3B5]/50 transition-colors">
+              <Link href="/products/beetle" className="px-6 py-3 border border-white/30 text-white font-semibold rounded hover:border-[#82D5CA]/50 transition-colors">
                 Also see: BEETLE Gimbal
               </Link>
             </div>

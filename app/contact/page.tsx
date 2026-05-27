@@ -46,7 +46,7 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <span className="telemetry-badge mb-4 inline-block">{t.badge}</span>
           <h1 className="text-4xl lg:text-5xl font-bold mb-4">{t.h1}</h1>
-          <p className="text-lg text-white/60 max-w-2xl">{t.subtitle}</p>
+          <p className="text-lg text-white max-w-2xl">{t.subtitle}</p>
         </div>
       </section>
 
@@ -62,15 +62,15 @@ export default function ContactPage() {
                   { label: "WEB", value: "hikade.cz", href: "https://hikade.cz" },
                 ].map((c) => (
                   <div key={c.label}>
-                    <p className="text-xs font-mono text-[#63C3B5] mb-1">{c.label}</p>
-                    <a href={c.href} className="text-white/70 hover:text-[#63C3B5] transition-colors">{c.value}</a>
+                    <p className="text-xs font-mono text-[#82D5CA] mb-1">{c.label}</p>
+                    <a href={c.href} className="text-white hover:text-[#82D5CA] transition-colors">{c.value}</a>
                   </div>
                 ))}
               </div>
 
               <div className="mt-10">
-                <p className="text-xs font-mono text-[#63C3B5] mb-3">{t.addressLabel}</p>
-                <address className="not-italic text-white/60 text-sm leading-relaxed">
+                <p className="text-xs font-mono text-[#82D5CA] mb-3">{t.addressLabel}</p>
+                <address className="not-italic text-white text-sm leading-relaxed">
                   Hikade Technologies s.r.o.<br />
                   Purkyňova 2836/79A<br />
                   612 00 Brno<br />
@@ -79,9 +79,9 @@ export default function ContactPage() {
               </div>
 
               <div className="mt-10 space-y-3">
-                <p className="text-xs font-mono text-[#63C3B5] mb-3">{t.relevantLabel}</p>
+                <p className="text-xs font-mono text-[#82D5CA] mb-3">{t.relevantLabel}</p>
                 {t.links.map((link) => (
-                  <Link key={link.href} href={link.href} className="block text-sm text-white/40 hover:text-[#63C3B5] transition-colors">
+                  <Link key={link.href} href={link.href} className="block text-sm text-white hover:text-[#82D5CA] transition-colors">
                     → {link.label}
                   </Link>
                 ))}

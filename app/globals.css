@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-hikade-mint: #63C3B5;
+  --color-hikade-mint: #82D5CA;
   --color-forest-black: #18261D;
   --color-copper-brown: #3C271E;
   --color-charcoal: #1F2019;
@@ -12,7 +12,7 @@
 }
 
 :root {
-  --color-hikade-mint: #63C3B5;
+  --color-hikade-mint: #82D5CA;
   --color-deep-forest-black: #18261D;
   --color-white: #FFFFFF;
   --color-dark-copper-brown: #3C271E;
@@ -26,6 +26,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 
 body {
@@ -39,28 +40,28 @@ body {
 /* Technical grid background */
 .tech-grid {
   background-image:
-    linear-gradient(rgba(99, 195, 181, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(99, 195, 181, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(130, 213, 202, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(130, 213, 202, 0.04) 1px, transparent 1px);
   background-size: 48px 48px;
 }
 
 .tech-grid-fine {
   background-image:
-    linear-gradient(rgba(99, 195, 181, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(99, 195, 181, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(130, 213, 202, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(130, 213, 202, 0.03) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
 /* Mint accent border */
 .mint-border-l {
-  border-left: 2px solid #63C3B5;
+  border-left: 2px solid #82D5CA;
 }
 
 /* Telemetry badge */
 .telemetry-badge {
-  background: rgba(99, 195, 181, 0.1);
-  border: 1px solid rgba(99, 195, 181, 0.3);
-  color: #63C3B5;
+  background: rgba(130, 213, 202, 0.1);
+  border: 1px solid rgba(130, 213, 202, 0.3);
+  color: #FFFFFF;
   font-family: var(--font-mono);
   font-size: 0.75rem;
   padding: 2px 8px;
@@ -76,7 +77,7 @@ body {
   background: #1F2019;
 }
 ::-webkit-scrollbar-thumb {
-  background: #63C3B5;
+  background: #82D5CA;
   border-radius: 3px;
 }
 
@@ -128,7 +129,7 @@ body {
 
 .product-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(99, 195, 181, 0.5);
+  border-color: rgba(130, 213, 202, 0.5);
 }
 
 /* Table styles */
@@ -138,15 +139,15 @@ body {
 }
 
 .tech-table th {
-  background: rgba(99, 195, 181, 0.1);
-  color: #63C3B5;
+  background: rgba(130, 213, 202, 0.1);
+  color: #FFFFFF;
   font-family: var(--font-mono);
   font-size: 0.7rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   padding: 10px 16px;
   text-align: left;
-  border-bottom: 1px solid rgba(99, 195, 181, 0.2);
+  border-bottom: 1px solid rgba(130, 213, 202, 0.2);
 }
 
 .tech-table td {
@@ -161,7 +162,7 @@ body {
 }
 
 .tech-table td:first-child {
-  color: #63C3B5;
+  color: #82D5CA;
   font-family: var(--font-mono);
   font-size: 0.8rem;
   white-space: nowrap;
@@ -173,7 +174,7 @@ body {
 }
 
 .tech-table td:nth-child(3) {
-  color: rgba(255, 255, 255, 0.5);
+  color: #FFFFFF;
   font-size: 0.8rem;
   font-style: italic;
 }
@@ -191,7 +192,7 @@ body {
   left: 0;
   width: 0;
   height: 1px;
-  background: #63C3B5;
+  background: #82D5CA;
   transition: width 0.3s ease;
 }
 
@@ -209,7 +210,7 @@ body {
 .cursor-blink::after {
   content: '|';
   animation: blink 1s step-end infinite;
-  color: #63C3B5;
+  color: #82D5CA;
 }
 
 /* Slow 360° Y-axis gimbal rotation */

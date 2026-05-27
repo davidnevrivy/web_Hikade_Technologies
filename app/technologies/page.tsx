@@ -116,7 +116,7 @@ export default function TechnologiesPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <span className="telemetry-badge mb-4 inline-block">{t.headerBadge}</span>
           <h1 className="text-4xl lg:text-5xl font-bold mb-4">{t.h1}</h1>
-          <p className="text-lg text-white/60 max-w-2xl">{t.headerDesc}</p>
+          <p className="text-lg text-white max-w-2xl">{t.headerDesc}</p>
         </div>
       </section>
 
@@ -125,7 +125,7 @@ export default function TechnologiesPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#18261D] via-[#18261D]/60 to-transparent" />
         <div className="relative z-10 h-full flex items-center px-6 lg:px-8 max-w-7xl mx-auto">
           <div>
-            <p className="text-[#63C3B5] font-mono text-xs mb-2">{t.labQuoteBadge}</p>
+            <p className="text-[#82D5CA] font-mono text-xs mb-2">{t.labQuoteBadge}</p>
             <p className="text-xl lg:text-2xl font-semibold max-w-lg">{t.labQuote}</p>
           </div>
         </div>
@@ -138,16 +138,16 @@ export default function TechnologiesPage() {
               <div key={capabilityIds[i]} className={`grid grid-cols-1 lg:grid-cols-5 gap-12 pb-16 ${i < t.capabilities.length - 1 ? "border-b border-white/10" : ""}`}>
                 <div className="lg:col-span-2">
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="text-3xl text-[#63C3B5]">{capabilityIcons[i]}</span>
+                    <span className="text-3xl text-white">{capabilityIcons[i]}</span>
                     <h2 className="text-xl font-bold">{cap.title}</h2>
                   </div>
-                  <p className="text-white/60 leading-relaxed text-sm">{cap.desc}</p>
+                  <p className="text-white leading-relaxed text-sm">{cap.desc}</p>
                 </div>
                 <div className="lg:col-span-3">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     {cap.items.map((item) => (
-                      <div key={item} className="flex items-start gap-3 p-3 border border-white/8 rounded bg-[#1F2019]/50 text-sm text-white/65">
-                        <span className="text-[#63C3B5] flex-shrink-0 mt-0.5 text-xs">→</span>
+                      <div key={item} className="flex items-start gap-3 p-3 border border-white/8 rounded bg-[#1F2019]/50 text-sm text-white">
+                        <span className="text-white flex-shrink-0 mt-0.5 text-xs">→</span>
                         {item}
                       </div>
                     ))}
@@ -164,13 +164,13 @@ export default function TechnologiesPage() {
           <div className="max-w-3xl">
             <span className="telemetry-badge mb-4 inline-block">{t.validationBadge}</span>
             <h2 className="text-2xl lg:text-3xl font-bold mb-6">{t.validationH2}</h2>
-            <div className="space-y-4 text-white/65 leading-relaxed mb-8">
+            <div className="space-y-4 text-white leading-relaxed mb-8">
               <p>{t.validationP1}</p>
               <p>{t.validationP2}</p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {t.validationItems.map((v) => (
-                <div key={v} className="p-3 border border-[#63C3B5]/15 rounded bg-[#63C3B5]/5 text-xs text-[#63C3B5] text-center">{v}</div>
+                <div key={v} className="p-3 border border-[#82D5CA]/15 rounded bg-[#82D5CA]/5 text-xs text-white text-center">{v}</div>
               ))}
             </div>
           </div>
@@ -180,12 +180,12 @@ export default function TechnologiesPage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 max-w-2xl">
           <h2 className="text-2xl font-bold mb-4">{t.ctaH2}</h2>
-          <p className="text-white/60 leading-relaxed mb-8">{t.ctaP}</p>
+          <p className="text-white leading-relaxed mb-8">{t.ctaP}</p>
           <div className="flex flex-wrap gap-4">
-            <Link href="/contact" className="px-6 py-3 bg-[#63C3B5] text-black font-semibold rounded hover:bg-[#63C3B5]/90 transition-colors">
+            <Link href="/contact" className="px-6 py-3 bg-[#82D5CA] text-black font-semibold rounded hover:bg-[#82D5CA]/90 transition-colors">
               {t.ctaBtn1}
             </Link>
-            <Link href="/positioning-systems" className="px-6 py-3 border border-white/30 text-white font-semibold rounded hover:border-[#63C3B5]/50 transition-colors">
+            <Link href="/positioning-systems" className="px-6 py-3 border border-white/30 text-white font-semibold rounded hover:border-[#82D5CA]/50 transition-colors">
               {t.ctaBtn2}
             </Link>
           </div>

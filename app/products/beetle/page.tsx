@@ -63,7 +63,7 @@ export default function BeetlePage() {
             { label: "NOMINAL POWER", val: "~30 W" },
           ].map((b) => (
             <div key={b.label} className="telemetry-badge flex items-center gap-2">
-              <span className="text-white/50">{b.label}</span>
+              <span className="text-white">{b.label}</span>
               <span>{b.val}</span>
             </div>
           ))}
@@ -71,21 +71,21 @@ export default function BeetlePage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pb-16 w-full">
           <div className="max-w-2xl">
-            <nav className="text-xs font-mono text-white/40 mb-6 flex items-center gap-2">
-              <Link href="/products" className="hover:text-[#63C3B5] transition-colors">Products</Link>
+            <nav className="text-xs font-mono text-[#82D5CA]/70 mb-6 flex items-center gap-2">
+              <Link href="/products" className="hover:text-[#82D5CA] transition-colors">Products</Link>
               <span>/</span>
-              <span className="text-[#63C3B5]">BEETLE Gimbal</span>
+              <span className="text-white">BEETLE Gimbal</span>
             </nav>
             <span className="telemetry-badge mb-4 inline-block">Lightweight two-axis gimbal platform</span>
             <h1 className="text-5xl lg:text-6xl font-bold mb-4">BEETLE</h1>
-            <p className="text-lg text-white/70 leading-relaxed mb-8">
+            <p className="text-lg text-white leading-relaxed mb-8">
               Lightweight and cost-sensitive two-axis gimbal platform for smaller payloads, test platforms and early stratospheric mission development.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Link href="/contact" className="px-6 py-3 bg-[#63C3B5] text-black font-semibold rounded hover:bg-[#63C3B5]/90 transition-colors">
+              <Link href="/contact" className="px-6 py-3 bg-[#82D5CA] text-black font-semibold rounded hover:bg-[#82D5CA]/90 transition-colors">
                 Define Your Configuration
               </Link>
-              <Link href="#specs" className="px-6 py-3 border border-white/30 text-white font-semibold rounded hover:border-[#63C3B5]/50 transition-colors">
+              <Link href="#specs" className="px-6 py-3 border border-white/30 text-white font-semibold rounded hover:border-[#82D5CA]/50 transition-colors">
                 Technical Specifications
               </Link>
             </div>
@@ -99,7 +99,7 @@ export default function BeetlePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
               <h2 className="text-2xl font-bold mb-6">Compact, Cost-Sensitive, Configurable</h2>
-              <div className="space-y-4 text-white/65 leading-relaxed">
+              <div className="space-y-4 text-white leading-relaxed">
                 <p>
                   BEETLE is a compact two-axis gimbal platform developed for smaller payload classes, test flights, technology demonstrations and cost-sensitive stratospheric or aerospace-adjacent applications. It shares the same development philosophy as PATRON — modular, configurable and designed with integration constraints in mind — but targets a different payload class and mission profile.
                 </p>
@@ -112,40 +112,40 @@ export default function BeetlePage() {
               </div>
 
               <div className="mt-8 p-4 border border-yellow-400/20 rounded bg-yellow-400/5">
-                <p className="text-xs text-white/50 leading-relaxed">
+                <p className="text-xs text-white leading-relaxed">
                   <span className="text-yellow-400 font-mono">STATUS:</span> BEETLE is a development / demonstration platform. Parameters may vary depending on configuration and validation scope. The system is not presented as flight-proven unless explicitly validated.
                 </p>
               </div>
             </div>
 
             <div>
-              <h3 className="text-sm font-mono text-[#63C3B5] mb-4 tracking-widest uppercase">Target Applications</h3>
+              <h3 className="text-sm font-mono text-white mb-4 tracking-widest uppercase">Target Applications</h3>
               <div className="flex flex-wrap gap-2 mb-8">
                 {applications.map((app) => (
-                  <span key={app} className="px-3 py-1.5 bg-[#1F2019] border border-white/10 rounded text-xs text-white/60">{app}</span>
+                  <span key={app} className="px-3 py-1.5 bg-[#1F2019] border border-white/10 rounded text-xs text-white">{app}</span>
                 ))}
               </div>
 
-              <h3 className="text-sm font-mono text-[#63C3B5] mb-4 tracking-widest uppercase">Key Differentiators vs. PATRON</h3>
+              <h3 className="text-sm font-mono text-white mb-4 tracking-widest uppercase">Key Differentiators vs. PATRON</h3>
               <ul className="space-y-3">
                 {[
-                  "Lower total system mass (~2.5 kg vs. ~8 kg)",
+                  "Lower total system mass (~2.5 kg vs. 6.5 kg)",
                   "Smaller payload envelope (up to ~4.5 kg)",
                   "Lower nominal power (~30 W vs. 200–400 W)",
                   "Cost-sensitive configuration for early validation",
                   "Faster integration for demonstration missions",
                   "Suitable for R&D, university and low-budget platforms",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm text-white/70">
-                    <span className="text-[#63C3B5] mt-0.5 flex-shrink-0">→</span>
+                  <li key={item} className="flex items-start gap-3 text-sm text-white">
+                    <span className="text-[#82D5CA] mt-0.5 flex-shrink-0">→</span>
                     {item}
                   </li>
                 ))}
               </ul>
 
-              <div className="mt-8 p-4 border border-[#63C3B5]/20 rounded bg-[#63C3B5]/5">
-                <p className="text-xs text-[#63C3B5] font-mono mb-1">ALSO IN THE FAMILY</p>
-                <p className="text-xs text-white/50">
+              <div className="mt-8 p-4 border border-[#82D5CA]/20 rounded bg-[#82D5CA]/5">
+                <p className="text-xs text-white font-mono mb-1">ALSO IN THE FAMILY</p>
+                <p className="text-xs text-white">
                   PATRON is the larger and higher-precision variant for heavier payloads. Micro BEETLE is an early concept for ultra-lightweight pointing below 400 g system mass.
                 </p>
               </div>
@@ -158,11 +158,11 @@ export default function BeetlePage() {
       <section className="py-10 bg-[#1F2019]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <h2 className="text-xl font-bold mb-8">
-            <span className="text-[#63C3B5] font-mono text-sm">RENDERS & VISUALS</span>
+            <span className="text-white font-mono text-sm">RENDERS & VISUALS</span>
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
             {galleryImages.map((img, i) => (
-              <div key={i} className="relative aspect-square bg-[#3C271E]/30 rounded-lg overflow-hidden group border border-white/5 hover:border-[#63C3B5]/30 transition-colors">
+              <div key={i} className="relative aspect-square bg-[#3C271E]/30 rounded-lg overflow-hidden group border border-white/5 hover:border-[#82D5CA]/30 transition-colors">
                 <Image src={img.src} alt={img.alt} fill className="object-contain p-3 group-hover:scale-105 transition-transform duration-400" />
               </div>
             ))}
@@ -196,7 +196,7 @@ export default function BeetlePage() {
                 </tbody>
               </table>
             </div>
-            <p className="text-xs text-white/35 mt-3 font-mono">Parameters may vary depending on configuration, customer requirements and validation scope.</p>
+            <p className="text-xs text-white mt-3 font-mono">Parameters may vary depending on configuration, customer requirements and validation scope.</p>
           </div>
         </div>
       </section>
@@ -205,14 +205,14 @@ export default function BeetlePage() {
       <section className="py-20 bg-[#1F2019]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 max-w-2xl">
           <h2 className="text-2xl lg:text-3xl font-bold mb-4">Use BEETLE as a configurable starting point</h2>
-          <p className="text-white/60 leading-relaxed mb-8">
+          <p className="text-white leading-relaxed mb-8">
             Use BEETLE as a configurable starting point for lightweight payload stabilization and early stratospheric mission development. Define your payload envelope, platform interface and pointing requirements with us.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Link href="/contact" className="px-6 py-3 bg-[#63C3B5] text-black font-semibold rounded hover:bg-[#63C3B5]/90 transition-colors">
+            <Link href="/contact" className="px-6 py-3 bg-[#82D5CA] text-black font-semibold rounded hover:bg-[#82D5CA]/90 transition-colors">
               Start Technical Discussion
             </Link>
-            <Link href="/products/patron" className="px-6 py-3 border border-white/30 text-white font-semibold rounded hover:border-[#63C3B5]/50 transition-colors">
+            <Link href="/products/patron" className="px-6 py-3 border border-white/30 text-white font-semibold rounded hover:border-[#82D5CA]/50 transition-colors">
               Also see: PATRON Gimbal
             </Link>
           </div>

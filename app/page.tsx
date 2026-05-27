@@ -10,7 +10,7 @@ const T = {
     heroTitle1: "Stratospheric Gimbals",
     heroTitle2: "for HAPS & Stratospheric Applications",
     heroTagline: "Precision two-axis gimbal platforms for the stratosphere",
-    heroSub1: "Precision two-axis gimbal platforms built for the stratosphere. PATRON handles payloads up to 18 kg at 18–25 km altitude. BEETLE delivers the same core technology for lighter, more compact missions — both designed for HAPS.",
+    heroSub1: "Precision two-axis gimbal platforms built for the stratosphere. PATRON handles payloads up to 15 kg at 18–25 km altitude. BEETLE delivers the same core technology for lighter, more compact missions — both designed for HAPS.",
     heroSub2: "",
     cta1: "Explore Portfolio", cta2: "About Us", cta3: "Request Consultation",
     stat1: "Altitude", stat2: "Temperature", stat3: "Pressure",
@@ -20,7 +20,7 @@ const T = {
     w1t: "Stratospheric Positioning Systems", w1d: "Two-axis gimbal platforms for HAPS, balloon platforms, optical payloads, antennas and customer-specific stratospheric payload integration.",
     w2t: "Clean & Vacuum Processing Systems", w2d: "AVPS and related systems for controlled cleaning, drying, assembly, lubrication, inspection and packaging of precision components.",
     w3t: "Custom Engineering", w3d: "Complete engineering systems combining mechanics, electronics, firmware, control logic and documentation. From concept to validated prototype.",
-    w4t: "Industrial R&D Test Equipment", w4d: "Motor stands, material testing fixtures, measurement rigs, single-purpose machines and development hardware for demanding R&D applications.",
+    w4t: "Industrial Testing Equipment", w4d: "Motor stands, material testing fixtures, measurement rigs, single-purpose machines and development hardware for demanding applications.",
     explore: "Explore",
     platformBadge: "Portfolio & Projects", platformTitle: "Our Products & Projects",
     platformDesc: "Proprietary technology platforms and custom engineering projects — from validated systems to early-stage concepts.",
@@ -74,7 +74,7 @@ const T = {
     heroTitle1: "Stratosférické gimbaly",
     heroTitle2: "pro HAPS a stratosferické aplikace",
     heroTagline: "Přesné dvouosé gimbalové platformy pro stratosféru",
-    heroSub1: "Přesné dvouosé gimbalové platformy konstruované pro stratosféru. PATRON nese payloady až 18 kg ve výšce 18–25 km. BEETLE přináší stejnou technologii pro lehčí a kompaktnější mise — obě platformy navrženy pro HAPS.",
+    heroSub1: "Přesné dvouosé gimbalové platformy konstruované pro stratosféru. PATRON nese payloady až 15 kg ve výšce 18–25 km. BEETLE přináší stejnou technologii pro lehčí a kompaktnější mise — obě platformy navrženy pro HAPS.",
     heroSub2: "",
     cta1: "Prozkoumat portfolio", cta2: "O nás", cta3: "Technická konzultace",
     stat1: "Výška", stat2: "Teplota", stat3: "Tlak",
@@ -84,7 +84,7 @@ const T = {
     w1t: "Stratosferické polohovací systémy", w1d: "Dvouosé gimbalové platformy pro HAPS, balonové platformy, optické payloady, antény a zákaznicky specifické integrace stratosferických payloadů.",
     w2t: "Čisté a vakuové zpracovatelské systémy", w2d: "AVPS a příbuzné systémy pro řízené čištění, sušení, montáž, mazání, kontrolu a balení přesných součástek.",
     w3t: "Zakázkový vývoj", w3d: "Kompletní inženýrské systémy kombinující mechaniku, elektroniku, firmware, řídicí logiku a dokumentaci. Od konceptu k validovanému prototypu.",
-    w4t: "Testovací zařízení pro průmyslový výzkum", w4d: "Motorové zkušební stolice, přípravky pro zkoušení materiálů, měřicí přípravky, jednoúčelové stroje a vývojový hardware pro náročné aplikace.",
+    w4t: "Průmyslové testovací zařízení", w4d: "Motorové zkušební stolice, přípravky pro zkoušení materiálů, měřicí přípravky, jednoúčelové stroje a vývojový hardware pro náročné aplikace.",
     explore: "Prozkoumat",
     platformBadge: "Portfolio & projekty", platformTitle: "Naše produkty & projekty",
     platformDesc: "Proprietární technologické platformy a zakázkové inženýrské projekty — od validovaných systémů po raná stádia vývoje.",
@@ -140,11 +140,10 @@ export default function HomePage() {
   const t = T[lang];
 
   const platforms = [
-    { name: "PATRON", category: lang === "en" ? "High-precision HAPS gimbal" : "Vysoce přesný HAPS gimbal", desc: t.patronDesc, status: t.pDev, statusColor: "text-[#63C3B5]", href: "/products/patron", image: "/assets/products/patron/patron-transparent-1.png", payload: "~18 kg", mass: "~8 kg", axes: "2-axis" },
-    { name: "BEETLE", category: lang === "en" ? "Lightweight HAPS gimbal" : "Lehký HAPS gimbal", desc: t.beetleDesc, status: t.pDev2, statusColor: "text-yellow-400", href: "/products/beetle", image: "/assets/products/beetle/beetle-ai-3.png", payload: "~4.5 kg", mass: "~2.5 kg", axes: "2-axis" },
-    { name: "AVPS",   category: lang === "en" ? "Clean processing workstation" : "Čisté zpracovatelské pracoviště", desc: t.avpsDesc, status: t.pCfg, statusColor: "text-[#63C3B5]", href: "/products/avps", image: "/assets/hero/svetlomet-side.jpg", payload: "ISO 8→5", mass: lang === "en" ? "Modular" : "Modulární", axes: lang === "en" ? "Multi-zone" : "Více zón" },
-    { name: "CryoLyze", category: lang === "en" ? "Laboratory freeze-drying" : "Laboratorní mrazové sušení", desc: t.cryoDesc, status: t.pDev2, statusColor: "text-yellow-400", href: "/products/cryolyze", image: "/assets/lab/lab-electronics.jpg", payload: "< 3.5 kPa", mass: "LN2", axes: "AISI 316L" },
-    { name: lang === "en" ? "Motor Stand" : "Motorová stolice", category: lang === "en" ? "High-power test bench" : "Vysokovýkonná zkušební stolice", desc: t.motorDesc, status: lang === "en" ? "Custom system" : "Zakázkový systém", statusColor: "text-[#63C3B5]", href: "/products/motor-stand", image: "/assets/products/testing/ball-joint-full.png", payload: "~400 Nm", mass: "2×80 kW", axes: "2 800 RPM" },
+    { name: "BEETLE",   category: lang === "en" ? "Lightweight HAPS gimbal" : "Lehký HAPS gimbal",          desc: t.beetleDesc, status: t.pDev,  statusColor: "text-[#82D5CA]",   href: "/products/beetle",   image: "/assets/products/beetle/beetle-ai-3.png",            payload: "~4.5 kg",  mass: "~2.5 kg",                              axes: "2-axis" },
+    { name: "PATRON",   category: lang === "en" ? "High-precision HAPS gimbal" : "Vysoce přesný HAPS gimbal", desc: t.patronDesc, status: t.pDev,  statusColor: "text-[#82D5CA]",    href: "/products/patron",   image: "/assets/products/patron/patron-real-bg.png",          payload: "15 kg",   mass: "6.5 kg",                                axes: "2-axis" },
+    { name: "AVPS",     category: lang === "en" ? "Clean processing workstation" : "Čisté zpracovatelské pracoviště", desc: t.avpsDesc, status: t.pDev, statusColor: "text-[#82D5CA]", href: "/products/avps",   image: "/assets/products/avps/avps-1.png",                   payload: "ISO 8→5",  mass: lang === "en" ? "Modular" : "Modulární", axes: lang === "en" ? "Multi-zone" : "Více zón" },
+    { name: "CryoLyze", category: lang === "en" ? "Laboratory freeze-drying" : "Laboratorní mrazové sušení",    desc: t.cryoDesc, status: t.pDev2, statusColor: "text-yellow-400",    href: "/products/cryolyze", image: "/assets/products/cryolyze/cryolyze-1.png",            payload: "< 3.5 kPa", mass: "LN2",                                 axes: "AISI 316L" },
   ];
 
   const caps = [
@@ -189,13 +188,13 @@ export default function HomePage() {
             <div>
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight tracking-tight mb-5 drop-shadow-lg">
                 <span className="text-white">{t.heroTitle1}</span><br />
-                <span className="text-[#63C3B5]">{t.heroTitle2}</span>
+                <span className="text-[#82D5CA]">{t.heroTitle2}</span>
               </h1>
-              <p className="text-sm lg:text-base text-white/60 leading-relaxed mb-8">{t.heroSub1}</p>
+              <p className="text-sm lg:text-base text-white leading-relaxed mb-8">{t.heroSub1}</p>
               <div className="flex flex-wrap gap-3">
-                <Link href="/products" className="px-5 py-2.5 bg-[#63C3B5] text-black font-semibold rounded hover:bg-[#63C3B5]/90 transition-colors text-sm">{t.cta1}</Link>
-                <Link href="/about" className="px-5 py-2.5 border border-white/30 text-white font-semibold rounded hover:border-[#63C3B5]/60 hover:text-[#63C3B5] transition-colors text-sm">{t.cta2}</Link>
-                <Link href="/contact" className="px-5 py-2.5 border border-white/15 text-white/55 font-semibold rounded hover:border-white/35 hover:text-white transition-colors text-sm">{t.cta3}</Link>
+                <Link href="/products" className="px-5 py-2.5 bg-[#82D5CA] text-black font-semibold rounded hover:bg-[#82D5CA]/90 transition-colors text-sm">{t.cta1}</Link>
+                <Link href="/about" className="px-5 py-2.5 border border-white/30 text-white font-semibold rounded hover:border-[#82D5CA]/60 hover:text-[#82D5CA] transition-colors text-sm">{t.cta2}</Link>
+                <Link href="/contact" className="px-5 py-2.5 border border-white/15 text-white font-semibold rounded hover:border-white/35 hover:text-white transition-colors text-sm">{t.cta3}</Link>
               </div>
               <div className="mt-10 grid grid-cols-3 gap-3 border-t border-white/10 pt-7">
                 {[
@@ -204,8 +203,8 @@ export default function HomePage() {
                   { val: "2.5–7.5 kPa",  label: t.stat3 },
                 ].map((s) => (
                   <div key={s.val}>
-                    <div className="text-base font-bold font-mono text-[#63C3B5]">{s.val}</div>
-                    <div className="text-[10px] text-white/40 mt-1 leading-tight">{s.label}</div>
+                    <div className="text-base font-bold font-mono text-[#82D5CA]">{s.val}</div>
+                    <div className="text-[10px] text-white mt-1 leading-tight">{s.label}</div>
                   </div>
                 ))}
               </div>
@@ -214,7 +213,7 @@ export default function HomePage() {
             {/* ── RIGHT: gimbal slideshow ── */}
             <div className="relative mt-6 lg:mt-0 px-4 lg:px-6">
               {/* Mint ambient glow behind card */}
-              <div className="absolute -inset-4 bg-[#63C3B5]/8 rounded-2xl blur-2xl pointer-events-none" />
+              <div className="absolute -inset-4 bg-[#82D5CA]/8 rounded-2xl blur-2xl pointer-events-none" />
 
               <div className="relative w-full" style={{ aspectRatio: "3/4" }}>
                 <Image
@@ -231,7 +230,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-white/30">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-white">
           <span className="text-xs font-mono tracking-widest">{t.scroll}</span>
           <div className="w-px h-8 bg-gradient-to-b from-white/30 to-transparent" />
         </div>
@@ -243,18 +242,18 @@ export default function HomePage() {
           <div className="mb-14">
             <span className="telemetry-badge">{t.whatBadge}</span>
             <h2 className="text-3xl lg:text-4xl font-bold mt-4 mb-4">{t.whatTitle}</h2>
-            <p className="text-white/50 max-w-xl">{t.whatDesc}</p>
+            <p className="text-white max-w-xl">{t.whatDesc}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {whatWeBuild.map((item) => (
-              <Link key={item.label} href={item.href} className="group block p-8 border border-white/10 rounded-lg bg-[#18261D]/60 product-card hover:border-[#63C3B5]/40">
+              <Link key={item.label} href={item.href} className="group block p-8 border border-white/10 rounded-lg bg-[#18261D]/60 product-card hover:border-[#82D5CA]/40">
                 <div className="flex items-start gap-6">
-                  <div className="flex-shrink-0 w-10 h-10 border border-[#63C3B5]/30 rounded flex items-center justify-center text-[#63C3B5] text-lg">{item.icon}</div>
+                  <div className="flex-shrink-0 w-10 h-10 border border-[#82D5CA]/30 rounded flex items-center justify-center text-white text-lg">{item.icon}</div>
                   <div>
-                    <div className="text-xs font-mono text-[#63C3B5] mb-2">{item.label}</div>
-                    <h3 className="text-lg font-semibold mb-3 group-hover:text-[#63C3B5] transition-colors">{item.title}</h3>
-                    <p className="text-sm text-white/50 leading-relaxed">{item.desc}</p>
-                    <div className="mt-4 text-xs text-[#63C3B5] flex items-center gap-1"><span>{t.explore}</span><span>→</span></div>
+                    <div className="text-xs font-mono text-[#82D5CA] mb-2">{item.label}</div>
+                    <h3 className="text-lg font-semibold mb-3 group-hover:text-[#82D5CA] transition-colors">{item.title}</h3>
+                    <p className="text-sm text-white leading-relaxed">{item.desc}</p>
+                    <div className="mt-4 text-xs text-[#82D5CA] flex items-center gap-1"><span>{t.explore}</span><span>→</span></div>
                   </div>
                 </div>
               </Link>
@@ -269,11 +268,11 @@ export default function HomePage() {
           <div className="mb-14">
             <span className="telemetry-badge">{t.platformBadge}</span>
             <h2 className="text-3xl lg:text-4xl font-bold mt-4 mb-4">{t.platformTitle}</h2>
-            <p className="text-white/50 max-w-xl">{t.platformDesc}</p>
+            <p className="text-white max-w-xl">{t.platformDesc}</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {platforms.map((p) => (
-              <Link key={p.name} href={p.href} className="group flex flex-col border border-white/10 rounded-lg overflow-hidden bg-[#18261D]/70 product-card hover:border-[#63C3B5]/40">
+              <Link key={p.name} href={p.href} className="group flex flex-col border border-white/10 rounded-lg overflow-hidden bg-[#18261D]/70 product-card hover:border-[#82D5CA]/40">
                 <div className="relative h-48 overflow-hidden bg-[#3C271E]/30">
                   <Image src={p.image} alt={p.name} fill className="object-contain p-4 group-hover:scale-105 transition-transform duration-500" />
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#18261D]/60" />
@@ -281,30 +280,30 @@ export default function HomePage() {
                 <div className="p-6 flex flex-col flex-1">
                   <div className="flex items-start justify-between mb-3">
                     <div>
-                      <h3 className="text-xl font-bold group-hover:text-[#63C3B5] transition-colors">{p.name}</h3>
-                      <span className="text-xs text-white/40">{p.category}</span>
+                      <h3 className="text-xl font-bold group-hover:text-[#82D5CA] transition-colors">{p.name}</h3>
+                      <span className="text-xs text-white">{p.category}</span>
                     </div>
                     <span className={`text-xs font-mono ${p.statusColor}`}>●</span>
                   </div>
-                  <p className="text-sm text-white/55 leading-relaxed mb-5 flex-1">{p.desc}</p>
+                  <p className="text-sm text-white leading-relaxed mb-5 flex-1">{p.desc}</p>
                   <div className="grid grid-cols-3 gap-2 mb-4">
                     {[{ label: lang === "en" ? "PAYLOAD" : "PAYLOAD", val: p.payload }, { label: lang === "en" ? "MASS" : "HMOTNOST", val: p.mass }, { label: lang === "en" ? "AXES" : "OSY", val: p.axes }].map((spec) => (
-                      <div key={spec.label} className="bg-[#63C3B5]/5 border border-[#63C3B5]/10 rounded p-2 text-center">
-                        <div className="text-[9px] font-mono text-[#63C3B5] mb-0.5">{spec.label}</div>
+                      <div key={spec.label} className="bg-[#82D5CA]/5 border border-[#82D5CA]/10 rounded p-2 text-center">
+                        <div className="text-[9px] font-mono text-white mb-0.5">{spec.label}</div>
                         <div className="text-xs font-semibold">{spec.val}</div>
                       </div>
                     ))}
                   </div>
-                  <div className="text-xs text-white/40 flex items-center justify-between">
+                  <div className="text-xs text-white flex items-center justify-between">
                     <span className={`font-mono ${p.statusColor}`}>{p.status}</span>
-                    <span className="text-[#63C3B5]">{t.learnMore}</span>
+                    <span className="text-white">{t.learnMore}</span>
                   </div>
                 </div>
               </Link>
             ))}
           </div>
           <div className="mt-8 text-center">
-            <Link href="/products" className="inline-flex items-center gap-2 border border-white/20 text-white/60 hover:text-white hover:border-white/40 px-6 py-3 rounded text-sm transition-colors">
+            <Link href="/products" className="inline-flex items-center gap-2 border border-white/20 text-white hover:text-white hover:border-white/40 px-6 py-3 rounded text-sm transition-colors">
               {t.viewAll}
             </Link>
           </div>
@@ -318,20 +317,20 @@ export default function HomePage() {
             <div>
               <span className="telemetry-badge mb-4 inline-block">{t.ceLbl}</span>
               <h2 className="text-3xl lg:text-4xl font-bold mb-6">{t.ceTitle}</h2>
-              <p className="text-white/60 leading-relaxed mb-6">{t.ceP1}</p>
+              <p className="text-white leading-relaxed mb-6">{t.ceP1}</p>
               <ul className="grid grid-cols-1 gap-2 mb-8">
                 {t.ceItems.map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm text-white/60">
-                    <span className="text-[#63C3B5] mt-0.5 flex-shrink-0">→</span>{item}
+                  <li key={item} className="flex items-start gap-3 text-sm text-white">
+                    <span className="text-[#82D5CA] mt-0.5 flex-shrink-0">→</span>{item}
                   </li>
                 ))}
               </ul>
-              <Link href="/products#custom-engineering" className="inline-block px-6 py-3 bg-[#63C3B5] text-black font-semibold rounded hover:bg-[#63C3B5]/90 transition-colors">
+              <Link href="/products#custom-engineering" className="inline-block px-6 py-3 bg-[#82D5CA] text-black font-semibold rounded hover:bg-[#82D5CA]/90 transition-colors">
                 {t.ceCta}
               </Link>
             </div>
             <div className="relative h-72 lg:h-96 rounded-lg overflow-hidden border border-white/10">
-              <Image src="/assets/lab/lab-electronics.jpg" alt="Custom Engineering" fill className="object-cover opacity-80" />
+              <Image src="/assets/products/industrial/custom-engineering-johny-512.png" alt="Custom Engineering" fill className="object-cover object-center opacity-90" />
               <div className="absolute inset-0 bg-gradient-to-tl from-[#18261D]/80 to-transparent" />
               <div className="absolute bottom-4 left-4"><span className="telemetry-badge">{t.labLabel}</span></div>
             </div>
@@ -345,19 +344,19 @@ export default function HomePage() {
           <div className="mb-14">
             <span className="telemetry-badge">{t.capBadge}</span>
             <h2 className="text-3xl lg:text-4xl font-bold mt-4 mb-4">{t.capTitle}</h2>
-            <p className="text-white/50 max-w-xl">{t.capDesc}</p>
+            <p className="text-white max-w-xl">{t.capDesc}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {caps.map((cap) => (
-              <div key={cap.title} className="p-6 border border-white/10 rounded-lg bg-[#1F2019]/50 hover:border-[#63C3B5]/30 transition-colors">
-                <div className="text-2xl text-[#63C3B5] mb-4">{cap.icon}</div>
+              <div key={cap.title} className="p-6 border border-white/10 rounded-lg bg-[#1F2019]/50 hover:border-[#82D5CA]/30 transition-colors">
+                <div className="text-2xl text-[#82D5CA] mb-4">{cap.icon}</div>
                 <h3 className="text-base font-semibold mb-2">{cap.title}</h3>
-                <p className="text-sm text-white/50 leading-relaxed">{cap.desc}</p>
+                <p className="text-sm text-white leading-relaxed">{cap.desc}</p>
               </div>
             ))}
           </div>
           <div className="mt-10 text-center">
-            <Link href="/technologies" className="text-sm text-[#63C3B5] hover:text-white transition-colors">{t.techLink}</Link>
+            <Link href="/technologies" className="text-sm text-white hover:text-white transition-colors">{t.techLink}</Link>
           </div>
         </div>
       </section>
@@ -368,14 +367,14 @@ export default function HomePage() {
           <div className="mb-14">
             <span className="telemetry-badge">{t.procBadge}</span>
             <h2 className="text-3xl lg:text-4xl font-bold mt-4 mb-4">{t.procTitle}</h2>
-            <p className="text-white/50 max-w-xl">{t.procDesc}</p>
+            <p className="text-white max-w-xl">{t.procDesc}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {steps.map((s) => (
               <div key={s.step} className="p-6 border border-white/10 rounded-lg">
-                <div className="text-4xl font-mono font-bold text-[#63C3B5]/20 mb-4">{s.step}</div>
-                <h3 className="text-lg font-semibold text-[#63C3B5] mb-2">{s.title}</h3>
-                <p className="text-sm text-white/55 leading-relaxed">{s.desc}</p>
+                <div className="text-4xl font-mono font-bold text-white mb-4">{s.step}</div>
+                <h3 className="text-lg font-semibold text-[#82D5CA] mb-2">{s.title}</h3>
+                <p className="text-sm text-white leading-relaxed">{s.desc}</p>
               </div>
             ))}
           </div>
@@ -389,24 +388,24 @@ export default function HomePage() {
             <div>
               <span className="telemetry-badge mb-4 inline-block">{t.evBadge}</span>
               <h2 className="text-3xl lg:text-4xl font-bold mb-6">{t.evTitle}</h2>
-              <p className="text-white/60 leading-relaxed mb-6">{t.evDesc}</p>
+              <p className="text-white leading-relaxed mb-6">{t.evDesc}</p>
               <ul className="grid grid-cols-1 gap-2 mb-8">
                 {t.evItems.map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm text-white/60">
-                    <span className="text-[#63C3B5] mt-0.5 flex-shrink-0">→</span>{item}
+                  <li key={item} className="flex items-start gap-3 text-sm text-white">
+                    <span className="text-[#82D5CA] mt-0.5 flex-shrink-0">→</span>{item}
                   </li>
                 ))}
               </ul>
-              <Link href="/about#events" className="inline-flex items-center gap-2 text-sm text-[#63C3B5] hover:text-white transition-colors font-medium">{t.evLink}</Link>
+              <Link href="/about#events" className="inline-flex items-center gap-2 text-sm text-white hover:text-white transition-colors font-medium">{t.evLink}</Link>
             </div>
             <div className="grid grid-cols-2 gap-4">
               {[
                 { title: t.ev1t, desc: t.ev1d }, { title: t.ev2t, desc: t.ev2d },
                 { title: t.ev3t, desc: t.ev3d }, { title: t.ev4t, desc: t.ev4d },
               ].map((card) => (
-                <div key={card.title} className="p-5 border border-white/10 rounded-lg bg-[#1F2019]/50 hover:border-[#63C3B5]/30 transition-colors">
-                  <h4 className="text-sm font-semibold mb-2 text-[#63C3B5]">{card.title}</h4>
-                  <p className="text-xs text-white/50 leading-relaxed">{card.desc}</p>
+                <div key={card.title} className="p-5 border border-white/10 rounded-lg bg-[#1F2019]/50 hover:border-[#82D5CA]/30 transition-colors">
+                  <h4 className="text-sm font-semibold mb-2 text-[#82D5CA]">{card.title}</h4>
+                  <p className="text-xs text-white leading-relaxed">{card.desc}</p>
                 </div>
               ))}
             </div>
@@ -422,7 +421,7 @@ export default function HomePage() {
           <div className="max-w-lg">
             <span className="telemetry-badge mb-4 block w-fit">{t.labCity}</span>
             <h2 className="text-2xl lg:text-3xl font-bold mb-3">{t.labTitle}</h2>
-            <p className="text-white/60 text-sm leading-relaxed">{t.labDesc}</p>
+            <p className="text-white text-sm leading-relaxed">{t.labDesc}</p>
           </div>
         </div>
       </section>
@@ -432,10 +431,10 @@ export default function HomePage() {
         <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
           <span className="telemetry-badge mb-6 inline-block">{t.ctaBadge}</span>
           <h2 className="text-3xl lg:text-4xl font-bold mb-6">{t.ctaTitle}</h2>
-          <p className="text-white/60 leading-relaxed mb-10">{t.ctaDesc}</p>
+          <p className="text-white leading-relaxed mb-10">{t.ctaDesc}</p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/contact" className="px-8 py-4 bg-[#63C3B5] text-black font-semibold rounded hover:bg-[#63C3B5]/90 transition-colors">{t.ctaBtn1}</Link>
-            <Link href="/contact" className="px-8 py-4 border border-white/30 text-white font-semibold rounded hover:border-[#63C3B5]/60 hover:text-[#63C3B5] transition-colors">{t.ctaBtn2}</Link>
+            <Link href="/contact" className="px-8 py-4 bg-[#82D5CA] text-black font-semibold rounded hover:bg-[#82D5CA]/90 transition-colors">{t.ctaBtn1}</Link>
+            <Link href="/contact" className="px-8 py-4 border border-white/30 text-white font-semibold rounded hover:border-[#82D5CA]/60 hover:text-[#82D5CA] transition-colors">{t.ctaBtn2}</Link>
           </div>
         </div>
       </section>

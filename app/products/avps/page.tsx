@@ -60,7 +60,7 @@ export default function AVPSPage() {
             { label: "PROCESS", val: "Modular" },
           ].map((b) => (
             <div key={b.label} className="telemetry-badge flex items-center gap-2">
-              <span className="text-white/50">{b.label}</span>
+              <span className="text-white">{b.label}</span>
               <span>{b.val}</span>
             </div>
           ))}
@@ -68,22 +68,22 @@ export default function AVPSPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pb-16 w-full">
           <div className="max-w-2xl">
-            <nav className="text-xs font-mono text-white/40 mb-6 flex items-center gap-2">
-              <Link href="/products" className="hover:text-[#63C3B5] transition-colors">Products</Link>
+            <nav className="text-xs font-mono text-[#82D5CA]/70 mb-6 flex items-center gap-2">
+              <Link href="/products" className="hover:text-[#82D5CA] transition-colors">Products</Link>
               <span>/</span>
-              <span className="text-[#63C3B5]">AeroVac Precision System</span>
+              <span className="text-white">AeroVac Precision System</span>
             </nav>
             <span className="telemetry-badge mb-4 inline-block">Modular clean & vacuum-compatible workstation</span>
             <h1 className="text-4xl lg:text-5xl font-bold mb-2">AeroVac Precision System</h1>
-            <p className="text-xl font-mono text-[#63C3B5] mb-4">AVPS</p>
-            <p className="text-lg text-white/70 leading-relaxed mb-8">
+            <p className="text-xl font-mono text-white mb-4">AVPS</p>
+            <p className="text-lg text-white leading-relaxed mb-8">
               Modular technological workstation designed for cleaning, rinsing, drying, assembly, lubrication, inspection and packaging of precision bearings and similar mechanical components with high cleanliness requirements.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Link href="/contact" className="px-6 py-3 bg-[#63C3B5] text-black font-semibold rounded hover:bg-[#63C3B5]/90 transition-colors">
+              <Link href="/contact" className="px-6 py-3 bg-[#82D5CA] text-black font-semibold rounded hover:bg-[#82D5CA]/90 transition-colors">
                 Define Your Configuration
               </Link>
-              <Link href="#specs" className="px-6 py-3 border border-white/30 text-white font-semibold rounded hover:border-[#63C3B5]/50 transition-colors">
+              <Link href="#specs" className="px-6 py-3 border border-white/30 text-white font-semibold rounded hover:border-[#82D5CA]/50 transition-colors">
                 Technical Specifications
               </Link>
             </div>
@@ -97,7 +97,7 @@ export default function AVPSPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
               <h2 className="text-2xl font-bold mb-6">Cleanliness Zone Concept</h2>
-              <p className="text-white/65 leading-relaxed mb-8">
+              <p className="text-white leading-relaxed mb-8">
                 AVPS is based on strict spatial and process separation of individual steps according to contamination level and process sensitivity. Progressive reduction of contamination between zones ensures controlled, repeatable and traceable processing.
               </p>
 
@@ -105,23 +105,23 @@ export default function AVPSPage() {
               <div className="space-y-3">
                 {[
                   { zone: "Zone A", iso: "Undefined / ISO 9", regime: "at-rest", desc: "Input and pre-processing area", color: "border-white/20 bg-white/5" },
-                  { zone: "Zone B", iso: "ISO 8", regime: "at-rest", desc: "Intermediate processing zone", color: "border-[#63C3B5]/20 bg-[#63C3B5]/5" },
-                  { zone: "Zone C", iso: "ISO 7–6", regime: "operational", desc: "Clean process zone — assembly, lubrication, inspection", color: "border-[#63C3B5]/40 bg-[#63C3B5]/10" },
-                  { zone: "AVPS-A", iso: "ISO 6–5", regime: "operational / as-built", desc: "Optional local high-cleanliness zone (validation pack)", color: "border-[#63C3B5] bg-[#63C3B5]/15" },
+                  { zone: "Zone B", iso: "ISO 8", regime: "at-rest", desc: "Intermediate processing zone", color: "border-[#82D5CA]/20 bg-[#82D5CA]/5" },
+                  { zone: "Zone C", iso: "ISO 7–6", regime: "operational", desc: "Clean process zone — assembly, lubrication, inspection", color: "border-[#82D5CA]/40 bg-[#82D5CA]/10" },
+                  { zone: "AVPS-A", iso: "ISO 6–5", regime: "operational / as-built", desc: "Optional local high-cleanliness zone (validation pack)", color: "border-[#82D5CA] bg-[#82D5CA]/15" },
                 ].map((z) => (
                   <div key={z.zone} className={`p-4 border rounded-lg ${z.color}`}>
                     <div className="flex items-center justify-between mb-1">
                       <span className="font-mono text-sm font-bold">{z.zone}</span>
                       <span className="telemetry-badge">{z.iso}</span>
                     </div>
-                    <div className="text-xs text-white/40 font-mono mb-2">{z.regime}</div>
-                    <p className="text-sm text-white/60">{z.desc}</p>
+                    <div className="text-xs text-white font-mono mb-2">{z.regime}</div>
+                    <p className="text-sm text-white">{z.desc}</p>
                   </div>
                 ))}
               </div>
 
               <div className="mt-6 p-4 border border-white/10 rounded bg-[#1F2019]">
-                <p className="text-xs text-white/45 leading-relaxed">
+                <p className="text-xs text-white leading-relaxed">
                   Higher cleanliness levels such as ISO 7 to ISO 5 are achieved locally in laminar flow areas, not across the whole internal volume of the device. ISO classes must always be connected to measurement regime, system configuration, validation scope and operating mode.
                 </p>
               </div>
@@ -129,23 +129,23 @@ export default function AVPSPage() {
 
             <div>
               <h2 className="text-2xl font-bold mb-6">Process Modules</h2>
-              <p className="text-white/65 leading-relaxed mb-6">
+              <p className="text-white leading-relaxed mb-6">
                 The AVPS workstation supports a configurable set of process modules, allowing the workflow to be adapted to the specific component type, cleanliness requirements and validation needs.
               </p>
               <div className="grid grid-cols-2 gap-2">
                 {processModules.map((mod) => (
-                  <div key={mod} className="flex items-start gap-2 p-3 border border-white/10 rounded bg-[#1F2019]/50 text-xs text-white/60">
-                    <span className="text-[#63C3B5] flex-shrink-0 mt-0.5">◎</span>
+                  <div key={mod} className="flex items-start gap-2 p-3 border border-white/10 rounded bg-[#1F2019]/50 text-xs text-white">
+                    <span className="text-white flex-shrink-0 mt-0.5">◎</span>
                     {mod}
                   </div>
                 ))}
               </div>
 
               <div className="mt-6">
-                <h3 className="text-sm font-mono text-[#63C3B5] mb-3 tracking-widest uppercase">Compatible Components</h3>
+                <h3 className="text-sm font-mono text-white mb-3 tracking-widest uppercase">Compatible Components</h3>
                 <div className="flex flex-wrap gap-2">
                   {["Precision bearings", "Vacuum-compatible mechanical parts", "Aerospace mechanical components", "Optical assemblies", "Selected PCB assemblies", "Precision mechanical parts"].map((c) => (
-                    <span key={c} className="px-3 py-1.5 bg-[#1F2019] border border-white/10 rounded text-xs text-white/60">{c}</span>
+                    <span key={c} className="px-3 py-1.5 bg-[#1F2019] border border-white/10 rounded text-xs text-white">{c}</span>
                   ))}
                 </div>
               </div>
@@ -177,7 +177,7 @@ export default function AVPSPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-4xl">
             <h2 className="text-xl font-bold mb-2">ISO 14644-1 Particle Limits</h2>
-            <p className="text-sm text-white/50 mb-6">Maximum particle concentration per m³ of air — for reference only. Actual cleanliness depends on system configuration, validation scope and operating mode.</p>
+            <p className="text-sm text-white mb-6">Maximum particle concentration per m³ of air — for reference only. Actual cleanliness depends on system configuration, validation scope and operating mode.</p>
             <div className="border border-white/10 rounded-lg overflow-x-auto">
               <table className="tech-table min-w-full">
                 <thead>
@@ -206,7 +206,7 @@ export default function AVPSPage() {
                 </tbody>
               </table>
             </div>
-            <p className="text-xs text-white/35 mt-3 font-mono">ISO 9 ≈ normal indoor environment. Not used as a strict cleanroom target. Particle limits are stated as maximums per m³.</p>
+            <p className="text-xs text-white mt-3 font-mono">ISO 9 ≈ normal indoor environment. Not used as a strict cleanroom target. Particle limits are stated as maximums per m³.</p>
           </div>
         </div>
       </section>
@@ -237,7 +237,7 @@ export default function AVPSPage() {
                 </tbody>
               </table>
             </div>
-            <p className="text-xs text-white/35 mt-3 font-mono">Parameters may vary depending on configuration, customer requirements and validation scope.</p>
+            <p className="text-xs text-white mt-3 font-mono">Parameters may vary depending on configuration, customer requirements and validation scope.</p>
           </div>
         </div>
       </section>
@@ -246,14 +246,14 @@ export default function AVPSPage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 max-w-2xl">
           <h2 className="text-2xl lg:text-3xl font-bold mb-4">Define an AVPS configuration for your process</h2>
-          <p className="text-white/60 leading-relaxed mb-8">
+          <p className="text-white leading-relaxed mb-8">
             Define an AVPS configuration around your cleanliness class, process flow, component type and validation requirements. We will help design a workstation that fits your specific contamination limits and operational workflow.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Link href="/contact" className="px-6 py-3 bg-[#63C3B5] text-black font-semibold rounded hover:bg-[#63C3B5]/90 transition-colors">
+            <Link href="/contact" className="px-6 py-3 bg-[#82D5CA] text-black font-semibold rounded hover:bg-[#82D5CA]/90 transition-colors">
               Discuss Your Process
             </Link>
-            <Link href="/products/cryolyze" className="px-6 py-3 border border-white/30 text-white font-semibold rounded hover:border-[#63C3B5]/50 transition-colors">
+            <Link href="/products/cryolyze" className="px-6 py-3 border border-white/30 text-white font-semibold rounded hover:border-[#82D5CA]/50 transition-colors">
               Also see: CryoLyze
             </Link>
           </div>

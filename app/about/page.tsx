@@ -155,7 +155,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <span className="telemetry-badge mb-4 inline-block">{t.heroBadge}</span>
           <h1 className="text-4xl lg:text-5xl font-bold mb-4 max-w-3xl">{t.h1}</h1>
-          <p className="text-lg text-white/60 max-w-2xl">{t.heroSub}</p>
+          <p className="text-lg text-white max-w-2xl">{t.heroSub}</p>
         </div>
       </section>
 
@@ -165,7 +165,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
               <h2 className="text-2xl font-bold mb-6">{t.whoH2}</h2>
-              <div className="space-y-4 text-white/65 leading-relaxed">
+              <div className="space-y-4 text-white leading-relaxed">
                 <p>{t.whoP1}</p>
                 <p>{t.whoP2}</p>
                 <p>{t.whoP3}</p>
@@ -190,14 +190,14 @@ export default function AboutPage() {
           <div className="mb-14">
             <span className="telemetry-badge">{t.skillsBadge}</span>
             <h2 className="text-3xl lg:text-4xl font-bold mt-4 mb-4">{t.skillsH2}</h2>
-            <p className="text-white/50 max-w-xl">{t.skillsP}</p>
+            <p className="text-white max-w-xl">{t.skillsP}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             {t.skills.map((skill) => (
-              <div key={skill.title} className="p-6 border border-white/10 rounded-lg bg-[#18261D]/60 hover:border-[#63C3B5]/25 transition-colors">
-                <div className="text-xl text-[#63C3B5] mb-4">{skill.icon}</div>
+              <div key={skill.title} className="p-6 border border-white/10 rounded-lg bg-[#18261D]/60 hover:border-[#82D5CA]/25 transition-colors">
+                <div className="text-xl text-white mb-4">{skill.icon}</div>
                 <h3 className="text-sm font-semibold mb-3 leading-snug">{skill.title}</h3>
-                <p className="text-xs text-white/45 leading-relaxed">{skill.desc}</p>
+                <p className="text-xs text-white leading-relaxed">{skill.desc}</p>
               </div>
             ))}
           </div>
@@ -210,10 +210,10 @@ export default function AboutPage() {
           <h2 className="text-2xl font-bold mb-10">{t.whatH2}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {t.whatItems.map((item) => (
-              <Link key={item.href} href={item.href} className="group p-6 border border-white/10 rounded-lg hover:border-[#63C3B5]/30 transition-colors">
-                <div className="text-2xl text-[#63C3B5] mb-4">{item.icon}</div>
-                <h3 className="font-semibold mb-2 group-hover:text-[#63C3B5] transition-colors">{item.title}</h3>
-                <p className="text-sm text-white/55 leading-relaxed">{item.desc}</p>
+              <Link key={item.href} href={item.href} className="group p-6 border border-white/10 rounded-lg hover:border-[#82D5CA]/30 transition-colors">
+                <div className="text-2xl text-[#82D5CA] mb-4">{item.icon}</div>
+                <h3 className="font-semibold mb-2 group-hover:text-[#82D5CA] transition-colors">{item.title}</h3>
+                <p className="text-sm text-white leading-relaxed">{item.desc}</p>
               </Link>
             ))}
           </div>
@@ -226,7 +226,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div className="max-w-2xl">
               <h2 className="text-2xl font-bold mb-6">{t.philH2}</h2>
-              <div className="space-y-4 text-white/65 leading-relaxed">
+              <div className="space-y-4 text-white leading-relaxed">
                 <p>{t.philP1}</p>
                 <p>{t.philP2}</p>
                 <p>{t.philP3}</p>
@@ -235,8 +235,8 @@ export default function AboutPage() {
             <div className="grid grid-cols-2 gap-4">
               {t.philPillars.map((item) => (
                 <div key={item.val} className="p-5 border border-white/10 rounded-lg">
-                  <div className="text-sm font-semibold text-[#63C3B5] mb-2">{item.val}</div>
-                  <div className="text-xs text-white/45 leading-relaxed">{item.desc}</div>
+                  <div className="text-sm font-semibold text-white mb-2">{item.val}</div>
+                  <div className="text-xs text-white leading-relaxed">{item.desc}</div>
                 </div>
               ))}
             </div>
@@ -247,7 +247,7 @@ export default function AboutPage() {
       {/* ── HARDWARE GALLERY ── */}
       <section className="py-14">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <h2 className="text-sm font-mono text-[#63C3B5] mb-6 tracking-widest uppercase">{t.galleryLabel}</h2>
+          <h2 className="text-sm font-mono text-white mb-6 tracking-widest uppercase">{t.galleryLabel}</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {galleryImages.map((img, i) => (
               <div key={i} className={`relative aspect-square rounded-lg overflow-hidden border border-white/10 group ${img.bg}`}>
@@ -264,11 +264,11 @@ export default function AboutPage() {
           <div className="mb-12">
             <span className="telemetry-badge">{t.eventsBadge}</span>
             <h2 className="text-2xl lg:text-3xl font-bold mt-4 mb-3">{t.eventsH2}</h2>
-            <p className="text-white/50 text-sm max-w-xl">{t.eventsP}</p>
+            <p className="text-white text-sm max-w-xl">{t.eventsP}</p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
             {t.events.map((event) => (
-              <div key={event.name} className="group border border-white/10 rounded-lg overflow-hidden bg-[#18261D]/60 hover:border-[#63C3B5]/25 transition-colors">
+              <div key={event.name} className="group border border-white/10 rounded-lg overflow-hidden bg-[#18261D]/60 hover:border-[#82D5CA]/25 transition-colors">
                 <div className="relative h-36 overflow-hidden">
                   <Image src={event.image} alt={event.name} fill className="object-cover opacity-55 group-hover:opacity-70 group-hover:scale-105 transition-all duration-500" />
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#18261D]" />
@@ -278,11 +278,11 @@ export default function AboutPage() {
                 </div>
                 <div className="p-5">
                   <h3 className="text-sm font-semibold leading-snug mb-1">{event.name}</h3>
-                  <div className="text-[11px] font-mono text-white/35 mb-3">{event.date} · {event.location}</div>
-                  <p className="text-xs text-white/50 leading-relaxed mb-3">{event.desc}</p>
+                  <div className="text-[11px] font-mono text-white mb-3">{event.date} · {event.location}</div>
+                  <p className="text-xs text-white leading-relaxed mb-3">{event.desc}</p>
                   <div className="flex flex-wrap gap-1.5">
                     {event.technologies.map((tech) => (
-                      <span key={tech} className="text-[10px] font-mono px-2 py-0.5 border border-[#63C3B5]/20 text-[#63C3B5]/60 rounded">
+                      <span key={tech} className="text-[10px] font-mono px-2 py-0.5 border border-[#82D5CA]/20 text-white rounded">
                         {tech}
                       </span>
                     ))}
@@ -300,23 +300,23 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
               <h2 className="text-2xl font-bold mb-6">{t.brnoH2}</h2>
-              <div className="space-y-4 text-white/65 leading-relaxed">
+              <div className="space-y-4 text-white leading-relaxed">
                 <p>{t.brnoP1}</p>
                 <p>{t.brnoP2}</p>
               </div>
               <div className="mt-8 space-y-1">
-                <p className="text-xs font-mono text-[#63C3B5]">{t.brnoAddrLabel}</p>
-                <p className="text-white/70 text-sm">Hikade Technologies s.r.o.</p>
-                <p className="text-white/50 text-sm">Purkyňova 2836/79A<br />612 00 Brno, Czech Republic</p>
+                <p className="text-xs font-mono text-[#82D5CA]">{t.brnoAddrLabel}</p>
+                <p className="text-white text-sm">Hikade Technologies s.r.o.</p>
+                <p className="text-white text-sm">Purkyňova 2836/79A<br />612 00 Brno, Czech Republic</p>
               </div>
             </div>
             <div>
               <h2 className="text-2xl font-bold mb-6">{t.esaH2}</h2>
-              <p className="text-white/65 leading-relaxed mb-4">{t.esaP1}</p>
-              <p className="text-white/65 leading-relaxed mb-6">{t.esaP2}</p>
-              <div className="p-4 border border-[#63C3B5]/20 rounded bg-[#63C3B5]/5">
-                <p className="text-xs text-white/50 leading-relaxed">
-                  <span className="text-[#63C3B5] font-semibold">ESA BIC Prague</span> — {t.esaNote}
+              <p className="text-white leading-relaxed mb-4">{t.esaP1}</p>
+              <p className="text-white leading-relaxed mb-6">{t.esaP2}</p>
+              <div className="p-4 border border-[#82D5CA]/20 rounded bg-[#82D5CA]/5">
+                <p className="text-xs text-white leading-relaxed">
+                  <span className="text-white font-semibold">ESA BIC Prague</span> — {t.esaNote}
                 </p>
               </div>
             </div>
@@ -328,12 +328,12 @@ export default function AboutPage() {
       <section className="py-20 bg-[#1F2019]">
         <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-2xl lg:text-3xl font-bold mb-4">{t.ctaH2}</h2>
-          <p className="text-white/60 leading-relaxed mb-8">{t.ctaP}</p>
+          <p className="text-white leading-relaxed mb-8">{t.ctaP}</p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/contact" className="px-8 py-4 bg-[#63C3B5] text-black font-semibold rounded hover:bg-[#63C3B5]/90 transition-colors">
+            <Link href="/contact" className="px-8 py-4 bg-[#82D5CA] text-black font-semibold rounded hover:bg-[#82D5CA]/90 transition-colors">
               {t.ctaBtn1}
             </Link>
-            <Link href="/positioning-systems" className="px-8 py-4 border border-white/30 text-white font-semibold rounded hover:border-[#63C3B5]/50 transition-colors">
+            <Link href="/positioning-systems" className="px-8 py-4 border border-white/30 text-white font-semibold rounded hover:border-[#82D5CA]/50 transition-colors">
               {t.ctaBtn2}
             </Link>
           </div>

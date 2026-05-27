@@ -22,19 +22,19 @@ export default function CryolyzePage() {
       <section className="py-32 bg-[#1F2019] tech-grid">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-2xl">
-            <nav className="text-xs font-mono text-white/40 mb-6 flex items-center gap-2">
-              <Link href="/products" className="hover:text-[#63C3B5] transition-colors">Products</Link>
+            <nav className="text-xs font-mono text-[#82D5CA]/70 mb-6 flex items-center gap-2">
+              <Link href="/products" className="hover:text-[#82D5CA] transition-colors">Products</Link>
               <span>/</span>
-              <span className="text-[#63C3B5]">CryoLyze</span>
+              <span className="text-white">CryoLyze</span>
             </nav>
             <span className="telemetry-badge mb-4 inline-block">Laboratory freeze-drying technology</span>
             <h1 className="text-4xl lg:text-5xl font-bold mb-2">CryoLyze</h1>
-            <p className="text-xl font-mono text-[#63C3B5] mb-4">CRYO-LYO25</p>
-            <p className="text-lg text-white/70 leading-relaxed mb-8">
+            <p className="text-xl font-mono text-white mb-4">CRYO-LYO25</p>
+            <p className="text-lg text-white leading-relaxed mb-8">
               Laboratory freeze-drying / lyophilization technology designed to support controlled processing of sensitive biological, research and technical samples with preservation of sample quality.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Link href="/contact" className="px-6 py-3 bg-[#63C3B5] text-black font-semibold rounded hover:bg-[#63C3B5]/90 transition-colors">
+              <Link href="/contact" className="px-6 py-3 bg-[#82D5CA] text-black font-semibold rounded hover:bg-[#82D5CA]/90 transition-colors">
                 Discuss Your Process
               </Link>
             </div>
@@ -47,7 +47,7 @@ export default function CryolyzePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
               <h2 className="text-2xl font-bold mb-6">Controlled Freeze-Drying for Sensitive Samples</h2>
-              <div className="space-y-4 text-white/65 leading-relaxed">
+              <div className="space-y-4 text-white leading-relaxed">
                 <p>
                   CryoLyze is a laboratory freeze-drying / lyophilization technology developed for controlled processing of sensitive biological, research and technical samples. The system is intended to support preservation of sample quality and biological activity where relevant — depending on process validation.
                 </p>
@@ -61,7 +61,7 @@ export default function CryolyzePage() {
 
               {/* Process phases diagram */}
               <div className="mt-8">
-                <h3 className="text-sm font-mono text-[#63C3B5] mb-4 tracking-widest uppercase">Process Phases</h3>
+                <h3 className="text-sm font-mono text-white mb-4 tracking-widest uppercase">Process Phases</h3>
                 <div className="flex items-center gap-0">
                   {[
                     { phase: "01", title: "Freezing", desc: "LN2-based cooling" },
@@ -69,33 +69,33 @@ export default function CryolyzePage() {
                     { phase: "03", title: "Secondary Drying", desc: "Desorption phase" },
                   ].map((p, i) => (
                     <div key={p.phase} className="flex items-center flex-1">
-                      <div className="flex-1 p-4 border border-[#63C3B5]/20 rounded-lg bg-[#63C3B5]/5">
-                        <div className="text-xs font-mono text-[#63C3B5] mb-1">{p.phase}</div>
+                      <div className="flex-1 p-4 border border-[#82D5CA]/20 rounded-lg bg-[#82D5CA]/5">
+                        <div className="text-xs font-mono text-[#82D5CA] mb-1">{p.phase}</div>
                         <div className="font-semibold text-sm">{p.title}</div>
-                        <div className="text-xs text-white/40">{p.desc}</div>
+                        <div className="text-xs text-white">{p.desc}</div>
                       </div>
-                      {i < 2 && <div className="w-4 h-px bg-[#63C3B5]/30 flex-shrink-0" />}
+                      {i < 2 && <div className="w-4 h-px bg-[#82D5CA]/30 flex-shrink-0" />}
                     </div>
                   ))}
                 </div>
               </div>
 
               <div className="mt-6 p-4 border border-white/10 rounded bg-[#1F2019]">
-                <p className="text-xs text-white/45 leading-relaxed">
-                  <span className="text-white/60 font-mono">NOTE:</span> CryoLyze is a development platform. It is not presented as a medical device, GMP-certified system or pharmaceutical manufacturing equipment. Claims about sample preservation depend on process validation. Careful, process-specific validation is required for any regulated application.
+                <p className="text-xs text-white leading-relaxed">
+                  <span className="text-white font-mono">NOTE:</span> CryoLyze is a development platform. It is not presented as a medical device, GMP-certified system or pharmaceutical manufacturing equipment. Claims about sample preservation depend on process validation. Careful, process-specific validation is required for any regulated application.
                 </p>
               </div>
             </div>
 
             <div>
-              <h3 className="text-sm font-mono text-[#63C3B5] mb-4 tracking-widest uppercase">Target Applications</h3>
+              <h3 className="text-sm font-mono text-white mb-4 tracking-widest uppercase">Target Applications</h3>
               <div className="flex flex-wrap gap-2 mb-8">
                 {["Biological samples", "Pharmaceutical R&D", "Laboratory development", "Sensitive material processing", "Research institutions", "Process development", "Lyophilization workflow development"].map((a) => (
-                  <span key={a} className="px-3 py-1.5 bg-[#1F2019] border border-white/10 rounded text-xs text-white/60">{a}</span>
+                  <span key={a} className="px-3 py-1.5 bg-[#1F2019] border border-white/10 rounded text-xs text-white">{a}</span>
                 ))}
               </div>
 
-              <h3 className="text-sm font-mono text-[#63C3B5] mb-4 tracking-widest uppercase">Technical Specifications</h3>
+              <h3 className="text-sm font-mono text-white mb-4 tracking-widest uppercase">Technical Specifications</h3>
               <div className="border border-white/10 rounded-lg overflow-hidden">
                 <table className="tech-table">
                   <thead>
@@ -116,15 +116,15 @@ export default function CryolyzePage() {
                   </tbody>
                 </table>
               </div>
-              <p className="text-xs text-white/35 mt-3 font-mono">Parameters may vary depending on configuration and validation scope.</p>
+              <p className="text-xs text-white mt-3 font-mono">Parameters may vary depending on configuration and validation scope.</p>
 
               {/* AVPS connection */}
-              <div className="mt-6 p-4 border border-[#63C3B5]/20 rounded bg-[#63C3B5]/5">
-                <p className="text-xs text-[#63C3B5] font-mono mb-1">AVPS INTEGRATION</p>
-                <p className="text-xs text-white/50">
+              <div className="mt-6 p-4 border border-[#82D5CA]/20 rounded bg-[#82D5CA]/5">
+                <p className="text-xs text-white font-mono mb-1">AVPS INTEGRATION</p>
+                <p className="text-xs text-white">
                   CryoLyze can be connected to the AeroVac Precision System (AVPS) to enable post-lyophilization clean handling, inspection and packaging in a controlled environment.
                 </p>
-                <Link href="/products/avps" className="text-xs text-[#63C3B5] mt-2 inline-block hover:underline">
+                <Link href="/products/avps" className="text-xs text-white mt-2 inline-block hover:underline">
                   Learn about AVPS →
                 </Link>
               </div>
@@ -136,12 +136,12 @@ export default function CryolyzePage() {
       <section className="py-20 bg-[#1F2019]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 max-w-2xl">
           <h2 className="text-2xl font-bold mb-4">Discuss your sample type and process requirements</h2>
-          <p className="text-white/60 leading-relaxed mb-8">
+          <p className="text-white leading-relaxed mb-8">
             Discuss your sample type, process requirements and post-lyophilization handling workflow. We will help define a freeze-drying process configuration and assess possible integration with AVPS.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Link href="/contact" className="px-6 py-3 bg-[#63C3B5] text-black font-semibold rounded hover:bg-[#63C3B5]/90 transition-colors">Start Discussion</Link>
-            <Link href="/products/avps" className="px-6 py-3 border border-white/30 text-white font-semibold rounded hover:border-[#63C3B5]/50 transition-colors">Also see: AVPS</Link>
+            <Link href="/contact" className="px-6 py-3 bg-[#82D5CA] text-black font-semibold rounded hover:bg-[#82D5CA]/90 transition-colors">Start Discussion</Link>
+            <Link href="/products/avps" className="px-6 py-3 border border-white/30 text-white font-semibold rounded hover:border-[#82D5CA]/50 transition-colors">Also see: AVPS</Link>
           </div>
         </div>
       </section>

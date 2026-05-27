@@ -45,10 +45,10 @@ const T = {
         subtitle: "High-Precision HAPS Gimbal",
         desc: "Configurable two-axis gimbal platform for demanding HAPS and stratospheric payloads. Designed for optical, antenna and sensor payloads requiring precise pointing, robust mechanical design and customer-specific integration.",
         status: "Development / TRL ~5",
-        statusColor: "text-[#63C3B5]",
+        statusColor: "text-[#82D5CA]",
         specs: [
-          { label: "Payload capacity", val: "up to ~18 kg" },
-          { label: "System mass", val: "~8 kg" },
+          { label: "Payload capacity", val: "up to ~15 kg" },
+          { label: "System mass", val: "6.5 kg" },
           { label: "Axes", val: "2-axis (AZ/EL)" },
           { label: "Nominal power", val: "200–400 W" },
         ],
@@ -71,7 +71,7 @@ const T = {
         subtitle: "Ultra-Lightweight Concept",
         desc: "Early-stage development direction targeting ultra-lightweight two-axis pointing for very small payloads, micro-balloon platforms and applications with single-digit watt power budgets.",
         status: "Concept / early development",
-        statusColor: "text-white/40",
+        statusColor: "text-white",
         specs: [
           { label: "Target system mass", val: "~400 g" },
           { label: "Supply voltage", val: "28 V (concept)" },
@@ -166,10 +166,10 @@ const T = {
         subtitle: "Vysoce přesný HAPS Gimbal",
         desc: "Konfigurovatelná dvouosá gimbalová platforma pro náročné HAPS a stratosferické payloady. Navržena pro optické, anténní a senzorové payloady vyžadující přesné polohování, robustní mechanickou konstrukci a zákaznicky specifickou integraci.",
         status: "Vývoj / TRL ~5",
-        statusColor: "text-[#63C3B5]",
+        statusColor: "text-[#82D5CA]",
         specs: [
-          { label: "Nosnost payloadu", val: "až ~18 kg" },
-          { label: "Hmotnost systému", val: "~8 kg" },
+          { label: "Nosnost payloadu", val: "až ~15 kg" },
+          { label: "Hmotnost systému", val: "6.5 kg" },
           { label: "Osy", val: "2-osý (AZ/EL)" },
           { label: "Jm. příkon", val: "200–400 W" },
         ],
@@ -192,7 +192,7 @@ const T = {
         subtitle: "Ultra-lehký koncept",
         desc: "Raně vývojový směr zaměřený na ultra-lehké dvouosé polohování pro velmi malé payloady, mikrobalonové platformy a aplikace s výkonovým rozpočtem v jednotkách wattů.",
         status: "Koncept / raný vývoj",
-        statusColor: "text-white/40",
+        statusColor: "text-white",
         specs: [
           { label: "Cíl. hmotnost syst.", val: "~400 g" },
           { label: "Napájecí napětí", val: "28 V (koncept)" },
@@ -268,29 +268,29 @@ export default function PositioningSystemsPage() {
           <Image src="/assets/hero/patron-atmosphere.jpg" alt="Stratospheric Positioning" fill className="object-cover opacity-25" priority />
           <div className="absolute inset-0 bg-gradient-to-b from-[#18261D]/70 via-[#18261D]/50 to-[#18261D]" />
         </div>
-        <div className="absolute top-1/3 right-0 w-40 h-px bg-gradient-to-l from-transparent to-[#63C3B5]/30 z-10" />
-        <div className="absolute bottom-1/3 left-0 w-24 h-px bg-gradient-to-r from-transparent to-[#63C3B5]/20 z-10" />
+        <div className="absolute top-1/3 right-0 w-40 h-px bg-gradient-to-l from-transparent to-[#82D5CA]/30 z-10" />
+        <div className="absolute bottom-1/3 left-0 w-24 h-px bg-gradient-to-r from-transparent to-[#82D5CA]/20 z-10" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-24">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 mb-6">
-              <span className="w-2 h-2 rounded-full bg-[#63C3B5] pulse-mint" />
+              <span className="w-2 h-2 rounded-full bg-[#82D5CA] pulse-mint" />
               <span className="telemetry-badge">{t.heroBadge}</span>
             </div>
             <h1 className="text-4xl lg:text-6xl font-bold leading-tight tracking-tight mb-6">
               {t.h1a}<br />
-              <span className="text-[#63C3B5]">{t.h1b}</span>
+              <span className="text-white">{t.h1b}</span>
             </h1>
-            <p className="text-lg text-white/70 leading-relaxed mb-4">{t.heroP1}</p>
-            <p className="text-base text-white/50 leading-relaxed mb-10">{t.heroP2}</p>
+            <p className="text-lg text-white leading-relaxed mb-4">{t.heroP1}</p>
+            <p className="text-base text-white leading-relaxed mb-10">{t.heroP2}</p>
             <div className="flex flex-wrap gap-4">
-              <Link href="/products/patron" className="px-6 py-3 bg-[#63C3B5] text-black font-semibold rounded hover:bg-[#63C3B5]/90 transition-colors">
+              <Link href="/products/patron" className="px-6 py-3 bg-[#82D5CA] text-black font-semibold rounded hover:bg-[#82D5CA]/90 transition-colors">
                 {t.cta1}
               </Link>
-              <Link href="/products/beetle" className="px-6 py-3 border border-white/30 text-white font-semibold rounded hover:border-[#63C3B5]/60 hover:text-[#63C3B5] transition-colors">
+              <Link href="/products/beetle" className="px-6 py-3 border border-white/30 text-white font-semibold rounded hover:border-[#82D5CA]/60 hover:text-[#82D5CA] transition-colors">
                 {t.cta2}
               </Link>
-              <Link href="/contact" className="px-6 py-3 border border-white/20 text-white/60 font-semibold rounded hover:border-white/40 hover:text-white transition-colors">
+              <Link href="/contact" className="px-6 py-3 border border-white/20 text-white font-semibold rounded hover:border-white/40 hover:text-white transition-colors">
                 {t.cta3}
               </Link>
             </div>
@@ -299,8 +299,8 @@ export default function PositioningSystemsPage() {
           <div className="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-6 border-t border-white/10 pt-8 max-w-3xl">
             {t.stats.map((s) => (
               <div key={s.val}>
-                <div className="text-xl font-bold font-mono text-[#63C3B5]">{s.val}</div>
-                <div className="text-xs text-white/40 mt-1">{s.label}</div>
+                <div className="text-xl font-bold font-mono text-white">{s.val}</div>
+                <div className="text-xs text-white mt-1">{s.label}</div>
               </div>
             ))}
           </div>
@@ -314,9 +314,9 @@ export default function PositioningSystemsPage() {
             <div>
               <span className="telemetry-badge mb-4 inline-block">{t.whyBadge}</span>
               <h2 className="text-3xl lg:text-4xl font-bold mb-6">{t.whyH2}</h2>
-              <p className="text-white/60 leading-relaxed mb-4">{t.whyP1}</p>
-              <p className="text-white/60 leading-relaxed mb-4">{t.whyP2}</p>
-              <p className="text-white/60 leading-relaxed">{t.whyP3}</p>
+              <p className="text-white leading-relaxed mb-4">{t.whyP1}</p>
+              <p className="text-white leading-relaxed mb-4">{t.whyP2}</p>
+              <p className="text-white leading-relaxed">{t.whyP3}</p>
             </div>
             <div className="relative h-72 lg:h-full min-h-64 rounded-lg overflow-hidden border border-white/10">
               <Image src="/assets/products/patron/patron-atmosphere.jpg" alt="PATRON in atmosphere" fill className="object-cover opacity-80" />
@@ -335,14 +335,14 @@ export default function PositioningSystemsPage() {
           <div className="mb-14">
             <span className="telemetry-badge">{t.useBadge}</span>
             <h2 className="text-3xl lg:text-4xl font-bold mt-4 mb-4">{t.useH2}</h2>
-            <p className="text-white/50 max-w-xl">{t.useP}</p>
+            <p className="text-white max-w-xl">{t.useP}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {t.useCases.map((uc) => (
-              <div key={uc.title} className="p-8 border border-white/10 rounded-lg bg-[#1F2019]/50 hover:border-[#63C3B5]/30 transition-colors">
-                <div className="w-10 h-10 border border-[#63C3B5]/30 rounded flex items-center justify-center text-[#63C3B5] text-lg mb-5">{uc.icon}</div>
+              <div key={uc.title} className="p-8 border border-white/10 rounded-lg bg-[#1F2019]/50 hover:border-[#82D5CA]/30 transition-colors">
+                <div className="w-10 h-10 border border-[#82D5CA]/30 rounded flex items-center justify-center text-white text-lg mb-5">{uc.icon}</div>
                 <h3 className="text-lg font-semibold mb-3">{uc.title}</h3>
-                <p className="text-sm text-white/55 leading-relaxed">{uc.desc}</p>
+                <p className="text-sm text-white leading-relaxed">{uc.desc}</p>
               </div>
             ))}
           </div>
@@ -355,11 +355,11 @@ export default function PositioningSystemsPage() {
           <div className="mb-14">
             <span className="telemetry-badge">{t.gimbalBadge}</span>
             <h2 className="text-3xl lg:text-4xl font-bold mt-4 mb-4">{t.gimbalH2}</h2>
-            <p className="text-white/50 max-w-xl">{t.gimbalP}</p>
+            <p className="text-white max-w-xl">{t.gimbalP}</p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {t.gimbals.map((g, i) => (
-              <div key={g.name} className="group flex flex-col border border-white/10 rounded-lg overflow-hidden bg-[#18261D]/70 hover:border-[#63C3B5]/40 transition-colors">
+              <div key={g.name} className="group flex flex-col border border-white/10 rounded-lg overflow-hidden bg-[#18261D]/70 hover:border-[#82D5CA]/40 transition-colors">
                 <div className="relative h-52 overflow-hidden bg-[#3C271E]/20">
                   <Image src={gimbalImages[i]} alt={g.name} fill className="object-contain p-6 group-hover:scale-105 transition-transform duration-500" />
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#18261D]/60" />
@@ -367,23 +367,23 @@ export default function PositioningSystemsPage() {
                 <div className="p-6 flex flex-col flex-1">
                   <div className="flex items-start justify-between mb-2">
                     <div>
-                      <h3 className="text-2xl font-bold group-hover:text-[#63C3B5] transition-colors">{g.name}</h3>
-                      <p className="text-xs text-white/40">{g.subtitle}</p>
+                      <h3 className="text-2xl font-bold group-hover:text-[#82D5CA] transition-colors">{g.name}</h3>
+                      <p className="text-xs text-white">{g.subtitle}</p>
                     </div>
                     <span className={`text-xs font-mono mt-1 ${g.statusColor}`}>●</span>
                   </div>
-                  <p className="text-sm text-white/55 leading-relaxed mb-5 flex-1">{g.desc}</p>
+                  <p className="text-sm text-white leading-relaxed mb-5 flex-1">{g.desc}</p>
                   <div className="space-y-2 mb-5">
                     {g.specs.map((spec) => (
                       <div key={spec.label} className="flex items-center justify-between text-xs border-b border-white/5 pb-2">
-                        <span className="text-white/40 font-mono uppercase">{spec.label}</span>
-                        <span className="font-semibold text-white/80">{spec.val}</span>
+                        <span className="text-white font-mono uppercase">{spec.label}</span>
+                        <span className="font-semibold text-white">{spec.val}</span>
                       </div>
                     ))}
                   </div>
                   <div className="flex items-center justify-between text-xs">
                     <span className={`font-mono ${g.statusColor}`}>{g.status}</span>
-                    <Link href={gimbalHrefs[i]} className="text-[#63C3B5] hover:text-white transition-colors">
+                    <Link href={gimbalHrefs[i]} className="text-white hover:text-white transition-colors">
                       {t.learnMore}
                     </Link>
                   </div>
@@ -400,14 +400,14 @@ export default function PositioningSystemsPage() {
           <div className="mb-14">
             <span className="telemetry-badge">{t.challengesBadge}</span>
             <h2 className="text-3xl lg:text-4xl font-bold mt-4 mb-4">{t.challengesH2}</h2>
-            <p className="text-white/50 max-w-xl">{t.challengesP}</p>
+            <p className="text-white max-w-xl">{t.challengesP}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {t.challenges.map((c, i) => (
-              <div key={c.title} className="p-6 border border-white/10 rounded-lg bg-[#1F2019]/50 hover:border-[#63C3B5]/20 transition-colors">
-                <div className="text-xs font-mono text-[#63C3B5]/50 mb-2">{String(i + 1).padStart(2, "0")}</div>
-                <h3 className="text-sm font-semibold mb-2 text-white/90">{c.title}</h3>
-                <p className="text-xs text-white/45 leading-relaxed">{c.desc}</p>
+              <div key={c.title} className="p-6 border border-white/10 rounded-lg bg-[#1F2019]/50 hover:border-[#82D5CA]/20 transition-colors">
+                <div className="text-xs font-mono text-[#82D5CA]/70 mb-2">{String(i + 1).padStart(2, "0")}</div>
+                <h3 className="text-sm font-semibold mb-2 text-[#82D5CA]/90">{c.title}</h3>
+                <p className="text-xs text-white leading-relaxed">{c.desc}</p>
               </div>
             ))}
           </div>
@@ -421,21 +421,21 @@ export default function PositioningSystemsPage() {
             <div>
               <span className="telemetry-badge mb-4 inline-block">{t.reqBadge}</span>
               <h2 className="text-3xl lg:text-4xl font-bold mb-6">{t.reqH2}</h2>
-              <p className="text-white/60 leading-relaxed mb-8">{t.reqP}</p>
+              <p className="text-white leading-relaxed mb-8">{t.reqP}</p>
               <ul className="space-y-3">
                 {t.requirements.map((req) => (
-                  <li key={req} className="flex items-start gap-3 text-sm text-white/60">
-                    <span className="text-[#63C3B5] mt-0.5 flex-shrink-0">→</span>
+                  <li key={req} className="flex items-start gap-3 text-sm text-white">
+                    <span className="text-[#82D5CA] mt-0.5 flex-shrink-0">→</span>
                     {req}
                   </li>
                 ))}
               </ul>
             </div>
             <div className="space-y-4">
-              <div className="p-6 border border-[#63C3B5]/20 rounded-lg bg-[#63C3B5]/5">
-                <h3 className="text-lg font-semibold text-[#63C3B5] mb-3">{t.notSureH3}</h3>
-                <p className="text-sm text-white/60 leading-relaxed mb-4">{t.notSureP}</p>
-                <Link href="/contact" className="inline-block px-5 py-2.5 bg-[#63C3B5] text-black text-sm font-semibold rounded hover:bg-[#63C3B5]/90 transition-colors">
+              <div className="p-6 border border-[#82D5CA]/20 rounded-lg bg-[#82D5CA]/5">
+                <h3 className="text-lg font-semibold text-white mb-3">{t.notSureH3}</h3>
+                <p className="text-sm text-white leading-relaxed mb-4">{t.notSureP}</p>
+                <Link href="/contact" className="inline-block px-5 py-2.5 bg-[#82D5CA] text-black text-sm font-semibold rounded hover:bg-[#82D5CA]/90 transition-colors">
                   {t.notSureCta}
                 </Link>
               </div>
@@ -443,8 +443,8 @@ export default function PositioningSystemsPage() {
                 <h3 className="text-sm font-semibold mb-2">{t.startingH3}</h3>
                 <ul className="space-y-2">
                   {t.startingItems.map((item) => (
-                    <li key={item} className="text-xs text-white/45 flex items-start gap-2">
-                      <span className="text-[#63C3B5]/60 mt-0.5">–</span>
+                    <li key={item} className="text-xs text-white flex items-start gap-2">
+                      <span className="text-white mt-0.5">–</span>
                       {item}
                     </li>
                   ))}
@@ -460,12 +460,12 @@ export default function PositioningSystemsPage() {
         <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
           <span className="telemetry-badge mb-6 inline-block">{t.ctaBadge}</span>
           <h2 className="text-3xl lg:text-4xl font-bold mb-6">{t.ctaH2}</h2>
-          <p className="text-white/60 leading-relaxed mb-10">{t.ctaP}</p>
+          <p className="text-white leading-relaxed mb-10">{t.ctaP}</p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/contact" className="px-8 py-4 bg-[#63C3B5] text-black font-semibold rounded hover:bg-[#63C3B5]/90 transition-colors">
+            <Link href="/contact" className="px-8 py-4 bg-[#82D5CA] text-black font-semibold rounded hover:bg-[#82D5CA]/90 transition-colors">
               {t.ctaBtn1}
             </Link>
-            <Link href="/products" className="px-8 py-4 border border-white/30 text-white font-semibold rounded hover:border-[#63C3B5]/60 hover:text-[#63C3B5] transition-colors">
+            <Link href="/products" className="px-8 py-4 border border-white/30 text-white font-semibold rounded hover:border-[#82D5CA]/60 hover:text-[#82D5CA] transition-colors">
               {t.ctaBtn2}
             </Link>
           </div>

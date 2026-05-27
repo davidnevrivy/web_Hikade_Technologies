@@ -275,7 +275,7 @@ export default function HistoryPage() {
           <div className="max-w-3xl">
             <span className="telemetry-badge mb-4 inline-block">{t.heroBadge}</span>
             <h1 className="text-4xl lg:text-5xl font-bold mb-4">{t.h1}</h1>
-            <p className="text-lg text-white/60 leading-relaxed">{t.heroP}</p>
+            <p className="text-lg text-white leading-relaxed">{t.heroP}</p>
           </div>
         </div>
       </section>
@@ -284,7 +284,7 @@ export default function HistoryPage() {
       <section className="py-16 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-            <div className="lg:col-span-2 space-y-4 text-white/60 leading-relaxed">
+            <div className="lg:col-span-2 space-y-4 text-white leading-relaxed">
               <p>{t.overviewP1}</p>
               <p>{t.overviewP2}</p>
               <p>{t.overviewP3}</p>
@@ -292,8 +292,8 @@ export default function HistoryPage() {
             <div className="grid grid-cols-2 gap-3">
               {t.overviewStats.map((s) => (
                 <div key={s.val} className="p-4 border border-white/10 rounded-lg bg-[#1F2019]/50">
-                  <div className="text-base font-bold font-mono text-[#63C3B5]">{s.val}</div>
-                  <div className="text-xs text-white/40 mt-0.5">{s.label}</div>
+                  <div className="text-base font-bold font-mono text-[#82D5CA]">{s.val}</div>
+                  <div className="text-xs text-white mt-0.5">{s.label}</div>
                 </div>
               ))}
             </div>
@@ -310,34 +310,34 @@ export default function HistoryPage() {
           </div>
 
           <div className="relative">
-            <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-[#63C3B5]/50 via-[#63C3B5]/20 to-transparent hidden lg:block" />
+            <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-[#82D5CA]/50 via-[#82D5CA]/20 to-transparent hidden lg:block" />
 
             <div className="space-y-6">
               {t.timeline.map((item) => (
                 <div key={item.phase} className="relative lg:pl-20">
-                  <div className="absolute left-6 top-7 w-4 h-4 rounded-full border-2 border-[#63C3B5] bg-[#18261D] hidden lg:flex items-center justify-center">
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#63C3B5]" />
+                  <div className="absolute left-6 top-7 w-4 h-4 rounded-full border-2 border-[#82D5CA] bg-[#18261D] hidden lg:flex items-center justify-center">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#82D5CA]" />
                   </div>
 
-                  <div className="border border-white/10 rounded-lg overflow-hidden bg-[#1F2019]/50 hover:border-[#63C3B5]/20 transition-colors">
+                  <div className="border border-white/10 rounded-lg overflow-hidden bg-[#1F2019]/50 hover:border-[#82D5CA]/20 transition-colors">
                     <div className="p-6 lg:p-8">
                       <div className="flex flex-wrap items-start justify-between gap-4 mb-5">
                         <div className="flex items-center gap-4">
-                          <span className="text-4xl font-mono font-bold text-[#63C3B5]">{item.phase}</span>
+                          <span className="text-4xl font-mono font-bold text-white">{item.phase}</span>
                           <div>
                             <h3 className="text-xl font-bold">{item.title}</h3>
-                            <span className="text-xs font-mono text-white/30">{item.period}</span>
+                            <span className="text-xs font-mono text-[#82D5CA]/70">{item.period}</span>
                           </div>
                         </div>
-                        <div className="text-xs font-mono px-3 py-1.5 border border-[#63C3B5]/20 text-[#63C3B5]/60 rounded">
+                        <div className="text-xs font-mono px-3 py-1.5 border border-[#82D5CA]/20 text-white rounded">
                           {item.summary}
                         </div>
                       </div>
-                      <p className="text-sm text-white/55 leading-relaxed mb-5">{item.desc}</p>
+                      <p className="text-sm text-white leading-relaxed mb-5">{item.desc}</p>
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
                         {item.details.map((detail) => (
-                          <div key={detail} className="flex items-start gap-2 text-xs text-white/40">
-                            <span className="text-[#63C3B5]/40 mt-0.5 flex-shrink-0">→</span>
+                          <div key={detail} className="flex items-start gap-2 text-xs text-white">
+                            <span className="text-white mt-0.5 flex-shrink-0">→</span>
                             {detail}
                           </div>
                         ))}
@@ -359,7 +359,7 @@ export default function HistoryPage() {
           <div className="max-w-lg">
             <span className="telemetry-badge mb-3 block w-fit">{t.labBadge}</span>
             <h2 className="text-2xl lg:text-3xl font-bold mb-2">{t.labH2}</h2>
-            <p className="text-white/55 text-sm leading-relaxed">{t.labP}</p>
+            <p className="text-white text-sm leading-relaxed">{t.labP}</p>
           </div>
         </div>
       </section>
@@ -367,19 +367,19 @@ export default function HistoryPage() {
       {/* ── ESA BIC ── */}
       <section className="py-20 bg-[#1F2019]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="border border-[#63C3B5]/20 rounded-lg p-8 lg:p-12 bg-[#63C3B5]/5">
+          <div className="border border-[#82D5CA]/20 rounded-lg p-8 lg:p-12 bg-[#82D5CA]/5">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
               <div>
                 <span className="telemetry-badge mb-4 inline-block">{t.esaBadge}</span>
                 <h2 className="text-2xl lg:text-3xl font-bold mb-4">{t.esaH2}</h2>
-                <p className="text-white/60 leading-relaxed mb-4">{t.esaP1}</p>
-                <p className="text-white/60 leading-relaxed">{t.esaP2}</p>
+                <p className="text-white leading-relaxed mb-4">{t.esaP1}</p>
+                <p className="text-white leading-relaxed">{t.esaP2}</p>
               </div>
               <div className="space-y-3">
                 {t.esaItems.map((item) => (
                   <div key={item.title} className="p-4 border border-white/10 rounded-lg bg-[#18261D]/50">
-                    <div className="text-[10px] font-mono text-[#63C3B5] uppercase mb-1">{item.title}</div>
-                    <div className="text-sm text-white/65">{item.val}</div>
+                    <div className="text-[10px] font-mono text-white uppercase mb-1">{item.title}</div>
+                    <div className="text-sm text-white">{item.val}</div>
                   </div>
                 ))}
               </div>
@@ -393,15 +393,15 @@ export default function HistoryPage() {
         <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
           <span className="telemetry-badge mb-6 inline-block">{t.ctaBadge}</span>
           <h2 className="text-2xl lg:text-3xl font-bold mb-4">{t.ctaH2}</h2>
-          <p className="text-white/60 leading-relaxed mb-8">{t.ctaP}</p>
+          <p className="text-white leading-relaxed mb-8">{t.ctaP}</p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/positioning-systems" className="px-6 py-3 bg-[#63C3B5] text-black font-semibold rounded hover:bg-[#63C3B5]/90 transition-colors">
+            <Link href="/positioning-systems" className="px-6 py-3 bg-[#82D5CA] text-black font-semibold rounded hover:bg-[#82D5CA]/90 transition-colors">
               {t.ctaBtn1}
             </Link>
-            <Link href="/about" className="px-6 py-3 border border-white/30 text-white font-semibold rounded hover:border-[#63C3B5]/60 hover:text-[#63C3B5] transition-colors">
+            <Link href="/about" className="px-6 py-3 border border-white/30 text-white font-semibold rounded hover:border-[#82D5CA]/60 hover:text-[#82D5CA] transition-colors">
               {t.ctaBtn2}
             </Link>
-            <Link href="/contact" className="px-6 py-3 border border-white/20 text-white/60 font-semibold rounded hover:border-white/40 hover:text-white transition-colors">
+            <Link href="/contact" className="px-6 py-3 border border-white/20 text-white font-semibold rounded hover:border-white/40 hover:text-white transition-colors">
               {t.ctaBtn3}
             </Link>
           </div>

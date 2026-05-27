@@ -44,7 +44,7 @@ export default function Navbar() {
             alt="Hikade Technologies"
             width={360}
             height={140}
-            className="h-[88px] w-auto"
+            className="h-[110px] w-auto"
             style={{ filter: "invert(1)" }}
             priority
           />
@@ -59,8 +59,8 @@ export default function Navbar() {
                 href={link.href}
                 className={`px-4 py-2 rounded border text-sm font-medium whitespace-nowrap transition-all duration-150 ${
                   isActive
-                    ? "text-[#63C3B5] font-semibold border-[#63C3B5]/40 bg-[#63C3B5]/5"
-                    : "text-white/80 border-transparent hover:text-white hover:font-semibold hover:border-white/25 hover:bg-white/5"
+                    ? "text-white font-semibold border-[#82D5CA]/40 bg-[#82D5CA]/5"
+                    : "text-white border-transparent hover:text-white hover:font-semibold hover:border-white/25 hover:bg-white/5"
                 }`}
               >
                 {link[lang]}
@@ -75,8 +75,8 @@ export default function Navbar() {
               onClick={() => setLang("en")}
               className={`px-3 py-2 text-sm font-semibold transition-all ${
                 lang === "en"
-                  ? "bg-[#63C3B5] text-black"
-                  : "text-white/60 hover:text-white hover:bg-white/10"
+                  ? "bg-[#82D5CA] text-black"
+                  : "text-white hover:text-white hover:bg-white/10"
               }`}
             >
               EN
@@ -86,8 +86,8 @@ export default function Navbar() {
               onClick={() => setLang("cs")}
               className={`px-3 py-2 text-sm font-semibold transition-all ${
                 lang === "cs"
-                  ? "bg-[#63C3B5] text-black"
-                  : "text-white/60 hover:text-white hover:bg-white/10"
+                  ? "bg-[#82D5CA] text-black"
+                  : "text-white hover:text-white hover:bg-white/10"
               }`}
             >
               CS
@@ -95,7 +95,7 @@ export default function Navbar() {
           </div>
           <Link
             href="/contact"
-            className="px-5 py-2.5 bg-[#63C3B5] text-black text-sm font-semibold rounded hover:bg-[#63C3B5]/90 transition-colors"
+            className="px-5 py-2.5 bg-[#82D5CA] text-black text-sm font-semibold rounded hover:bg-[#82D5CA]/90 transition-colors"
           >
             {lang === "en" ? "Contact" : "Kontakt"}
           </Link>
@@ -126,8 +126,8 @@ export default function Navbar() {
                 href={link.href}
                 className={`text-sm py-2.5 px-3 rounded border transition-all duration-150 ${
                   isActive
-                    ? "text-[#63C3B5] font-semibold border-[#63C3B5]/30 bg-[#63C3B5]/5"
-                    : "text-white/70 font-medium border-transparent"
+                    ? "text-white font-semibold border-[#82D5CA]/30 bg-[#82D5CA]/5"
+                    : "text-white font-medium border-transparent"
                 }`}
               >
                 {link[lang]}
@@ -136,19 +136,19 @@ export default function Navbar() {
           })}
           <Link
             href="/contact"
-            className="mt-3 px-4 py-3 bg-[#63C3B5] text-black text-sm font-semibold rounded text-center"
+            className="mt-3 px-4 py-3 bg-[#82D5CA] text-black text-sm font-semibold rounded text-center"
           >
             {lang === "en" ? "Contact" : "Kontakt"}
           </Link>
           <div className="flex items-center gap-2 text-xs font-mono py-2">
             <button
               onClick={() => setLang("en")}
-              className={lang === "en" ? "text-[#63C3B5] font-semibold" : "text-white/40"}
+              className={lang === "en" ? "text-white font-semibold" : "text-white"}
             >EN</button>
-            <span className="text-white/30">/</span>
+            <span className="text-white">/</span>
             <button
               onClick={() => setLang("cs")}
-              className={lang === "cs" ? "text-[#63C3B5] font-semibold" : "text-white/40"}
+              className={lang === "cs" ? "text-white font-semibold" : "text-white"}
             >CS</button>
           </div>
         </div>
