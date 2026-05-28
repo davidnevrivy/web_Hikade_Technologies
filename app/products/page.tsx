@@ -341,7 +341,7 @@ export default function ProductsPage() {
                   src="/assets/products/industrial/custom-engineering-johny.png"
                   alt="Custom Engineering"
                   fill
-                  className="object-cover object-right opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"
+                  className="object-contain opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500 p-3"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-[#1F2019]/80 via-[#1F2019]/40 to-transparent" />
               </div>
@@ -388,13 +388,8 @@ export default function ProductsPage() {
             <details className="group border border-white/10 rounded-lg bg-[#18261D]/40 hover:bg-[#18261D]/70 hover:border-[#82D5CA]/30 transition-all duration-200 overflow-hidden">
               <summary className="flex items-center justify-between gap-4 p-5 cursor-pointer list-none">
                 <div className="flex items-center gap-5 flex-1 min-w-0">
-                  <div className="flex flex-col gap-1.5 flex-shrink-0">
-                    <div className="w-20 h-8 relative">
-                      <Image src="/assets/logos/grants/tacr.png" alt="TAČR" fill className="object-contain object-left" />
-                    </div>
-                    <div className="w-24 h-7 relative">
-                      <Image src="/assets/logos/grants/sigma.png" alt="SIGMA" fill className="object-contain object-left" />
-                    </div>
+                  <div className="flex-shrink-0 w-20 h-8 relative">
+                    <Image src="/assets/logos/grants/tacr.png" alt="TAČR" fill className="object-contain object-left" />
                   </div>
                   <div className="min-w-0">
                     <div className="text-[10px] font-mono text-white uppercase tracking-wider mb-0.5">TAČR / SIGMA — {en ? "Technology Agency of the Czech Republic" : "Technologická agentura ČR"}</div>
@@ -411,6 +406,11 @@ export default function ProductsPage() {
                     ? "TAČR (Technology Agency of the Czech Republic) funds applied research, experimental development and innovation in the Czech Republic. This project developed a commercial strategy for deploying PATRON gimbal technology in multisensor communication platforms for HAPS and stratospheric applications."
                     : "TAČR (Technologická agentura ČR) financuje aplikovaný výzkum, experimentální vývoj a inovace v ČR. Tento projekt vypracoval komerční strategii pro nasazení technologie gimbalu PATRON v multisenzorových komunikačních platformách pro HAPS a stratosferické aplikace."}
                 </p>
+                <div className="flex justify-center mt-6">
+                  <div className="w-64 h-28 relative">
+                    <Image src="/assets/logos/grants/tacr.png" alt="TAČR" fill className="object-contain" />
+                  </div>
+                </div>
               </div>
             </details>
 
@@ -434,6 +434,13 @@ export default function ProductsPage() {
                     ? "CryoLyze executed by Hikade Technologies s.r.o. has been supported by the ESA Technology Broker Czech Republic through the ESA Spark Funding initiative. ESA SPARK accelerates early-stage commercialisation of space-related technologies by providing funding and support to innovative companies."
                     : "CryoLyze realizovaný společností Hikade Technologies s.r.o. byl podpořen prostřednictvím ESA Technology Broker Česká republika v rámci iniciativy ESA Spark Funding. ESA SPARK urychluje komercionalizaci vesmírných technologií v raném stádiu vývoje."}
                 </p>
+                <div className="flex justify-center mt-6">
+                  <div className="bg-white rounded-xl px-8 py-5">
+                    <div className="w-72 h-24 relative">
+                      <Image src="/assets/logos/grants/esa-spark.png" alt="ESA SPARK" fill className="object-contain" />
+                    </div>
+                  </div>
+                </div>
               </div>
             </details>
 
@@ -469,6 +476,16 @@ export default function ProductsPage() {
                     ? "The Technology Incubation programme further supported the maturation of PATRON from prototype to validated system ready for commercial deployment in stratospheric and HAPS missions."
                     : "Program technologické inkubace dále podpořil zrání PATRONu od prototypu po validovaný systém připravený k nasazení ve stratosferických a HAPS misích."}
                 </p>
+                <div className="flex justify-center mt-6">
+                  <div className="bg-white rounded-xl px-8 py-5 flex items-center gap-10">
+                    <div className="w-52 h-20 relative">
+                      <Image src="/assets/logos/grants/esa-bic.png" alt="ESA BIC" fill className="object-contain" />
+                    </div>
+                    <div className="w-52 h-18 relative">
+                      <Image src="/assets/logos/grants/tech-incub.png" alt="Technology Incubation" fill className="object-contain" />
+                    </div>
+                  </div>
+                </div>
               </div>
             </details>
 
@@ -531,6 +548,16 @@ export default function ProductsPage() {
                 <p className="text-xs text-white mt-1 italic">
                   {en ? "This project is co-financed by the European Union." : "Tento projekt je spolufinancován Evropskou unií."}
                 </p>
+                <div className="flex justify-center mt-6">
+                  <div className="bg-white rounded-xl px-8 py-5 flex items-center gap-10">
+                    <div className="w-56 h-20 relative">
+                      <Image src="/assets/logos/grants/nextgen-eu.png" alt="NextGenerationEU" fill className="object-contain" />
+                    </div>
+                    <div className="w-36 h-20 relative">
+                      <Image src="/assets/logos/grants/npo.svg" alt="NPO" fill className="object-contain" />
+                    </div>
+                  </div>
+                </div>
               </div>
             </details>
 

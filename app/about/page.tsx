@@ -134,12 +134,12 @@ const T = {
 } as const;
 
 const galleryImages = [
-  { src: "/assets/products/patron/patron-dark-1.png",              alt: "PATRON Gimbal",           bg: "bg-[#3C271E]/30", scale: ""           },
-  { src: "/assets/about/motorstand-2.png",                         alt: "Motor Test Stand",        bg: "bg-white",        scale: ""           },
-  { src: "/assets/products/beetle/beetle-ai-1.png",                alt: "BEETLE Gimbal",           bg: "bg-[#3C271E]/30", scale: ""           },
-  { src: "/assets/products/testing/3b-bend.png",                   alt: "Testing fixture",         bg: "bg-white",        scale: "scale-[2.2]"},
-  { src: "/assets/about/svetlomet-167.jpg",                        alt: "Gimbal Odysseus",         bg: "bg-white",        scale: ""           },
-  { src: "/assets/products/industrial/custom-engineering-johny-512.png", alt: "Custom Engineering", bg: "bg-[#1F2019]",   scale: ""           },
+  { src: "/assets/products/patron/patron-dark-1.png",              alt: "PATRON Gimbal",           bg: "bg-[#3C271E]/30" },
+  { src: "/assets/about/motorstand-2.png",                         alt: "Motor Test Stand",        bg: "bg-white"        },
+  { src: "/assets/products/beetle/beetle-ai-1.png",                alt: "BEETLE Gimbal",           bg: "bg-[#3C271E]/30" },
+  { src: "/assets/products/testing/3b-bend.png",                   alt: "Testing fixture",         bg: "bg-white"        },
+  { src: "/assets/about/svetlomet-167.jpg",                        alt: "Gimbal Odysseus",         bg: "bg-white"        },
+  { src: "/assets/products/industrial/custom-engineering-johny-512.png", alt: "Custom Engineering", bg: "bg-[#1F2019]"   },
 ];
 
 export default function AboutPage() {
@@ -169,15 +169,15 @@ export default function AboutPage() {
                 <p>{t.whoP3}</p>
               </div>
             </div>
-            <div className="flex flex-col gap-4">
-              <div className="relative aspect-[3/2] rounded-lg overflow-hidden border border-white/10 bg-black">
-                <Image src="/assets/team/hikade-booth-team.jpg" alt="Hikade Technologies team at trade show" fill className="object-contain" />
+            <div className="flex flex-col gap-6">
+              <div className="relative h-80 rounded-lg overflow-hidden border border-white/10">
+                <Image src="/assets/team/hikade-booth-team.jpg" alt="Hikade Technologies team at trade show" fill className="object-cover object-top" />
                 <div className="absolute bottom-4 left-4">
                   <span className="telemetry-badge">{t.whoImgBadge}</span>
                 </div>
               </div>
-              <div className="relative aspect-[3/2] rounded-lg overflow-hidden border border-white/10 bg-black">
-                <Image src="/assets/team/hikade-team-2.jpg" alt="Hikade Technologies team" fill className="object-contain" />
+              <div className="relative h-80 rounded-lg overflow-hidden border border-white/10">
+                <Image src="/assets/team/hikade-team-2.jpg" alt="Hikade Technologies team" fill className="object-cover object-top" />
               </div>
             </div>
           </div>
@@ -248,15 +248,17 @@ export default function AboutPage() {
       <section className="py-14">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <h2 className="text-sm font-mono text-white mb-6 tracking-widest uppercase">{t.galleryLabel}</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {galleryImages.map((img, i) => (
-              <div key={i} className={`relative aspect-square rounded-lg overflow-hidden border border-white/10 group ${img.bg}`}>
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  fill
-                  className={`object-cover object-center transition-transform duration-300 group-hover:scale-105 ${img.scale}`}
-                />
+              <div key={i} className={`rounded-lg border border-white/10 group ${img.bg} p-3`}>
+                <div className="relative aspect-[4/3] overflow-hidden rounded">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-contain transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
               </div>
             ))}
           </div>

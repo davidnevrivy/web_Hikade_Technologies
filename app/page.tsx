@@ -414,8 +414,8 @@ export default function HomePage() {
       </section>
 
       {/* ── LAB PHOTO ── */}
-      <section className="relative h-72 lg:h-96 overflow-hidden">
-        <Image src="/assets/team/czech-space-stand.jpg" alt="Hikade Technologies Lab" fill className="object-cover" />
+      <section className="relative h-[26rem] lg:h-[36rem] overflow-hidden">
+        <Image src="/assets/team/veletrh-selfie-stormtroopers-baby-yoda.jpg" alt="Hikade Technologies Lab" fill className="object-cover" style={{ objectPosition: '50% 30%' }} />
         <div className="absolute inset-0 bg-gradient-to-r from-[#18261D] via-[#18261D]/70 to-transparent" />
         <div className="relative z-10 h-full flex items-center px-6 lg:px-8 max-w-7xl mx-auto">
           <div className="max-w-lg">
