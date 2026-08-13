@@ -254,7 +254,7 @@ export default function HomePage() {
                     <div className="text-xs font-mono text-[#82D5CA] mb-2">{item.label}</div>
                     <h3 className="text-lg font-semibold mb-3 group-hover:text-[#82D5CA] transition-colors">{item.title}</h3>
                     <p className="text-sm text-white leading-relaxed">{item.desc}</p>
-                    <div className="mt-4 text-xs text-[#82D5CA] flex items-center gap-1"><span>{t.explore}</span><span>→</span></div>
+                    <div className="mt-4 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md border border-[#82D5CA]/30 bg-[#82D5CA]/5 text-sm font-semibold text-[#82D5CA] group-hover:bg-[#82D5CA]/15 group-hover:border-[#82D5CA]/60 group-hover:translate-x-0.5 transition-all"><span>{t.explore}</span><span>→</span></div>
                   </div>
                 </div>
               </Link>
@@ -297,7 +297,7 @@ export default function HomePage() {
                   </div>
                   <div className="text-xs text-white flex items-center justify-between">
                     <span className={`font-mono ${p.statusColor}`}>{p.status}</span>
-                    <span className="text-white">{t.learnMore}</span>
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md border border-[#82D5CA]/30 bg-[#82D5CA]/5 text-sm font-semibold text-[#82D5CA] group-hover:bg-[#82D5CA]/15 group-hover:border-[#82D5CA]/60 group-hover:translate-x-0.5 transition-all">{t.learnMore}</span>
                   </div>
                 </div>
               </Link>

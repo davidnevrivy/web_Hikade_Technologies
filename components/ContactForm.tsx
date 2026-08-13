@@ -11,6 +11,8 @@ const projectTypes = {
 export default function ContactForm() {
   const { lang } = useLanguage();
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [form, setForm] = useState({
     name: "", company: "", email: "", phone: "",
     projectType: "", applicationArea: "", description: "",
@@ -33,6 +35,8 @@ export default function ContactForm() {
       notesLbl: "Additional Notes", notesPh: "Any other relevant context, existing documentation or preferred approach...",
       required: "Fields marked * are required. We treat all technical information as confidential.",
       submit: "Send Technical Requirements",
+      sending: "Sending...",
+      errorGeneric: "Something went wrong while sending your inquiry. Please try again or email us directly.",
     },
     cs: {
       receivedTitle: "Zpráva přijata",
@@ -49,6 +53,8 @@ export default function ContactForm() {
       notesLbl: "Doplňující poznámky", notesPh: "Další relevantní kontext, existující dokumentace nebo preferovaný přístup...",
       required: "Pole označená * jsou povinná. Veškeré technické informace považujeme za důvěrné.",
       submit: "Odeslat technické požadavky",
+      sending: "Odesílání...",
+      errorGeneric: "Při odesílání dotazu došlo k chybě. Zkuste to prosím znovu nebo nám napište přímo na e-mail.",
     },
   }[lang];
 
@@ -65,8 +71,27 @@ export default function ContactForm() {
     );
   }
 
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setError(null);
+    setSending(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error();
+      setSubmitted(true);
+    } catch {
+      setError(t.errorGeneric);
+    } finally {
+      setSending(false);
+    }
+  }
+
   return (
-    <form onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {[
           { name: "name",    label: t.nameLbl,    required: true,  type: "text" },
@@ -158,10 +183,18 @@ export default function ContactForm() {
         />
       </div>
 
+      {error && (
+        <p className="text-sm text-red-400 bg-red-400/5 border border-red-400/20 rounded px-4 py-3">{error}</p>
+      )}
+
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <p className="text-xs text-white">{t.required}</p>
-        <button type="submit" className="px-8 py-3 bg-[#82D5CA] text-black font-semibold rounded hover:bg-[#82D5CA]/90 transition-colors whitespace-nowrap">
-          {t.submit}
+        <button
+          type="submit"
+          disabled={sending}
+          className="px-8 py-3 bg-[#82D5CA] text-black font-semibold rounded hover:bg-[#82D5CA]/90 transition-colors whitespace-nowrap disabled:opacity-60 disabled:cursor-not-allowed"
+        >
+          {sending ? t.sending : t.submit}
         </button>
       </div>
     </form>

@@ -383,7 +383,7 @@ export default function PositioningSystemsPage() {
                   </div>
                   <div className="flex items-center justify-between text-xs">
                     <span className={`font-mono ${g.statusColor}`}>{g.status}</span>
-                    <Link href={gimbalHrefs[i]} className="text-white hover:text-white transition-colors">
+                    <Link href={gimbalHrefs[i]} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md border border-[#82D5CA]/30 bg-[#82D5CA]/5 text-sm font-semibold text-[#82D5CA] group-hover:bg-[#82D5CA]/15 group-hover:border-[#82D5CA]/60 group-hover:translate-x-0.5 transition-all">
                       {t.learnMore}
                     </Link>
                   </div>

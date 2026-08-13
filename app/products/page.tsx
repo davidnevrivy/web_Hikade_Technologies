@@ -66,7 +66,7 @@ export default function ProductsPage() {
                     </div>
                   ))}
                 </div>
-                <span className="text-xs text-white group-hover:translate-x-1 transition-transform inline-block">{en ? "Learn more →" : "Více →"}</span>
+                <span className="inline-flex items-center px-3 py-1.5 rounded-md border border-[#82D5CA]/30 bg-[#82D5CA]/5 text-sm font-semibold text-[#82D5CA] group-hover:bg-[#82D5CA]/15 group-hover:border-[#82D5CA]/60 group-hover:translate-x-0.5 transition-all">{en ? "Learn more →" : "Více →"}</span>
               </div>
             </Link>
 
@@ -107,7 +107,7 @@ export default function ProductsPage() {
                     </div>
                   ))}
                 </div>
-                <span className="text-xs text-white group-hover:translate-x-1 transition-transform inline-block">{en ? "Learn more →" : "Více →"}</span>
+                <span className="inline-flex items-center px-3 py-1.5 rounded-md border border-[#82D5CA]/30 bg-[#82D5CA]/5 text-sm font-semibold text-[#82D5CA] group-hover:bg-[#82D5CA]/15 group-hover:border-[#82D5CA]/60 group-hover:translate-x-0.5 transition-all">{en ? "Learn more →" : "Více →"}</span>
               </div>
             </Link>
 
@@ -206,7 +206,7 @@ export default function ProductsPage() {
                     </div>
                   ))}
                 </div>
-                <span className="text-xs text-white group-hover:translate-x-1 transition-transform inline-block">{en ? "Learn more →" : "Více →"}</span>
+                <span className="inline-flex items-center px-3 py-1.5 rounded-md border border-[#82D5CA]/30 bg-[#82D5CA]/5 text-sm font-semibold text-[#82D5CA] group-hover:bg-[#82D5CA]/15 group-hover:border-[#82D5CA]/60 group-hover:translate-x-0.5 transition-all">{en ? "Learn more →" : "Více →"}</span>
               </div>
             </Link>
 
@@ -246,7 +246,7 @@ export default function ProductsPage() {
                     </div>
                   ))}
                 </div>
-                <span className="text-xs text-white group-hover:translate-x-1 transition-transform inline-block">{en ? "Learn more →" : "Více →"}</span>
+                <span className="inline-flex items-center px-3 py-1.5 rounded-md border border-[#82D5CA]/30 bg-[#82D5CA]/5 text-sm font-semibold text-[#82D5CA] group-hover:bg-[#82D5CA]/15 group-hover:border-[#82D5CA]/60 group-hover:translate-x-0.5 transition-all">{en ? "Learn more →" : "Více →"}</span>
               </div>
             </Link>
 
@@ -346,7 +346,7 @@ export default function ProductsPage() {
                     ? "End-to-end development of custom mechatronic systems, single-purpose machines and industrial prototypes where catalog solutions are not sufficient."
                     : "Kompletní vývoj zakázkových mechatronických systémů, jednoúčelových strojů a průmyslových prototypů, kde katalogová řešení nestačí."}
                 </p>
-                <span className="text-xs text-white group-hover:translate-x-1 transition-transform inline-block">
+                <span className="inline-flex items-center px-3 py-1.5 rounded-md border border-[#82D5CA]/30 bg-[#82D5CA]/5 text-sm font-semibold text-[#82D5CA] group-hover:bg-[#82D5CA]/15 group-hover:border-[#82D5CA]/60 group-hover:translate-x-0.5 transition-all">
                   {en ? "Discuss your project →" : "Diskutovat projekt →"}
                 </span>
               </div>
