@@ -41,21 +41,6 @@ const techFocus = [
   "Cable routing without restriction of motion",
 ];
 
-const galleryImages = [
-  { src: "/assets/products/patron/patron-dark-1.png", alt: "PATRON Gimbal — front view" },
-  { src: "/assets/products/patron/patron-dark-2.png", alt: "PATRON Gimbal — side view" },
-  { src: "/assets/products/patron/patron-dark-3.png", alt: "PATRON Gimbal — 3/4 view" },
-  { src: "/assets/products/patron/patron-dark-4.png", alt: "PATRON Gimbal — detail" },
-  { src: "/assets/products/patron/patron-real-1.png", alt: "PATRON Gimbal — real background" },
-  { src: "/assets/products/patron/patron-real-2.png", alt: "PATRON Gimbal — atmosphere" },
-  { src: "/assets/products/patron/patron-prototype.jpg", alt: "PATRON prototype demo" },
-  { src: "/assets/products/patron/patron-bearing.jpg", alt: "PATRON bearing housing" },
-  { src: "/assets/products/patron/patron-frame.jpg", alt: "PATRON prototype frame" },
-  { src: "/assets/products/patron/patron-motor.jpg", alt: "PATRON drive detail" },
-  { src: "/assets/products/patron/patron-drawing.jpg", alt: "PATRON technical drawing" },
-  { src: "/assets/products/patron/patron-atmosphere.jpg", alt: "PATRON in atmosphere" },
-];
-
 export default function PatronPage() {
   return (
     <div className="text-white pt-20">
@@ -67,7 +52,7 @@ export default function PatronPage() {
         </div>
 
         {/* Floating product render */}
-        <div className="absolute right-0 lg:right-8 xl:right-16 top-8 bottom-0 w-1/2 lg:w-2/5 z-10 hidden lg:block">
+        <div className="absolute right-0 xl:right-4 top-0 bottom-0 w-3/5 z-10 hidden lg:block">
           <Image src="/assets/products/patron/patron-transparent-2.png" alt="PATRON Gimbal" fill className="object-contain object-bottom" priority />
         </div>
 
@@ -109,62 +94,30 @@ export default function PatronPage() {
         </div>
       </section>
 
-      {/* Description + Photo */}
+      {/* Description */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div>
-              <h2 className="text-2xl font-bold mb-6">Designed for Demanding Payloads</h2>
-              <div className="space-y-4 text-white leading-relaxed">
-                <p>
-                  PATRON is a high-precision two-axis gimbal platform developed for payload stabilization and pointing in HAPS, stratospheric and aerospace-relevant environments. The design focuses on accurate two-axis control, mechanical stiffness and reliable operation where payload mass, power and pointing constraints define the engineering challenge.
-                </p>
-                <p>
-                  The platform is designed with low-pressure and low-temperature operation considerations from the beginning. Mass budget, cable management without restriction of motion and compatibility with customer-specific payload interfaces are integral parts of the architecture.
-                </p>
-                <p>
-                  PATRON is developed as a configurable system rather than a fixed catalog product. The payload interface, control architecture, cable routing and integration approach are adapted according to the specific platform and mission profile.
-                </p>
-                <p>
-                  Embedded control, encoder feedback, actuator integration and communication interfaces are developed as part of the complete system — not as separate components added at the end.
-                </p>
-              </div>
-              <div className="mt-8 p-4 border border-[#82D5CA]/20 rounded bg-[#82D5CA]/5">
-                <p className="text-xs text-white leading-relaxed">
-                  <span className="text-white font-mono">NOTE:</span> PATRON is a development platform approximately at TRL 5. Parameters may vary depending on configuration, customer requirements and validation scope. The system is not presented as flight-proven.
-                </p>
-              </div>
+          <div className="max-w-3xl">
+            <h2 className="text-2xl font-bold mb-6">Designed for Demanding Payloads</h2>
+            <div className="space-y-4 text-white leading-relaxed">
+              <p>
+                PATRON is a high-precision two-axis gimbal platform developed for payload stabilization and pointing in HAPS, stratospheric and aerospace-relevant environments. The design focuses on accurate two-axis control, mechanical stiffness and reliable operation where payload mass, power and pointing constraints define the engineering challenge.
+              </p>
+              <p>
+                The platform is designed with low-pressure and low-temperature operation considerations from the beginning. Mass budget, cable management without restriction of motion and compatibility with customer-specific payload interfaces are integral parts of the architecture.
+              </p>
+              <p>
+                PATRON is developed as a configurable system rather than a fixed catalog product. The payload interface, control architecture, cable routing and integration approach are adapted according to the specific platform and mission profile.
+              </p>
+              <p>
+                Embedded control, encoder feedback, actuator integration and communication interfaces are developed as part of the complete system — not as separate components added at the end.
+              </p>
             </div>
-
-            <div className="bg-white rounded-lg overflow-hidden h-[420px] lg:h-[520px] relative">
-              <Image
-                src="/assets/products/patron/patron-slide-3.png"
-                alt="PATRON Gimbal"
-                fill
-                className="object-contain p-6"
-              />
+            <div className="mt-8 p-4 border border-[#82D5CA]/20 rounded bg-[#82D5CA]/5">
+              <p className="text-xs text-white leading-relaxed">
+                <span className="text-white font-mono">NOTE:</span> PATRON is a development platform approximately at TRL 5. Parameters may vary depending on configuration, customer requirements and validation scope. The system is not presented as flight-proven.
+              </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Gallery */}
-      <section className="py-10 bg-[#1F2019]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <h2 className="text-xl font-bold mb-8 flex items-center gap-3">
-            <span className="text-white font-mono text-sm">RENDERS & PROTOTYPES</span>
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-            {galleryImages.map((img, i) => (
-              <div key={i} className="relative aspect-square bg-[#3C271E]/30 rounded-lg overflow-hidden group border border-white/5 hover:border-[#82D5CA]/30 transition-colors">
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  fill
-                  className="object-contain p-3 group-hover:scale-105 transition-transform duration-400"
-                />
-              </div>
-            ))}
           </div>
         </div>
       </section>

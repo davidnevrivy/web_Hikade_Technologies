@@ -29,19 +29,6 @@ const applications = [
   "Low-cost stratospheric experiments",
 ];
 
-const galleryImages = [
-  { src: "/assets/products/beetle/beetle-ai-1.png", alt: "BEETLE Gimbal — AI render front" },
-  { src: "/assets/products/beetle/beetle-ai-2.png", alt: "BEETLE Gimbal — AI render top" },
-  { src: "/assets/products/beetle/beetle-ai-3.png", alt: "BEETLE Gimbal — AI render 3/4" },
-  { src: "/assets/products/beetle/beetle-ai-4.png", alt: "BEETLE Gimbal — AI render side" },
-  { src: "/assets/products/beetle/beetle-bg-1.png", alt: "BEETLE Gimbal — atmospheric" },
-  { src: "/assets/products/beetle/beetle-bg-2.png", alt: "BEETLE Gimbal — render" },
-  { src: "/assets/products/beetle/beetle-bg-3.png", alt: "BEETLE Gimbal — detail" },
-  { src: "/assets/products/beetle/beetle-render-1.png", alt: "BEETLE — render 1" },
-  { src: "/assets/products/beetle/beetle-render-2.png", alt: "BEETLE — render 2" },
-  { src: "/assets/products/beetle/beetle-render-3.png", alt: "BEETLE — render 3" },
-];
-
 export default function BeetlePage() {
   return (
     <div className="text-white pt-20">
@@ -52,7 +39,7 @@ export default function BeetlePage() {
           <div className="absolute inset-0 bg-gradient-to-t from-[#1F2019] via-[#1F2019]/70 to-transparent" />
         </div>
 
-        <div className="absolute right-0 lg:right-8 xl:right-16 top-4 bottom-0 w-1/2 lg:w-2/5 z-10 hidden lg:block">
+        <div className="absolute right-0 xl:right-4 top-0 bottom-0 w-3/5 z-10 hidden lg:block">
           <Image src="/assets/products/beetle/beetle-ai-1.png" alt="BEETLE Gimbal" fill className="object-contain object-center" priority />
         </div>
 
@@ -93,52 +80,46 @@ export default function BeetlePage() {
         </div>
       </section>
 
-      {/* Description + Photo */}
+      {/* Description */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div>
-              <h2 className="text-2xl font-bold mb-6">Compact, Cost-Sensitive, Configurable</h2>
-              <div className="space-y-4 text-white leading-relaxed">
-                <p>
-                  BEETLE is a compact two-axis gimbal platform developed for smaller payload classes, test flights, technology demonstrations and cost-sensitive stratospheric or aerospace-adjacent applications. It shares the same development philosophy as PATRON — modular, configurable and designed with integration constraints in mind — but targets a different payload class and mission profile.
-                </p>
-                <p>
-                  The platform is developed for customers who need two-axis pointing and stabilization without the full mass and power budget of a larger system. BEETLE is a valid starting point for early validation, R&D missions, university payloads and compact optical or sensor systems where mass, volume and cost are the primary constraints.
-                </p>
-                <p>
-                  Like all Hikade Technologies platforms, BEETLE is not a fixed catalog product. The payload interface, control architecture and integration approach are adapted to the specific mission and platform requirements.
-                </p>
-              </div>
-              <div className="mt-8 p-4 border border-yellow-400/20 rounded bg-yellow-400/5">
-                <p className="text-xs text-white leading-relaxed">
-                  <span className="text-yellow-400 font-mono">STATUS:</span> BEETLE is a development / demonstration platform. Parameters may vary depending on configuration and validation scope. The system is not presented as flight-proven unless explicitly validated.
-                </p>
-              </div>
+          <div className="max-w-3xl">
+            <h2 className="text-2xl font-bold mb-6">Compact, Cost-Sensitive, Configurable</h2>
+            <div className="space-y-4 text-white leading-relaxed">
+              <p>
+                BEETLE is a compact two-axis gimbal platform developed for smaller payload classes, test flights, technology demonstrations and cost-sensitive stratospheric or aerospace-adjacent applications. It shares the same development philosophy as PATRON — modular, configurable and designed with integration constraints in mind — but targets a different payload class and mission profile.
+              </p>
+              <p>
+                The platform is developed for customers who need two-axis pointing and stabilization without the full mass and power budget of a larger system. BEETLE is a valid starting point for early validation, R&D missions, university payloads and compact optical or sensor systems where mass, volume and cost are the primary constraints.
+              </p>
+              <p>
+                Like all Hikade Technologies platforms, BEETLE is not a fixed catalog product. The payload interface, control architecture and integration approach are adapted to the specific mission and platform requirements.
+              </p>
             </div>
-
-            <div className="bg-white rounded-lg overflow-hidden h-[420px] lg:h-[520px] relative">
-              <Image
-                src="/assets/products/beetle/beetle-ai-3.png"
-                alt="BEETLE Gimbal"
-                fill
-                className="object-contain p-6"
-              />
+            <div className="mt-8 p-4 border border-yellow-400/20 rounded bg-yellow-400/5">
+              <p className="text-xs text-white leading-relaxed">
+                <span className="text-yellow-400 font-mono">STATUS:</span> BEETLE is a development / demonstration platform. Parameters may vary depending on configuration and validation scope. The system is not presented as flight-proven unless explicitly validated.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Gallery */}
+      {/* Prototype Hardware */}
       <section className="py-10 bg-[#1F2019]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <h2 className="text-xl font-bold mb-8">
-            <span className="text-white font-mono text-sm">RENDERS & VISUALS</span>
+            <span className="text-white font-mono text-sm">PROTOTYPE HARDWARE</span>
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
-            {galleryImages.map((img, i) => (
-              <div key={i} className="relative aspect-square bg-[#3C271E]/30 rounded-lg overflow-hidden group border border-white/5 hover:border-[#82D5CA]/30 transition-colors">
-                <Image src={img.src} alt={img.alt} fill className="object-contain p-3 group-hover:scale-105 transition-transform duration-400" />
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+            {[
+              { src: "/assets/products/beetle/beetle-prototype-desk.jpg", alt: "BEETLE prototype on the workbench" },
+              { src: "/assets/products/beetle/beetle-prototype-studio.jpg", alt: "BEETLE prototype — studio shot" },
+              { src: "/assets/products/beetle/beetle-prototype-front.jpg", alt: "BEETLE prototype — front view" },
+              { src: "/assets/products/beetle/beetle-prototype-rear.jpg", alt: "BEETLE prototype — rear view" },
+            ].map((img) => (
+              <div key={img.src} className="relative aspect-[4/5] bg-[#3C271E]/30 rounded-lg overflow-hidden group border border-white/5 hover:border-[#82D5CA]/30 transition-colors">
+                <Image src={img.src} alt={img.alt} fill className="object-cover group-hover:scale-105 transition-transform duration-400" />
               </div>
             ))}
           </div>

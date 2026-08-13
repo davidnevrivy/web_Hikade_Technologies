@@ -181,7 +181,7 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-b from-[#18261D]/20 via-transparent to-[#18261D]" />
         </div>
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 pt-28 pb-20">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 pt-10 pb-20">
           <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-6 items-center">
 
             {/* ── LEFT: text ── */}
@@ -223,6 +223,7 @@ export default function HomePage() {
                   className="object-contain drop-shadow-2xl"
                   sizes="(max-width: 768px) 100vw, 60vw"
                   priority
+                  unoptimized
                 />
               </div>
             </div>

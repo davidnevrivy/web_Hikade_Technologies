@@ -39,14 +39,14 @@ export default function Navbar() {
           : "bg-[#18261D]/40 backdrop-blur-sm border-b border-white/5"
       }`}
     >
-      <nav className="max-w-7xl mx-auto px-6 xl:px-8 flex items-center justify-between py-4">
-        <Link href="/" className="flex items-center flex-shrink-0">
+      <nav className="max-w-7xl mx-auto px-6 xl:px-8 flex items-center justify-between py-0">
+        <Link href="/" className="flex items-center flex-shrink-0 group">
           <Image
             src="/assets/logo/hikade-logo-transparent.png"
             alt="Hikade Technologies"
             width={360}
             height={140}
-            className="h-[110px] w-auto"
+            className="h-20 w-auto transition-all duration-200 group-hover:scale-110 group-hover:brightness-125"
             style={{ filter: "invert(1)" }}
             priority
           />
