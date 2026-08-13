@@ -92,7 +92,7 @@ export default function Navbar() {
                   : "text-white hover:text-white hover:bg-white/10"
               }`}
             >
-              CS
+              CZ
             </button>
           </div>
           <Link
@@ -151,7 +151,7 @@ export default function Navbar() {
             <button
               onClick={() => setLang("cs")}
               className={lang === "cs" ? "text-white font-semibold" : "text-white"}
-            >CS</button>
+            >CZ</button>
           </div>
         </div>
       </div>

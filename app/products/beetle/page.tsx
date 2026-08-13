@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import PhotoGallery from "@/components/PhotoGallery";
 
 export const metadata: Metadata = {
   title: "BEETLE Gimbal — Lightweight HAPS & Balloon Payload Platform",
@@ -111,18 +112,14 @@ export default function BeetlePage() {
           <h2 className="text-xl font-bold mb-8">
             <span className="text-white font-mono text-sm">PROTOTYPE HARDWARE</span>
           </h2>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
-            {[
-              { src: "/assets/products/beetle/beetle-prototype-desk.jpg", alt: "BEETLE prototype on the workbench" },
+          <PhotoGallery
+            className="grid grid-cols-2 md:grid-cols-3 gap-3"
+            photos={[
               { src: "/assets/products/beetle/beetle-prototype-studio.jpg", alt: "BEETLE prototype — studio shot" },
               { src: "/assets/products/beetle/beetle-prototype-front.jpg", alt: "BEETLE prototype — front view" },
               { src: "/assets/products/beetle/beetle-prototype-rear.jpg", alt: "BEETLE prototype — rear view" },
-            ].map((img) => (
-              <div key={img.src} className="relative aspect-[4/5] bg-[#3C271E]/30 rounded-lg overflow-hidden group border border-white/5 hover:border-[#82D5CA]/30 transition-colors">
-                <Image src={img.src} alt={img.alt} fill className="object-cover group-hover:scale-105 transition-transform duration-400" />
-              </div>
-            ))}
-          </div>
+            ]}
+          />
         </div>
       </section>
 

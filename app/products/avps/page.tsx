@@ -32,7 +32,7 @@ export default function AVPSPage() {
   return (
     <div className="text-white pt-20">
       {/* Hero */}
-      <section className="relative min-h-[60vh] flex items-end overflow-hidden bg-[#1F2019] tech-grid">
+      <section className="relative min-h-[70vh] flex items-end overflow-hidden bg-[#1F2019] tech-grid">
         <div className="absolute inset-0 z-0">
           <Image src="/assets/hero/svetlomet-gimbal-front.jpg" alt="AVPS Clean Processing" fill className="object-cover opacity-30" priority />
           <div className="absolute inset-0 bg-gradient-to-t from-[#1F2019] via-[#1F2019]/60 to-transparent" />
@@ -112,12 +112,12 @@ export default function AVPSPage() {
               </div>
             </div>
 
-            <div className="bg-white rounded-lg overflow-hidden h-[420px] lg:h-[520px] relative">
+            <div className="border border-white/10 rounded-lg overflow-hidden h-[420px] lg:h-[520px] relative">
               <Image
                 src="/assets/products/avps/avps-1.png"
                 alt="AeroVac Precision System"
                 fill
-                className="object-contain p-6"
+                className="object-cover"
               />
             </div>
           </div>

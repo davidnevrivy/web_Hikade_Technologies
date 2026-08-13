@@ -148,7 +148,7 @@ export default function AboutPage() {
   return (
     <div className="text-white pt-20">
       {/* ── HERO ── */}
-      <section className="py-24 tech-grid">
+      <section className="pt-10 pb-8 tech-grid">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <span className="telemetry-badge mb-4 inline-block">{t.heroBadge}</span>
           <h1 className="text-4xl lg:text-5xl font-bold mb-4 max-w-3xl">{t.h1}</h1>
@@ -157,7 +157,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── WHO WE ARE ── */}
-      <section className="py-20">
+      <section className="pt-6 pb-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
@@ -169,7 +169,7 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="relative h-full min-h-[420px] rounded-lg overflow-hidden border border-white/10">
-              <Image src="/assets/team/hikade-booth-team.jpg" alt="Hikade Technologies team at trade show" fill className="object-cover object-top" />
+              <Image src="/assets/team/hikade-spacetech-taiwan.jpeg" alt="Hikade Technologies at International SpaceTech Startups event" fill className="object-cover" />
             </div>
           </div>
         </div>

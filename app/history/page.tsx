@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -315,19 +314,6 @@ export default function HistoryPage() {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── LAB ── */}
-      <section className="relative h-64 lg:h-80 overflow-hidden">
-        <Image src="/assets/team/czech-space-stand.jpg" alt="Hikade Technologies Engineering Lab" fill className="object-cover" style={{ objectPosition: "50% 25%" }} />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#18261D] via-[#18261D]/70 to-transparent" />
-        <div className="relative z-10 h-full flex items-center px-6 lg:px-8 max-w-7xl mx-auto">
-          <div className="max-w-lg">
-            <span className="telemetry-badge mb-3 block w-fit">{t.labBadge}</span>
-            <h2 className="text-2xl lg:text-3xl font-bold mb-2">{t.labH2}</h2>
-            <p className="text-white text-sm leading-relaxed">{t.labP}</p>
           </div>
         </div>
       </section>

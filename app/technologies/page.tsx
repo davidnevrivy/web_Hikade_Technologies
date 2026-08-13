@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -112,25 +111,6 @@ export default function TechnologiesPage() {
 
   return (
     <div className="text-white pt-20">
-      <section className="py-20 bg-[#1F2019] tech-grid">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <span className="telemetry-badge mb-4 inline-block">{t.headerBadge}</span>
-          <h1 className="text-4xl lg:text-5xl font-bold mb-4">{t.h1}</h1>
-          <p className="text-lg text-white max-w-2xl">{t.headerDesc}</p>
-        </div>
-      </section>
-
-      <section className="relative h-64 lg:h-72 overflow-hidden">
-        <Image src="/assets/lab/lab-electronics.jpg" alt="Hikade Technologies engineering lab" fill className="object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#18261D] via-[#18261D]/60 to-transparent" />
-        <div className="relative z-10 h-full flex items-center px-6 lg:px-8 max-w-7xl mx-auto">
-          <div>
-            <p className="text-[#82D5CA] font-mono text-xs mb-2">{t.labQuoteBadge}</p>
-            <p className="text-xl lg:text-2xl font-semibold max-w-lg">{t.labQuote}</p>
-          </div>
-        </div>
-      </section>
-
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="space-y-16">
