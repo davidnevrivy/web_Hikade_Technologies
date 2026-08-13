@@ -91,19 +91,19 @@ export default function CryolyzePage() {
             <div className="bg-white rounded-lg overflow-hidden h-[420px] lg:h-[520px] flex">
               <div className="relative flex-1 overflow-hidden">
                 <Image
-                  src="/assets/products/cryolyze/cryolyze-3.png"
+                  src="/assets/products/cryolyze/cryolyze-3-tight.png"
                   alt="CryoLyze — closed"
                   fill
-                  className="object-contain scale-[2.5]"
+                  className="object-contain p-4"
                 />
               </div>
               <div className="w-px bg-gray-200 flex-shrink-0" />
               <div className="relative flex-1 overflow-hidden">
                 <Image
-                  src="/assets/products/cryolyze/cryolyze-1.png"
+                  src="/assets/products/cryolyze/cryolyze-1-tight.png"
                   alt="CryoLyze — open"
                   fill
-                  className="object-contain scale-[2.1]"
+                  className="object-contain p-4"
                 />
               </div>
             </div>

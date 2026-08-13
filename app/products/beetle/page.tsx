@@ -40,7 +40,7 @@ export default function BeetlePage() {
         </div>
 
         <div className="absolute right-0 xl:right-4 top-0 bottom-0 w-3/5 z-10 hidden lg:block">
-          <Image src="/assets/products/beetle/beetle-ai-1.png" alt="BEETLE Gimbal" fill className="object-contain object-center" priority />
+          <Image src="/assets/products/beetle/beetle-render-transparent.png" alt="BEETLE Gimbal" fill className="object-contain object-center" priority />
         </div>
 
         <div className="absolute top-16 left-6 lg:left-8 z-20 space-y-2">

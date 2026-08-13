@@ -22,19 +22,8 @@ export default function ProductsPage() {
             </h1>
             <p className="text-lg text-white max-w-2xl mb-10">
               {en
-                ? "Proprietary platforms, validated engineering systems and custom technology solutions for HAPS, aerospace, clean processing and industrial R&D applications."
-                : "Vlastní platformy, validované inženýrské systémy a zakázková technologická řešení pro HAPS, letectví, čisté zpracování a průmyslové R&D aplikace."}
-            </p>
-            <div className="flex items-center gap-3 mb-1">
-              <span className="telemetry-badge">{en ? "Stratospheric Gimbals" : "Stratosférické gimbaly"}</span>
-            </div>
-            <h2 className="text-2xl font-bold mt-2 mb-1">
-              {en ? "Gimbal for HAPS Platforms" : "Gimbal pro HAPS platformy"}
-            </h2>
-            <p className="text-white max-w-xl text-sm">
-              {en
-                ? "Purpose-built two-axis gimbal systems for high-altitude platform stations operating at 18–25 km altitude."
-                : "Dvouosé gimbalové systémy navržené pro platformy HAPS operující ve výšce 18–25 km."}
+                ? "Validated engineering systems and custom technology solutions for HAPS, aerospace, clean processing and industrial R&D applications. Purpose-built two-axis gimbal systems for high-altitude platform stations operating at 18–25 km altitude."
+                : "Validované inženýrské systémy a zakázková technologická řešení pro HAPS, letectví, čisté zpracování a průmyslové R&D aplikace. Dvouosé gimbalové systémy navržené pro platformy HAPS operující ve výšce 18–25 km."}
             </p>
           </div>
 
@@ -175,19 +164,19 @@ export default function ProductsPage() {
               <div className="h-80 overflow-hidden bg-white flex gap-0">
                 <div className="relative flex-1 overflow-hidden">
                   <Image
-                    src="/assets/products/cryolyze/cryolyze-3.png"
+                    src="/assets/products/cryolyze/cryolyze-3-tight.png"
                     alt="CryoLyze"
                     fill
-                    className="object-contain scale-[2.5] group-hover:scale-[2.6] transition-transform duration-500"
+                    className="object-contain p-3 group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="w-px bg-gray-200 flex-shrink-0" />
                 <div className="relative flex-1 overflow-hidden">
                   <Image
-                    src="/assets/products/cryolyze/cryolyze-1.png"
+                    src="/assets/products/cryolyze/cryolyze-1-tight.png"
                     alt="CryoLyze open"
                     fill
-                    className="object-contain scale-[2.1] group-hover:scale-[2.2] transition-transform duration-500"
+                    className="object-contain p-3 group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
               </div>

@@ -135,9 +135,8 @@ const T = {
 
 const galleryImages = [
   { src: "/assets/products/patron/patron-dark-1.png",              alt: "PATRON Gimbal",           bg: "bg-[#3C271E]/30" },
+  { src: "/assets/products/beetle/beetle-dark-transparent.png",    alt: "BEETLE Gimbal",           bg: "bg-white"        },
   { src: "/assets/about/motorstand-2.png",                         alt: "Motor Test Stand",        bg: "bg-white"        },
-  { src: "/assets/products/beetle/beetle-ai-1.png",                alt: "BEETLE Gimbal",           bg: "bg-[#3C271E]/30" },
-  { src: "/assets/products/testing/3b-bend.png",                   alt: "Testing fixture",         bg: "bg-white"        },
   { src: "/assets/about/svetlomet-167.jpg",                        alt: "Gimbal Odysseus",         bg: "bg-white"        },
   { src: "/assets/products/industrial/custom-engineering-johny-512.png", alt: "Custom Engineering", bg: "bg-[#1F2019]"   },
 ];
@@ -169,16 +168,8 @@ export default function AboutPage() {
                 <p>{t.whoP3}</p>
               </div>
             </div>
-            <div className="flex flex-col gap-6">
-              <div className="relative h-80 rounded-lg overflow-hidden border border-white/10">
-                <Image src="/assets/team/hikade-booth-team.jpg" alt="Hikade Technologies team at trade show" fill className="object-cover object-top" />
-                <div className="absolute bottom-4 left-4">
-                  <span className="telemetry-badge">{t.whoImgBadge}</span>
-                </div>
-              </div>
-              <div className="relative h-80 rounded-lg overflow-hidden border border-white/10">
-                <Image src="/assets/team/hikade-team-2.jpg" alt="Hikade Technologies team" fill className="object-cover" style={{ objectPosition: "50% 18%" }} />
-              </div>
+            <div className="relative h-full min-h-[420px] rounded-lg overflow-hidden border border-white/10">
+              <Image src="/assets/team/hikade-booth-team.jpg" alt="Hikade Technologies team at trade show" fill className="object-cover object-top" />
             </div>
           </div>
         </div>
@@ -248,7 +239,7 @@ export default function AboutPage() {
       <section className="py-14">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <h2 className="text-sm font-mono text-white mb-6 tracking-widest uppercase">{t.galleryLabel}</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             {galleryImages.map((img, i) => (
               <div key={i} className={`rounded-lg border border-white/10 group ${img.bg} p-3`}>
                 <div className="relative aspect-[4/3] overflow-hidden rounded">

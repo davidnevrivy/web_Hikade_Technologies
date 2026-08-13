@@ -101,22 +101,6 @@ const T = {
       },
       {
         phase: "08",
-        title: "TAČR — Commercial Strategy",
-        period: "Technology Agency of the Czech Republic",
-        summary: "Commercial Strategy for Implementing Gimbal in Multisensor Communication",
-        desc: "Hikade Technologies received TAČR (Technology Agency of the Czech Republic) funding for a project focused on developing a commercial strategy for deploying PATRON gimbal technology in multisensor communication platforms. This project validated the market approach and commercialisation roadmap for the stratospheric positioning technology in the context of HAPS and multisensor systems.",
-        details: ["TAČR applied research and innovation funding", "Project: Commercial Strategy for Implementing Gimbal in Multisensor Communication", "Market analysis and commercialisation roadmap for PATRON", "Multisensor communication platform deployment strategy", "Strengthened industry and market positioning"],
-      },
-      {
-        phase: "09",
-        title: "ESA SPARK — CryoLyze",
-        period: "ESA Technology Broker Czech Republic",
-        summary: "CryoLyze supported by ESA Spark Funding initiative",
-        desc: "CryoLyze executed by Hikade Technologies s.r.o. was supported by the ESA Technology Broker Czech Republic through the ESA Spark Funding initiative. ESA SPARK accelerates early-stage commercialisation of space-related technologies. The CryoLyze cryo-vacuum chamber and freeze-drying system received this support as a technology with direct relevance to space applications — including sample processing for aerospace and research missions.",
-        details: ["ESA Technology Broker Czech Republic — ESA Spark Funding", "CryoLyze: cryo-vacuum chamber and freeze-drying system", "Space-relevant technology: sample processing for aerospace applications", "Accelerates early-stage commercialisation of CryoLyze platform", "Strengthened connection to ESA technology ecosystem"],
-      },
-      {
-        phase: "10",
         title: "ESA BIC + Technology Incubation",
         period: "External validation & incubation",
         summary: "ESA BIC Prague participant + Technology Incubation programme for PATRON",
@@ -124,7 +108,7 @@ const T = {
         details: ["ESA BIC Czech Republic — pan-European ESA BIC network", "Validates technical relevance of stratospheric positioning work", "Access to European aerospace ecosystem and ESA connections", "Technology Incubation: PATRON from prototype toward validated system", "Technology Incubation: supports maturation to commercial readiness", "Combined: ESA BIC + Technology Incubation = ESA BIC+"],
       },
       {
-        phase: "11",
+        phase: "09",
         title: "Current Direction",
         period: "2025 and forward",
         summary: "Platform maturation, flight validation partnerships, portfolio expansion",
@@ -229,22 +213,6 @@ const T = {
       },
       {
         phase: "08",
-        title: "TAČR — Komerční strategie",
-        period: "Technologická agentura České republiky",
-        summary: "Komerční strategie pro implementaci gimbalu v multisenzorové komunikaci",
-        desc: "Hikade Technologies získala financování od TAČR (Technologická agentura České republiky) pro projekt zaměřený na vývoj komerční strategie pro nasazení gimbalové technologie PATRON na multisenzorových komunikačních platformách. Tento projekt validoval tržní přístup a komercionalizační plán pro stratosferickou polohovací technologii v kontextu HAPS a multisenzorových systémů.",
-        details: ["Financování aplikovaného výzkumu a inovací TAČR", "Projekt: Komerční strategie pro implementaci gimbalu v multisenzorové komunikaci", "Analýza trhu a komercionalizační plán pro PATRON", "Strategie nasazení na multisenzorové komunikační platformy", "Posílení průmyslového a tržního postavení"],
-      },
-      {
-        phase: "09",
-        title: "ESA SPARK — CryoLyze",
-        period: "ESA Technology Broker Česká republika",
-        summary: "CryoLyze podpořen iniciativou ESA Spark Funding",
-        desc: "CryoLyze realizovaný Hikade Technologies s.r.o. byl podpořen ESA Technology Broker Česká republika prostřednictvím iniciativy ESA Spark Funding. ESA SPARK urychluje ranou komercializaci technologií souvisejících s kosmickým sektorem. Kryovakuová komora a lyofilizační systém CryoLyze získaly tuto podporu jako technologie s přímou relevancí pro kosmické aplikace — včetně zpracování vzorků pro letecké a výzkumné mise.",
-        details: ["ESA Technology Broker Česká republika — ESA Spark Funding", "CryoLyze: kryovakuová komora a lyofilizační systém", "Technologie relevantní pro kosmický sektor: zpracování vzorků pro letecké aplikace", "Urychluje ranou komercializaci platformy CryoLyze", "Posílení vazby na ekosystém ESA technologií"],
-      },
-      {
-        phase: "10",
         title: "ESA BIC + Technologická inkubace",
         period: "Externí validace a inkubace",
         summary: "Účastník ESA BIC Prague + program technologické inkubace pro PATRON",
@@ -252,7 +220,7 @@ const T = {
         details: ["ESA BIC Czech Republic — součást celoevropské sítě ESA BIC", "Validuje technickou relevanci práce v oblasti stratosferického polohování", "Přístup k evropskému leteckému ekosystému a kontaktům ESA", "Technologická inkubace: PATRON od prototypu směrem k validovanému systému", "Technologická inkubace: podpora zrání k připravenosti pro komerční nasazení", "Kombinace: ESA BIC + Technologická inkubace = ESA BIC+"],
       },
       {
-        phase: "11",
+        phase: "09",
         title: "Současný směr",
         period: "2025 a dál",
         summary: "Zrání platforem, partnerství pro letovou validaci, rozšíření portfolia",
@@ -270,7 +238,7 @@ export default function HistoryPage() {
   return (
     <div className="text-white pt-20">
       {/* ── HERO ── */}
-      <section className="py-24 tech-grid">
+      <section className="pt-24 pb-10 tech-grid">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl">
             <span className="telemetry-badge mb-4 inline-block">{t.heroBadge}</span>
@@ -281,7 +249,7 @@ export default function HistoryPage() {
       </section>
 
       {/* ── OVERVIEW ── */}
-      <section className="py-16 border-b border-white/10">
+      <section className="pt-6 pb-16 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             <div className="lg:col-span-2 space-y-4 text-white leading-relaxed">
