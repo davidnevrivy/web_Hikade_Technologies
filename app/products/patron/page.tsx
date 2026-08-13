@@ -176,6 +176,20 @@ export default function PatronPage() {
             <span className="telemetry-badge mb-4 inline-block">Technical Data</span>
             <h2 className="text-2xl font-bold mb-8">PATRON — Technical Specifications</h2>
 
+            <h3 className="text-sm font-mono text-white mb-4 tracking-widest uppercase">Target Applications</h3>
+            <div className="flex flex-wrap gap-2 mb-8">
+              {applications.map((a) => (
+                <span key={a} className="px-3 py-1.5 bg-[#1F2019] border border-white/10 rounded text-xs text-white">{a}</span>
+              ))}
+            </div>
+
+            <h3 className="text-sm font-mono text-white mb-4 tracking-widest uppercase">Technical Focus</h3>
+            <div className="flex flex-wrap gap-2 mb-8">
+              {techFocus.map((t) => (
+                <span key={t} className="px-3 py-1.5 bg-[#1F2019] border border-white/10 rounded text-xs text-white">{t}</span>
+              ))}
+            </div>
+
             <div className="border border-white/10 rounded-lg overflow-hidden">
               <table className="tech-table">
                 <thead>

@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useSyncExternalStore } from "react";
 
 export type Lang = "en" | "cs";
 
@@ -11,17 +11,29 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType>({ lang: "en", setLang: () => {} });
 
-export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [lang, setLangState] = useState<Lang>("en");
+const STORAGE_KEY = "hikade-lang";
+const listeners = new Set<() => void>();
 
-  useEffect(() => {
-    const stored = localStorage.getItem("hikade-lang");
-    if (stored === "cs" || stored === "en") setLangState(stored);
-  }, []);
+function getSnapshot(): Lang {
+  const stored = localStorage.getItem(STORAGE_KEY);
+  return stored === "cs" || stored === "en" ? stored : "en";
+}
+
+function getServerSnapshot(): Lang {
+  return "en";
+}
+
+function subscribe(callback: () => void) {
+  listeners.add(callback);
+  return () => listeners.delete(callback);
+}
+
+export function LanguageProvider({ children }: { children: React.ReactNode }) {
+  const lang = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   function setLang(l: Lang) {
-    setLangState(l);
-    localStorage.setItem("hikade-lang", l);
+    localStorage.setItem(STORAGE_KEY, l);
+    listeners.forEach((callback) => callback());
   }
 
   return (

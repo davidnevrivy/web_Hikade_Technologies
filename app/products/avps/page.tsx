@@ -20,21 +20,6 @@ const specs = [
   { param: "Validation", value: "ISO 14644 where applicable", note: "According to configuration" },
 ];
 
-const processModules = [
-  "Input / pre-cleaning zone",
-  "Ultrasonic cleaning",
-  "Rinsing",
-  "Controlled drying",
-  "Vacuum drying (where relevant)",
-  "Clean transfer",
-  "Assembly",
-  "Lubrication",
-  "Inspection",
-  "Clean packaging",
-  "Airlock",
-  "Optional validation pack",
-];
-
 const isoClasses = [
   { cls: "ISO 5", c01: "100,000", c02: "23,700", c03: "10,200", c05: "3,520", c10: "832", c50: "29" },
   { cls: "ISO 6", c01: "1,000,000", c02: "237,000", c03: "102,000", c05: "35,200", c10: "8,320", c50: "293" },

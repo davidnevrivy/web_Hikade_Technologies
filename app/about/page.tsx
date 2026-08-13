@@ -177,7 +177,7 @@ export default function AboutPage() {
                 </div>
               </div>
               <div className="relative h-80 rounded-lg overflow-hidden border border-white/10">
-                <Image src="/assets/team/hikade-team-2.jpg" alt="Hikade Technologies team" fill className="object-cover object-top" />
+                <Image src="/assets/team/hikade-team-2.jpg" alt="Hikade Technologies team" fill className="object-cover" style={{ objectPosition: "50% 18%" }} />
               </div>
             </div>
           </div>
@@ -266,7 +266,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── EVENTS ── */}
-      <section className="py-20 bg-[#1F2019] tech-grid-fine">
+      <section id="events" className="py-20 bg-[#1F2019] tech-grid-fine">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
             <span className="telemetry-badge">{t.eventsBadge}</span>
