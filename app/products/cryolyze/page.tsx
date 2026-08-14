@@ -117,7 +117,7 @@ export default function CryolyzePage() {
           <div className="max-w-3xl">
             <span className="telemetry-badge mb-4 inline-block">Technical Data</span>
             <h2 className="text-2xl font-bold mb-8">CryoLyze — Technical Specifications</h2>
-            <div className="border border-white/10 rounded-lg overflow-hidden">
+            <div className="border border-white/10 rounded-lg overflow-x-auto">
               <table className="tech-table">
                 <thead>
                   <tr>

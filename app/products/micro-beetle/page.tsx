@@ -74,7 +74,7 @@ export default function MicroBeetlePage() {
               </div>
 
               <h3 className="text-sm font-mono text-white mb-4 tracking-widest uppercase">Concept Specifications</h3>
-              <div className="border border-white/10 rounded-lg overflow-hidden">
+              <div className="border border-white/10 rounded-lg overflow-x-auto">
                 <table className="tech-table">
                   <thead>
                     <tr>

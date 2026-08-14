@@ -21,7 +21,7 @@ export default function MotorStandPage() {
   return (
     <div className="text-white pt-20">
       <section className="relative py-32 bg-[#1F2019] tech-grid overflow-hidden">
-        <div className="absolute top-16 left-6 lg:left-8 z-20 space-y-2">
+        <div className="hidden lg:block absolute top-16 left-6 lg:left-8 z-20 space-y-2">
           {[
             { label: "POWER", val: "2×80 kW" },
             { label: "MAX TORQUE", val: "~400 Nm" },
@@ -101,7 +101,7 @@ export default function MotorStandPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl">
             <h3 className="text-sm font-mono text-white mb-4 tracking-widest uppercase">Reference Specifications</h3>
-            <div className="border border-white/10 rounded-lg overflow-hidden">
+            <div className="border border-white/10 rounded-lg overflow-x-auto">
               <table className="tech-table">
                 <thead>
                   <tr>

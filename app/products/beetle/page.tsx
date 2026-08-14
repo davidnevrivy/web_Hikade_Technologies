@@ -44,7 +44,7 @@ export default function BeetlePage() {
           <Image src="/assets/products/beetle/beetle-render-transparent.png" alt="BEETLE Gimbal" fill className="object-contain object-center" priority />
         </div>
 
-        <div className="absolute top-16 left-6 lg:left-8 z-20 space-y-2">
+        <div className="hidden lg:block absolute top-16 left-6 lg:left-8 z-20 space-y-2">
           {[
             { label: "PAYLOAD", val: "≤ 4.5 kg" },
             { label: "SYSTEM MASS", val: "~2.5 kg" },
@@ -137,7 +137,7 @@ export default function BeetlePage() {
               ))}
             </div>
 
-            <div className="border border-white/10 rounded-lg overflow-hidden">
+            <div className="border border-white/10 rounded-lg overflow-x-auto">
               <table className="tech-table">
                 <thead>
                   <tr>

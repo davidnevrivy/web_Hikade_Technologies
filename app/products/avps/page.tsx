@@ -38,7 +38,7 @@ export default function AVPSPage() {
           <div className="absolute inset-0 bg-gradient-to-t from-[#1F2019] via-[#1F2019]/60 to-transparent" />
         </div>
 
-        <div className="absolute top-16 left-6 lg:left-8 z-20 space-y-2">
+        <div className="hidden lg:block absolute top-16 left-6 lg:left-8 z-20 space-y-2">
           {[
             { label: "ZONE C", val: "ISO 7–6" },
             { label: "AVPS-A", val: "ISO 6–5" },
@@ -169,7 +169,7 @@ export default function AVPSPage() {
           <div className="max-w-3xl">
             <span className="telemetry-badge mb-4 inline-block">Technical Data</span>
             <h2 className="text-2xl font-bold mb-8">AVPS — System Specifications</h2>
-            <div className="border border-white/10 rounded-lg overflow-hidden">
+            <div className="border border-white/10 rounded-lg overflow-x-auto">
               <table className="tech-table">
                 <thead>
                   <tr>

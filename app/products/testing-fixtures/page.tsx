@@ -41,7 +41,7 @@ export default function TestingFixturesPage() {
     <div className="text-white pt-20">
       {/* Hero */}
       <section className="relative py-32 bg-[#1F2019] tech-grid overflow-hidden">
-        <div className="absolute top-16 left-6 lg:left-8 z-20 space-y-2">
+        <div className="hidden lg:block absolute top-16 left-6 lg:left-8 z-20 space-y-2">
           {[
             { label: "TYPE", val: "Custom fixtures" },
             { label: "STANDARD", val: "ISO 178" },
@@ -117,7 +117,7 @@ export default function TestingFixturesPage() {
           <div className="max-w-3xl">
             <span className="telemetry-badge mb-4 inline-block">Technical Data</span>
             <h2 className="text-2xl font-bold mb-8">Testing Fixtures — Specifications</h2>
-            <div className="border border-white/10 rounded-lg overflow-hidden">
+            <div className="border border-white/10 rounded-lg overflow-x-auto">
               <table className="tech-table">
                 <thead>
                   <tr>
