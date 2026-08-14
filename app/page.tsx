@@ -6,7 +6,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 const T = {
   en: {
-    heroEyebrow: "PATRON · BEETLE · ESA BIC Prague",
+    heroEyebrow: "PATRON · BEETLE · ESA BIC",
     heroTitle1: "Stratospheric Gimbals",
     heroTitle2: "for HAPS & Stratospheric Applications",
     heroTagline: "Precision two-axis gimbal platforms for the stratosphere",
@@ -70,7 +70,7 @@ const T = {
     ctaBtn1: "Request Technical Consultation", ctaBtn2: "Contact Hikade Technologies",
   },
   cs: {
-    heroEyebrow: "PATRON · BEETLE · ESA BIC Prague",
+    heroEyebrow: "PATRON · BEETLE · ESA BIC",
     heroTitle1: "Stratosférické gimbaly",
     heroTitle2: "pro HAPS a stratosferické aplikace",
     heroTagline: "Přesné dvouosé gimbalové platformy pro stratosféru",

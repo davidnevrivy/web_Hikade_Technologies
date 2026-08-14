@@ -25,7 +25,7 @@ const isoClasses = [
   { cls: "ISO 6", c01: "1,000,000", c02: "237,000", c03: "102,000", c05: "35,200", c10: "8,320", c50: "293" },
   { cls: "ISO 7", c01: "10,000,000", c02: "2,370,000", c03: "1,020,000", c05: "352,000", c10: "83,200", c50: "2,930" },
   { cls: "ISO 8", c01: "100,000,000", c02: "23,700,000", c03: "10,200,000", c05: "3,520,000", c10: "832,000", c50: "29,300" },
-  { cls: "ISO 9", c01: "—", c02: "—", c03: "—", c05: "—", c10: "—", c50: "—" },
+  { cls: "ISO 9", c01: "1,000,000,000", c02: "237,000,000", c03: "102,000,000", c05: "35,200,000", c10: "8,320,000", c50: "293,000" },
 ];
 
 export default function AVPSPage() {
@@ -34,7 +34,7 @@ export default function AVPSPage() {
       {/* Hero */}
       <section className="relative min-h-[70vh] flex items-end overflow-hidden bg-[#1F2019] tech-grid">
         <div className="absolute inset-0 z-0">
-          <Image src="/assets/hero/svetlomet-gimbal-front.jpg" alt="AVPS Clean Processing" fill className="object-cover opacity-30" priority />
+          <Image src="/assets/products/avps/avps-1.png" alt="AVPS Clean Processing" fill className="object-cover opacity-30" priority />
           <div className="absolute inset-0 bg-gradient-to-t from-[#1F2019] via-[#1F2019]/60 to-transparent" />
         </div>
 
@@ -119,24 +119,6 @@ export default function AVPSPage() {
                 fill
                 className="object-cover"
               />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Svetlomet photo */}
-      <section className="py-10 bg-[#1F2019]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="relative aspect-video rounded-lg overflow-hidden border border-white/10">
-              <Image src="/assets/hero/svetlomet-gimbal-front.jpg" alt="AVPS workstation front" fill className="object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1F2019]/80 to-transparent" />
-              <div className="absolute bottom-4 left-4"><span className="telemetry-badge">Clean zone view</span></div>
-            </div>
-            <div className="relative aspect-video rounded-lg overflow-hidden border border-white/10">
-              <Image src="/assets/hero/svetlomet-gimbal-side.jpg" alt="AVPS workstation side" fill className="object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1F2019]/80 to-transparent" />
-              <div className="absolute bottom-4 left-4"><span className="telemetry-badge">Side profile</span></div>
             </div>
           </div>
         </div>

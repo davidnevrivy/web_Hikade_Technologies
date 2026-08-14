@@ -42,12 +42,24 @@ export default function Footer() {
                 ? "Engineering for Extreme Environments. Advanced mechatronic systems for HAPS, aerospace, industrial R&D and demanding applications."
                 : "Engineering pro extrémní prostředí. Pokročilé mechatronické systémy pro HAPS, letectví, průmyslový výzkum a náročné aplikace."}
             </p>
-            <div className="space-y-2 text-sm text-white">
+            <div className="space-y-4 text-sm text-white">
               <p>
-                <span className="text-[#82D5CA] font-mono text-xs">{lang === "en" ? "ADDR" : "ADRESA"}</span>
+                <span className="text-[#82D5CA] font-mono text-xs">{lang === "en" ? "REGISTERED SEAT" : "SÍDLO"}</span>
                 <br />
                 Purkyňova 2836/79A<br />
-                612 00 Brno, Czech Republic
+                612 00 Brno, {lang === "en" ? "Czech Republic" : "Česká republika"}
+              </p>
+              <p>
+                <span className="text-[#82D5CA] font-mono text-xs">{lang === "en" ? "OFFICES" : "KANCELÁŘE"}</span>
+                <br />
+                U Vodárny 2965/2<br />
+                Brno, {lang === "en" ? "Czech Republic" : "Česká republika"}
+              </p>
+              <p>
+                <span className="text-[#82D5CA] font-mono text-xs">{lang === "en" ? "LEGAL INFORMATION" : "PRÁVNÍ INFORMACE"}</span>
+                <br />
+                IČ: 14202905<br />
+                DIČ: CZ14202905
               </p>
             </div>
           </div>
@@ -103,8 +115,8 @@ export default function Footer() {
             <div className="mt-8 p-4 border border-[#82D5CA]/20 rounded bg-[#82D5CA]/5">
               <p className="text-xs text-white leading-relaxed">
                 {lang === "en"
-                  ? "Supported by ESA BIC Prague and Czech innovation programs."
-                  : "Podporováno programem ESA BIC Prague a českými inovačními programy."}
+                  ? "Supported by ESA BIC and Czech innovation programs."
+                  : "Podporováno programem ESA BIC a českými inovačními programy."}
               </p>
             </div>
           </div>

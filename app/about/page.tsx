@@ -35,11 +35,12 @@ const T = {
     brnoH2: "Brno Engineering Ecosystem",
     brnoP1: "Brno is home to Brno University of Technology (VUT), Masaryk University and a dense ecosystem of industrial and R&D companies — one of the strongest technical environments in Central Europe.",
     brnoP2: "Hikade Technologies is based at Purkyňova 2836/79A in Brno, in close proximity to university and innovation infrastructure that enables access to technical expertise, machining, testing and collaboration with research institutions.",
-    brnoAddrLabel: "ADDRESS",
+    brnoAddrLabel: "REGISTERED SEAT",
+    brnoOfficesLabel: "OFFICES",
     esaH2: "ESA Business Incubation Centre",
     esaP1: "Hikade Technologies is a participant in the ESA Business Incubation Centre Czech Republic program — one of Europe's leading space incubation networks supporting companies developing technologies relevant to space and HAPS applications.",
     esaP2: "Participation reflects the technical relevance of our stratospheric positioning and precision engineering work within the European aerospace and space ecosystem.",
-    esaNote: "ESA BIC Prague — ESA Business Incubation Centre Czech Republic. Selected development activities may additionally be supported by Czech national innovation programs.",
+    esaNote: "ESA Business Incubation Centre Czech Republic. Selected development activities may additionally be supported by Czech national innovation programs.",
     ctaH2: "Work with us on your engineering challenge",
     ctaP: "Whether you have a payload, a process or an engineering problem that does not fit a catalog solution — start a technical discussion.",
     ctaBtn1: "Contact Hikade Technologies",
@@ -98,11 +99,12 @@ const T = {
     brnoH2: "Brněský inženýrský ekosystém",
     brnoP1: "Brno je domovem Vysokého učení technického (VUT), Masarykovy univerzity a hustého ekosystému průmyslových a R&D společností — jedno z nejsilnějších technických prostředí ve střední Evropě.",
     brnoP2: "Hikade Technologies sídlí na Purkyňově 2836/79A v Brně, v těsné blízkosti univerzitní a inovační infrastruktury umožňující přístup k technické odbornosti, obrábění, testování a spolupráci s výzkumnými institucemi.",
-    brnoAddrLabel: "ADRESA",
+    brnoAddrLabel: "SÍDLO",
+    brnoOfficesLabel: "KANCELÁŘE",
     esaH2: "ESA Business Incubation Centre",
     esaP1: "Hikade Technologies je účastníkem programu ESA Business Incubation Centre Czech Republic — jedné z předních evropských sítí pro inkubaci vesmírných technologií podporující společnosti vyvíjející technologie relevantní pro vesmír a HAPS aplikace.",
     esaP2: "Účast odráží technickou relevanci naší práce v oblasti stratosferického polohování a přesného inženýrství v rámci evropského leteckého a kosmického ekosystému.",
-    esaNote: "ESA BIC Prague — ESA Business Incubation Centre Czech Republic. Vybrané vývojové aktivity mohou být dodatečně podpořeny českými národními inovačními programy.",
+    esaNote: "ESA Business Incubation Centre Czech Republic. Vybrané vývojové aktivity mohou být dodatečně podpořeny českými národními inovačními programy.",
     ctaH2: "Spolupracujte s námi na vašem inženýrském problému",
     ctaP: "Ať máte payload, proces nebo inženýrský problém, který nevyřeší katalogové řešení — zahajte technickou diskuzi.",
     ctaBtn1: "Kontaktovat Hikade Technologies",
@@ -302,10 +304,16 @@ export default function AboutPage() {
                 <p>{t.brnoP1}</p>
                 <p>{t.brnoP2}</p>
               </div>
-              <div className="mt-8 space-y-1">
-                <p className="text-xs font-mono text-[#82D5CA]">{t.brnoAddrLabel}</p>
-                <p className="text-white text-sm">Hikade Technologies s.r.o.</p>
-                <p className="text-white text-sm">Purkyňova 2836/79A<br />612 00 Brno, Czech Republic</p>
+              <div className="mt-8 space-y-4">
+                <div className="space-y-1">
+                  <p className="text-xs font-mono text-[#82D5CA]">{t.brnoAddrLabel}</p>
+                  <p className="text-white text-sm">Hikade Technologies s.r.o.</p>
+                  <p className="text-white text-sm">Purkyňova 2836/79A<br />612 00 Brno, {lang === "en" ? "Czech Republic" : "Česká republika"}</p>
+                </div>
+                <div className="space-y-1">
+                  <p className="text-xs font-mono text-[#82D5CA]">{t.brnoOfficesLabel}</p>
+                  <p className="text-white text-sm">U Vodárny 2965/2<br />Brno, {lang === "en" ? "Czech Republic" : "Česká republika"}</p>
+                </div>
               </div>
             </div>
             <div>
@@ -314,7 +322,7 @@ export default function AboutPage() {
               <p className="text-white leading-relaxed mb-6">{t.esaP2}</p>
               <div className="p-4 border border-[#82D5CA]/20 rounded bg-[#82D5CA]/5">
                 <p className="text-xs text-white leading-relaxed">
-                  <span className="text-white font-semibold">ESA BIC Prague</span> — {t.esaNote}
+                  <span className="text-white font-semibold">ESA BIC</span> — {t.esaNote}
                 </p>
               </div>
             </div>

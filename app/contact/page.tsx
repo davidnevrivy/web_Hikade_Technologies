@@ -14,7 +14,9 @@ export default function ContactPage() {
       subtitle: "Have a payload, process or engineering challenge that does not fit a standard solution? Send us the core requirements, constraints and intended operating environment.",
       directContact: "Direct Contact",
       phoneLabel: "PHONE",
-      addressLabel: "ADDRESS",
+      addressLabel: "REGISTERED SEAT",
+      officesLabel: "OFFICES",
+      legalLabel: "LEGAL INFORMATION",
       relevantLabel: "RELEVANT STARTING POINTS",
       links: [
         { label: "Have a HAPS or stratospheric payload?", href: "/products/patron" },
@@ -29,7 +31,9 @@ export default function ContactPage() {
       subtitle: "Máte payload, proces nebo technický problém, který nevyřeší standardní produkt? Pošlete nám klíčové požadavky, omezení a zamýšlené provozní prostředí.",
       directContact: "Přímý kontakt",
       phoneLabel: "TELEFON",
-      addressLabel: "ADRESA",
+      addressLabel: "SÍDLO",
+      officesLabel: "KANCELÁŘE",
+      legalLabel: "PRÁVNÍ INFORMACE",
       relevantLabel: "RELEVANTNÍ VÝCHOZÍ BODY",
       links: [
         { label: "Máte HAPS nebo stratosferický payload?", href: "/products/patron" },
@@ -71,11 +75,24 @@ export default function ContactPage() {
               <div className="mt-10">
                 <p className="text-xs font-mono text-[#82D5CA] mb-3">{t.addressLabel}</p>
                 <address className="not-italic text-white text-sm leading-relaxed">
-                  Hikade Technologies s.r.o.<br />
                   Purkyňova 2836/79A<br />
                   612 00 Brno<br />
-                  Czech Republic
+                  {lang === "en" ? "Czech Republic" : "Česká republika"}
                 </address>
+              </div>
+
+              <div className="mt-8">
+                <p className="text-xs font-mono text-[#82D5CA] mb-3">{t.officesLabel}</p>
+                <address className="not-italic text-white text-sm leading-relaxed">
+                  U Vodárny 2965/2<br />
+                  Brno<br />
+                  {lang === "en" ? "Czech Republic" : "Česká republika"}
+                </address>
+              </div>
+
+              <div className="mt-8">
+                <p className="text-xs font-mono text-[#82D5CA] mb-3">{t.legalLabel}</p>
+                <p className="text-white text-sm leading-relaxed">IČ: 14202905<br />DIČ: CZ14202905</p>
               </div>
 
               <div className="mt-10 space-y-3">

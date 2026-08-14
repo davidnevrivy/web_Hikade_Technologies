@@ -446,7 +446,7 @@ export default function ProductsPage() {
                     </div>
                   </div>
                   <div className="min-w-0">
-                    <div className="text-[10px] font-mono text-white uppercase tracking-wider mb-0.5">ESA BIC+ — {en ? "ESA Business Incubation Centre Prague" : "ESA Podnikatelské inkubační centrum Praha"}</div>
+                    <div className="text-[10px] font-mono text-white uppercase tracking-wider mb-0.5">ESA BIC+ — {en ? "ESA Business Incubation Centre Czech Republic" : "ESA Podnikatelské inkubační centrum Česká republika"}</div>
                     <h3 className="font-semibold text-white text-sm leading-tight">
                       {en ? "Gimbal PATRON — ESA BIC + Technology Incubation" : "Gimbál PATRON — ESA BIC + Technologická inkubace"}
                     </h3>
@@ -457,8 +457,8 @@ export default function ProductsPage() {
               <div className="px-5 pb-5 pt-0 border-t border-white/5">
                 <p className="text-sm text-white leading-relaxed mt-4 mb-3">
                   {en
-                    ? "ESA Business Incubation Centre Prague (ESA BIC Prague) supports innovative startups and SMEs in commercialising space technologies. ESA BIC supported the development and commercialisation of PATRON — a precision stratospheric gimbal platform for HAPS payloads."
-                    : "ESA Business Incubation Centre Praha (ESA BIC Praha) podporuje inovativní startupy a malé podniky v komercionalizaci vesmírných technologií. ESA BIC podpořil vývoj a komercionalizaci PATRONu — precizní stratosferické gimbalové platformy pro HAPS payloady."}
+                    ? "ESA Business Incubation Centre Czech Republic (ESA BIC) supports innovative startups and SMEs in commercialising space technologies. ESA BIC supported the development and commercialisation of PATRON — a precision stratospheric gimbal platform for HAPS payloads."
+                    : "ESA Business Incubation Centre Czech Republic (ESA BIC) podporuje inovativní startupy a malé podniky v komercionalizaci vesmírných technologií. ESA BIC podpořil vývoj a komercionalizaci PATRONu — precizní stratosferické gimbalové platformy pro HAPS payloady."}
                 </p>
                 <p className="text-sm text-white leading-relaxed">
                   {en
