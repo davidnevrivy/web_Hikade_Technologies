@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/contexts/LanguageContext";
+import MuteableVideo from "@/components/MuteableVideo";
 
 const T = {
   en: {
@@ -10,13 +11,13 @@ const T = {
     heroTitle1: "Stratospheric Gimbals",
     heroTitle2: "for HAPS & Stratospheric Applications",
     heroTagline: "Precision two-axis gimbal platforms for the stratosphere",
-    heroSub1: "Precision two-axis gimbal platforms built for the stratosphere. PATRON handles payloads up to 15 kg at 18–25 km altitude. BEETLE delivers the same core technology for lighter, more compact missions — both designed for HAPS.",
+    heroSub1: "Precision two-axis gimbal platforms built for the stratosphere. PATRON handles payloads up to 15 kg at 16–23 km altitude. BEETLE delivers the same core technology for lighter, more compact missions — both designed for HAPS.",
     heroSub2: "",
     cta1: "Explore Portfolio", cta2: "About Us", cta3: "Request Consultation",
-    stat1: "Altitude", stat2: "Temperature", stat3: "Pressure",
+    stat1: "Flight Level", stat2: "Temperature", stat3: "Pressure", stat4: "Humidity",
     scroll: "SCROLL",
     whatBadge: "Engineering Portfolio", whatTitle: "What We Build",
-    whatDesc: "Hikade Technologies focuses on complete technical systems for demanding applications where standard catalog solutions are not sufficient.",
+    whatDesc: "Hikade Technologies is a high-tech R&D company focused on complete technical systems for mechatronics, aerospace, space and HAPS applications where standard catalog solutions are not sufficient.",
     w1t: "Stratospheric Positioning Systems", w1d: "Two-axis gimbal platforms for HAPS, balloon platforms, optical payloads, antennas and customer-specific stratospheric payload integration.",
     w2t: "Clean & Vacuum Processing Systems", w2d: "AVPS and related systems for controlled cleaning, drying, assembly, lubrication, inspection and packaging of precision components.",
     w3t: "Custom Engineering", w3d: "Complete engineering systems combining mechanics, electronics, firmware, control logic and documentation. From concept to validated prototype.",
@@ -37,20 +38,19 @@ const T = {
     ceCta: "Start a Custom Engineering Project",
     labLabel: "Engineering Lab · Brno",
     capBadge: "Engineering Depth", capTitle: "Core Capabilities",
-    capDesc: "Hikade Technologies combines mechanical engineering, embedded systems, prototyping, testing and documentation as a single integrated team.",
+    capDesc: "Hikade Technologies combines mechanical engineering, embedded systems, testing and documentation as a single integrated team.",
     cap1t: "CAD Design & Mechanical Engineering", cap1d: "Parametric modelling, tolerance-aware design, DFM, DFA, payload integration and precise mechanical packaging.",
     cap2t: "Computational Analysis", cap2d: "Structural, thermal, modal and buckling analysis. Topology optimization. Risk reduction through simulation.",
-    cap3t: "Rapid Prototyping", cap3d: "Full cycle: design → manufacture → assembly → bring-up → test → iterate. Fast development for functional prototypes.",
     cap4t: "Embedded Control", cap4d: "Real-time firmware, state machines, RS-485, Ethernet, actuator and sensor communication for complete system control.",
     cap5t: "Mechatronics & Integration", cap5d: "Mechanics, electronics, drives, sensors, cable routing, safety logic and system commissioning as one integrated system.",
     cap6t: "Technical Documentation", cap6d: "Test reports, installation and maintenance manuals, manufacturing documentation, risk analysis and validation packages.",
     techLink: "View full technology stack →",
     procBadge: "How We Work", procTitle: "Development Process",
-    procDesc: "Structured but flexible — our six-step process scales from rapid prototyping to full engineering system development.",
+    procDesc: "Structured but flexible — our six-step process scales from early concept work to full engineering system development.",
     s1t: "Discover", s1d: "Technical constraints, operating environment, payload requirements, integration limitations and customer objectives.",
     s2t: "Define", s2d: "System requirements, architecture, success criteria, interface definitions, validation scope and risk areas.",
     s3t: "Design", s3d: "Mechanical design, control architecture, electronics, firmware, cable routing, DFM and validation strategy.",
-    s4t: "Develop", s4d: "Rapid prototyping, manufacturing, assembly, firmware implementation, system integration and functional bring-up.",
+    s4t: "Develop", s4d: "Manufacturing, assembly, firmware implementation, system integration and functional bring-up.",
     s5t: "Validate", s5d: "Functional tests, mechanical verification, environmental checks, documentation, customer review and performance verification.",
     s6t: "Deliver", s6d: "Final prototype or system, technical documentation, manuals, integration support and roadmap for next development phase.",
     evBadge: "Presentations & Trade Fairs", evTitle: "Where We Present Our Technologies",
@@ -61,9 +61,8 @@ const T = {
     ev2t: "Engineering Fairs", ev2d: "Industrial and mechatronics trade exhibitions",
     ev3t: "ESA Programs", ev3d: "Innovation and incubation program events",
     ev4t: "Tech Conferences", ev4d: "Deep-tech and startup ecosystem presentations",
-    labCity: "Brno, Czech Republic",
-    labTitle: "Engineering in the heart of the Czech technical ecosystem",
-    labDesc: "Based in Brno — a city with strong technical universities, R&D organizations and engineering companies — Hikade Technologies combines local manufacturing with aerospace-relevant development capabilities.",
+    videoBadge: "Inside Hikade", videoTitle: "See the engineering in motion",
+    videoDesc: "A short look inside our Brno lab — design, manufacturing and testing of aerospace-relevant mechatronic systems.",
     ctaBadge: "Start a Technical Discussion",
     ctaTitle: "Have a payload, process or engineering challenge that does not fit a standard solution?",
     ctaDesc: "Send us your requirements, constraints and intended operating environment. We will help define a technically realistic path from concept to prototype or validated system.",
@@ -74,13 +73,13 @@ const T = {
     heroTitle1: "Stratosférické gimbaly",
     heroTitle2: "pro HAPS a stratosferické aplikace",
     heroTagline: "Přesné dvouosé gimbalové platformy pro stratosféru",
-    heroSub1: "Přesné dvouosé gimbalové platformy konstruované pro stratosféru. PATRON nese payloady až 15 kg ve výšce 18–25 km. BEETLE přináší stejnou technologii pro lehčí a kompaktnější mise — obě platformy navrženy pro HAPS.",
+    heroSub1: "Přesné dvouosé gimbalové platformy konstruované pro stratosféru. PATRON nese payloady až 15 kg ve výšce 16–23 km. BEETLE přináší stejnou technologii pro lehčí a kompaktnější mise — obě platformy navrženy pro HAPS.",
     heroSub2: "",
     cta1: "Prozkoumat portfolio", cta2: "O nás", cta3: "Technická konzultace",
-    stat1: "Výška", stat2: "Teplota", stat3: "Tlak",
+    stat1: "Letová hladina", stat2: "Teplota", stat3: "Tlak", stat4: "Vlhkost",
     scroll: "SCROLL",
     whatBadge: "Hlavní oblasti engineeringu", whatTitle: "Co vyvíjíme",
-    whatDesc: "Hikade Technologies se zaměřuje na kompletní technické systémy pro náročné aplikace, kde standardní katalogová řešení nestačí.",
+    whatDesc: "Hikade Technologies je high-tech R&D společnost zaměřená na kompletní technické systémy pro mechatroniku, letectví, vesmír a HAPS aplikace, kde standardní katalogová řešení nestačí.",
     w1t: "Stratosferické polohovací systémy", w1d: "Dvouosé gimbalové platformy pro HAPS, balonové platformy, optické payloady, antény a zákaznicky specifické integrace stratosferických payloadů.",
     w2t: "Čisté a vakuové zpracovatelské systémy", w2d: "AVPS a příbuzné systémy pro řízené čištění, sušení, montáž, mazání, kontrolu a balení přesných součástek.",
     w3t: "Zakázkový vývoj", w3d: "Kompletní inženýrské systémy kombinující mechaniku, elektroniku, firmware, řídicí logiku a dokumentaci. Od konceptu k validovanému prototypu.",
@@ -101,20 +100,19 @@ const T = {
     ceCta: "Zahájit zakázkový projekt",
     labLabel: "Vývojová laboratoř · Brno",
     capBadge: "Technická hloubka", capTitle: "Klíčové schopnosti",
-    capDesc: "Hikade Technologies kombinuje strojní engineering, vestavěné systémy, prototypování, testování a dokumentaci jako jeden integrovaný tým.",
+    capDesc: "Hikade Technologies kombinuje strojní engineering, vestavěné systémy, testování a dokumentaci jako jeden integrovaný tým.",
     cap1t: "CAD design a strojní engineering", cap1d: "Parametrické modelování, tolerance, DFM, DFA, integrace payloadu a přesné mechanické balení.",
     cap2t: "Výpočetní analýza", cap2d: "Strukturální, tepelná, modální a vzpěrnostní analýza. Topologická optimalizace. Snižování rizik pomocí simulace.",
-    cap3t: "Rychlé prototypování", cap3d: "Celý cyklus: návrh → výroba → montáž → oživení → test → iterace. Rychlý vývoj funkčních prototypů.",
     cap4t: "Vestavěné řídicí systémy", cap4d: "Firmware v reálném čase, stavové automaty, RS-485, Ethernet, komunikace s aktuátory a senzory.",
     cap5t: "Mechatronika a integrace", cap5d: "Mechanika, elektronika, pohony, senzory, vedení kabelů, bezpečnostní logika a zprovoznění systému jako celek.",
     cap6t: "Technická dokumentace", cap6d: "Testovací zprávy, instalační a servisní manuály, výrobní dokumentace, analýza rizik a validační balíčky.",
     techLink: "Zobrazit kompletní technologický stack →",
     procBadge: "Jak pracujeme", procTitle: "Proces vývoje",
-    procDesc: "Strukturovaný, ale flexibilní — náš šestikrokový proces se přizpůsobí od rychlého prototypování až po vývoj komplexního inženýrského systému.",
+    procDesc: "Strukturovaný, ale flexibilní — náš šestikrokový proces se přizpůsobí od raného konceptu až po vývoj komplexního inženýrského systému.",
     s1t: "Zjistit", s1d: "Technická omezení, provozní prostředí, požadavky na payload, integrační omezení a cíle zákazníka.",
     s2t: "Definovat", s2d: "Systémové požadavky, architektura, kritéria úspěchu, definice rozhraní, rozsah validace a rizikové oblasti.",
     s3t: "Navrhnout", s3d: "Mechanický návrh, řídicí architektura, elektronika, firmware, vedení kabelů, DFM a strategie validace.",
-    s4t: "Vyvinout", s4d: "Rychlé prototypování, výroba, montáž, implementace firmwaru, systémová integrace a funkční oživení.",
+    s4t: "Vyvinout", s4d: "Výroba, montáž, implementace firmwaru, systémová integrace a funkční oživení.",
     s5t: "Validovat", s5d: "Funkční testy, mechanická verifikace, environmentální zkoušky, dokumentace, zákaznická revize a ověření výkonu.",
     s6t: "Dodat", s6d: "Finální prototyp nebo systém, technická dokumentace, manuály, podpora integrace a plán pro další vývojovou fázi.",
     evBadge: "Prezentace a veletrhy", evTitle: "Kde prezentujeme naše technologie",
@@ -125,9 +123,8 @@ const T = {
     ev2t: "Inženýrské veletrhy", ev2d: "Průmyslové výstavy a mechatronické veletrhy",
     ev3t: "ESA programy", ev3d: "Inovační a inkubační programy ESA",
     ev4t: "Tech konference", ev4d: "Deep-tech a startupové ekosystémové prezentace",
-    labCity: "Brno, Česká republika",
-    labTitle: "Engineering v srdci českého technického ekosystému",
-    labDesc: "Se sídlem v Brně — městě se silnými technickými univerzitami, výzkumnými organizacemi a inženýrskými společnostmi — Hikade Technologies kombinuje lokální výrobu s aerospace-relevantními vývojovými kapacitami.",
+    videoBadge: "Pohled do Hikade", videoTitle: "Engineering v pohybu",
+    videoDesc: "Krátký pohled do naší laboratoře v Brně — návrh, výroba a testování aerospace-relevantních mechatronických systémů.",
     ctaBadge: "Zahájit technickou diskusi",
     ctaTitle: "Máte payload, proces nebo technický problém, který se nehodí do standardního řešení?",
     ctaDesc: "Zašlete nám vaše požadavky, omezení a zamýšlené provozní prostředí. Pomůžeme vám definovat technicky realistickou cestu od konceptu k prototypu nebo validovanému systému.",
@@ -149,7 +146,6 @@ export default function HomePage() {
   const caps = [
     { title: t.cap1t, desc: t.cap1d, icon: "◈" },
     { title: t.cap2t, desc: t.cap2d, icon: "⊞" },
-    { title: t.cap3t, desc: t.cap3d, icon: "◫" },
     { title: t.cap4t, desc: t.cap4d, icon: "⊟" },
     { title: t.cap5t, desc: t.cap5d, icon: "⊕" },
     { title: t.cap6t, desc: t.cap6d, icon: "≡" },
@@ -196,11 +192,12 @@ export default function HomePage() {
                 <Link href="/about" className="px-5 py-2.5 border border-white/30 text-white font-semibold rounded hover:border-[#82D5CA]/60 hover:text-[#82D5CA] transition-colors text-sm">{t.cta2}</Link>
                 <Link href="/contact" className="px-5 py-2.5 border border-white/15 text-white font-semibold rounded hover:border-white/35 hover:text-white transition-colors text-sm">{t.cta3}</Link>
               </div>
-              <div className="mt-10 grid grid-cols-3 gap-3 border-t border-white/10 pt-7">
+              <div className="mt-10 grid grid-cols-4 gap-3 border-t border-white/10 pt-7">
                 {[
-                  { val: "18–25 km",     label: t.stat1 },
-                  { val: "−60 / +80 °C", label: t.stat2 },
-                  { val: "2.5–7.5 kPa",  label: t.stat3 },
+                  { val: "16–23 km",     label: t.stat1 },
+                  { val: "−82 / +80 °C", label: t.stat2 },
+                  { val: "3–1000 kPa",   label: t.stat3 },
+                  { val: "15–95 %",      label: t.stat4 },
                 ].map((s) => (
                   <div key={s.val}>
                     <div className="text-base font-bold font-mono text-[#82D5CA]">{s.val}</div>
@@ -414,16 +411,18 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── LAB PHOTO ── */}
-      <section className="relative h-[26rem] lg:h-[36rem] overflow-hidden">
-        <Image src="/assets/team/veletrh-selfie-stormtroopers-baby-yoda.jpg" alt="Hikade Technologies Lab" fill className="object-cover" style={{ objectPosition: '50% 30%' }} />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#18261D] via-[#18261D]/70 to-transparent" />
-        <div className="relative z-10 h-full flex items-center px-6 lg:px-8 max-w-7xl mx-auto">
-          <div className="max-w-lg">
-            <span className="telemetry-badge mb-4 block w-fit">{t.labCity}</span>
-            <h2 className="text-2xl lg:text-3xl font-bold mb-3">{t.labTitle}</h2>
-            <p className="text-white text-sm leading-relaxed">{t.labDesc}</p>
-          </div>
+      {/* ── VIDEO ── */}
+      <section className="py-24 tech-grid">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+          <span className="telemetry-badge mb-4 inline-block">{t.videoBadge}</span>
+          <h2 className="text-2xl lg:text-3xl font-bold mb-3">{t.videoTitle}</h2>
+          <p className="text-white text-sm leading-relaxed max-w-xl mx-auto mb-8">{t.videoDesc}</p>
+          <MuteableVideo
+            src="/assets/video/hikade-intro.mp4"
+            poster="/assets/video/hikade-intro-poster.jpg"
+            containerClassName="relative aspect-video rounded-lg overflow-hidden border border-white/10 bg-black"
+            className="absolute inset-0 w-full h-full object-contain"
+          />
         </div>
       </section>
 

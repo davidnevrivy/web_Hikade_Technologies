@@ -18,19 +18,20 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Hikade Technologies — Engineering for Extreme Environments",
+    default: "Hikade Technologies — High-Tech R&D for Mechatronics, Aerospace & HAPS",
     template: "%s | Hikade Technologies",
   },
   description:
-    "Hikade Technologies develops advanced mechatronic systems, precision gimbal platforms, clean and vacuum processing systems, and custom engineering solutions for HAPS, aerospace, and industrial R&D applications.",
+    "Hikade Technologies is a high-tech R&D company developing advanced mechatronic systems, precision gimbal platforms, clean and vacuum processing systems and custom engineering solutions for HAPS, aerospace, space and industrial applications.",
   keywords: [
     "HAPS gimbal",
     "stratospheric payload",
     "two-axis gimbal",
     "payload stabilization",
     "aerospace mechatronics",
+    "space mechatronics",
+    "high-tech R&D",
     "custom mechatronics",
-    "rapid prototyping",
     "embedded control",
     "clean processing workstation",
     "vacuum compatible processing",
@@ -39,9 +40,9 @@ export const metadata: Metadata = {
     "precision positioning",
   ],
   openGraph: {
-    title: "Hikade Technologies — Engineering for Extreme Environments",
+    title: "Hikade Technologies — High-Tech R&D for Mechatronics, Aerospace & HAPS",
     description:
-      "Advanced mechatronic systems for HAPS, aerospace, industrial R&D and extreme environments. Based in Brno, Czech Republic.",
+      "A high-tech R&D company building advanced mechatronic systems for HAPS, aerospace, space and industrial applications. Based in Brno, Czech Republic.",
     url: "https://hikade.cz",
     siteName: "Hikade Technologies",
     locale: "en_US",

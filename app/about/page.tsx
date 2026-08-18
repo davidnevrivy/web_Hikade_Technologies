@@ -3,14 +3,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/contexts/LanguageContext";
+import MuteableVideo from "@/components/MuteableVideo";
 
 const T = {
   en: {
-    heroBadge: "Engineering Company · Brno",
-    h1: "Engineering company for advanced mechatronic systems and extreme-environment applications.",
+    heroBadge: "High-Tech R&D Company · Brno",
+    h1: "High-tech R&D company engineering mechatronic systems for aerospace, space and HAPS.",
     heroSub: "Hikade Technologies s.r.o. — Brno, Czech Republic",
     whoH2: "Who We Are",
-    whoP1: "Hikade Technologies is a Czech engineering company based in Brno, focused on advanced engineering, rapid prototyping and development of complete mechatronic systems for demanding industrial, aerospace, HAPS, laboratory and research applications.",
+    whoP1: "Hikade Technologies is a Czech high-tech R&D company based in Brno, focused on mechatronics, aerospace, space and HAPS engineering, and on the development of complete mechatronic systems for demanding industrial, laboratory and research applications.",
     whoP2: "We develop complete technical systems combining mechanical engineering, electronics, embedded firmware, sensor integration, actuators and drives, control logic, testing, validation and technical documentation. The output is not a model or a report — it is a working, documented system.",
     whoP3: "The company was founded with a clear technical direction: to develop engineering hardware for environments where mass, precision, pressure, temperature, cleanliness, reliability and integration constraints define the challenge — and where standard catalog solutions are not sufficient.",
     whoImgBadge: "Purkyňova, Brno · Czech Republic",
@@ -41,6 +42,8 @@ const T = {
     esaP1: "Hikade Technologies is a participant in the ESA Business Incubation Centre Czech Republic program — one of Europe's leading space incubation networks supporting companies developing technologies relevant to space and HAPS applications.",
     esaP2: "Participation reflects the technical relevance of our stratospheric positioning and precision engineering work within the European aerospace and space ecosystem.",
     esaNote: "ESA Business Incubation Centre Czech Republic. Selected development activities may additionally be supported by Czech national innovation programs.",
+    membershipsLabel: "Memberships & Programs",
+    memberships: ["ESA BIC Czech Republic", "Czech-German Chamber of Industry and Commerce", "InnovX"],
     ctaH2: "Work with us on your engineering challenge",
     ctaP: "Whether you have a payload, a process or an engineering problem that does not fit a catalog solution — start a technical discussion.",
     ctaBtn1: "Contact Hikade Technologies",
@@ -64,17 +67,20 @@ const T = {
       { title: "Custom Mechatronic Systems", desc: "Complete engineering from concept to prototype — mechanics, electronics, firmware, documentation — for customers with non-standard requirements.", icon: "≡", href: "/products#custom-engineering" },
     ],
     events: [
-      { name: "MSV Brno — International Engineering Fair", date: "October 2024", location: "Brno, Czech Republic", type: "Trade Fair", desc: "Presentation of precision gimbal platforms and custom mechatronic development capabilities to industrial and aerospace visitors at Central Europe's largest engineering exhibition.", technologies: ["PATRON Gimbal", "Custom Engineering"], image: "/assets/lab/lab-electronics.jpg" },
-      { name: "SpaceTech Expo Europe", date: "November 2024", location: "Bremen, Germany", type: "Aerospace Exhibition", desc: "HAPS-focused gimbal development program and stratospheric payload integration capabilities presented to European aerospace industry partners.", technologies: ["PATRON", "BEETLE", "HAPS Positioning"], image: "/assets/hero/patron-atmosphere.jpg" },
+      { name: "JEC World — Composites Show", date: "March 2025", location: "Paris, France", type: "Composites Exhibition", desc: "Hikade Technologies connected with leading composite material manufacturers and suppliers at JEC World, the world's leading composites show, exploring bio-composites and advanced materials relevant to lightweight aerospace structures.", technologies: ["Custom Engineering", "Materials R&D"], image: "/assets/events/jec-world-2025.png" },
+      { name: "IDET — International Defence and Security Technologies Fair", date: "May 2025", location: "Brno, Czech Republic", type: "Defence & Security Fair", desc: "Precision positioning and custom mechatronic systems presented to defence, security and dual-use technology visitors at the Czech Republic's leading defence and security exhibition.", technologies: ["PATRON Gimbal", "Custom Engineering"], image: "/assets/events/idet-2025-logo.png" },
+      { name: "Eurosatory", date: "June 2024", location: "Paris, France", type: "Defence & Security Exhibition", desc: "HAPS positioning platforms and precision mechatronic systems presented to international defence, security and aerospace decision-makers at one of the world's largest defence exhibitions.", technologies: ["PATRON", "BEETLE", "HAPS Positioning"], image: "/assets/team/czech-space-stand.jpg" },
+      { name: "MSV Brno — International Engineering Fair", date: "October 2025", location: "Brno, Czech Republic", type: "Trade Fair", desc: "Presentation of precision gimbal platforms and custom mechatronic development capabilities to industrial and aerospace visitors at Central Europe's largest engineering exhibition.", technologies: ["PATRON Gimbal", "Custom Engineering"], image: "/assets/events/msv-2025-banner.png" },
+      { name: "SpaceTech Expo Europe", date: "November 2025", location: "Bremen, Germany", type: "Aerospace Exhibition", desc: "HAPS-focused gimbal development program and stratospheric payload integration capabilities presented to European aerospace industry partners as part of the Czech Space Delegation.", technologies: ["PATRON", "BEETLE", "HAPS Positioning"], image: "/assets/events/spacetech-expo-2025-banner.png" },
       { name: "ESA BIC Czech Republic — Technology Showcase", date: "2024", location: "Czech Republic", type: "Innovation Program", desc: "Stratospheric positioning technology and AVPS clean processing system presented as part of the ESA Business Incubation Centre Czech Republic program.", technologies: ["PATRON", "AVPS", "Stratospheric Applications"], image: "/assets/products/patron/patron-dark-2.png" },
     ],
   },
   cs: {
-    heroBadge: "Inženýrská společnost · Brno",
-    h1: "Inženýrská společnost pro pokročilé mechatronické systémy a aplikace v extrémním prostředí.",
+    heroBadge: "High-tech R&D společnost · Brno",
+    h1: "High-tech R&D společnost vyvíjející mechatronické systémy pro letectví, vesmír a HAPS.",
     heroSub: "Hikade Technologies s.r.o. — Brno, Česká republika",
     whoH2: "Kdo jsme",
-    whoP1: "Hikade Technologies je česká inženýrská společnost se sídlem v Brně, zaměřená na pokročilé inženýrství, rychlé prototypování a vývoj kompletních mechatronických systémů pro náročné průmyslové, letecké, HAPS, laboratorní a výzkumné aplikace.",
+    whoP1: "Hikade Technologies je česká high-tech R&D společnost se sídlem v Brně, zaměřená na mechatroniku, letectví, vesmír a HAPS inženýrství a na vývoj kompletních mechatronických systémů pro náročné průmyslové, laboratorní a výzkumné aplikace.",
     whoP2: "Vyvíjíme kompletní technické systémy kombinující strojní inženýrství, elektroniku, vestavěný firmware, integraci senzorů, pohony, řídicí logiku, testování, validaci a technickou dokumentaci. Výstupem není model nebo zpráva — je to funkční, zdokumentovaný systém.",
     whoP3: "Společnost byla založena s jasným technickým zaměřením: vyvíjet inženýrský hardware pro prostředí, kde výzvu definují omezení hmotnosti, přesnosti, tlaku, teploty, čistoty, spolehlivosti a integrace — a kde standardní katalogová řešení nestačí.",
     whoImgBadge: "Purkyňova, Brno · Česká republika",
@@ -105,6 +111,8 @@ const T = {
     esaP1: "Hikade Technologies je účastníkem programu ESA Business Incubation Centre Czech Republic — jedné z předních evropských sítí pro inkubaci vesmírných technologií podporující společnosti vyvíjející technologie relevantní pro vesmír a HAPS aplikace.",
     esaP2: "Účast odráží technickou relevanci naší práce v oblasti stratosferického polohování a přesného inženýrství v rámci evropského leteckého a kosmického ekosystému.",
     esaNote: "ESA Business Incubation Centre Czech Republic. Vybrané vývojové aktivity mohou být dodatečně podpořeny českými národními inovačními programy.",
+    membershipsLabel: "Členství a programy",
+    memberships: ["ESA BIC Czech Republic", "Česko-německá obchodní a průmyslová komora", "InnovX"],
     ctaH2: "Spolupracujte s námi na vašem inženýrském problému",
     ctaP: "Ať máte payload, proces nebo inženýrský problém, který nevyřeší katalogové řešení — zahajte technickou diskuzi.",
     ctaBtn1: "Kontaktovat Hikade Technologies",
@@ -128,8 +136,11 @@ const T = {
       { title: "Zakázkové mechatronické systémy", desc: "Kompletní inženýrství od konceptu po prototyp — mechanika, elektronika, firmware, dokumentace — pro zákazníky s nestandardními požadavky.", icon: "≡", href: "/products#custom-engineering" },
     ],
     events: [
-      { name: "MSV Brno — Mezinárodní strojírenský veletrh", date: "Říjen 2024", location: "Brno, Česká republika", type: "Veletrh", desc: "Prezentace přesných gimbalových platforem a schopností zakázkového mechatronického vývoje průmyslovým a leteckým návštěvníkům na největší strojírenské výstavě ve střední Evropě.", technologies: ["PATRON Gimbal", "Zakázkové inženýrství"], image: "/assets/lab/lab-electronics.jpg" },
-      { name: "SpaceTech Expo Europe", date: "Listopad 2024", location: "Brémy, Německo", type: "Letecká výstava", desc: "Program vývoje gimbalů zaměřený na HAPS a schopnosti integrace stratosferického payloadu prezentované partnerům z evropského leteckého průmyslu.", technologies: ["PATRON", "BEETLE", "HAPS polohování"], image: "/assets/hero/patron-atmosphere.jpg" },
+      { name: "JEC World — veletrh kompozitních materiálů", date: "Březen 2025", location: "Paříž, Francie", type: "Výstava kompozitů", desc: "Hikade Technologies navázala kontakty s předními výrobci a dodavateli kompozitních materiálů na veletrhu JEC World, největší světové výstavě kompozitů, se zaměřením na biokompozity a pokročilé materiály relevantní pro odlehčené letecké konstrukce.", technologies: ["Zakázkové inženýrství", "Materiálový výzkum"], image: "/assets/events/jec-world-2025.png" },
+      { name: "IDET — Veletrh obranných a bezpečnostních technologií", date: "Květen 2025", location: "Brno, Česká republika", type: "Veletrh obrany a bezpečnosti", desc: "Prezentace přesných polohovacích a zakázkových mechatronických systémů návštěvníkům z oblasti obrany, bezpečnosti a technologií dvojího užití na předním českém veletrhu obranných technologií.", technologies: ["PATRON Gimbal", "Zakázkové inženýrství"], image: "/assets/events/idet-2025-logo.png" },
+      { name: "Eurosatory", date: "Červen 2024", location: "Paříž, Francie", type: "Výstava obrany a bezpečnosti", desc: "HAPS polohovací platformy a přesné mechatronické systémy prezentované mezinárodním rozhodovatelům z oblasti obrany, bezpečnosti a letectví na jedné z největších světových výstav obranných technologií.", technologies: ["PATRON", "BEETLE", "HAPS polohování"], image: "/assets/team/czech-space-stand.jpg" },
+      { name: "MSV Brno — Mezinárodní strojírenský veletrh", date: "Říjen 2025", location: "Brno, Česká republika", type: "Veletrh", desc: "Prezentace přesných gimbalových platforem a schopností zakázkového mechatronického vývoje průmyslovým a leteckým návštěvníkům na největší strojírenské výstavě ve střední Evropě.", technologies: ["PATRON Gimbal", "Zakázkové inženýrství"], image: "/assets/events/msv-2025-banner.png" },
+      { name: "SpaceTech Expo Europe", date: "Listopad 2025", location: "Brémy, Německo", type: "Letecká výstava", desc: "Program vývoje gimbalů zaměřený na HAPS a schopnosti integrace stratosferického payloadu prezentované partnerům z evropského leteckého průmyslu v rámci české kosmické delegace.", technologies: ["PATRON", "BEETLE", "HAPS polohování"], image: "/assets/events/spacetech-expo-2025-banner.png" },
       { name: "ESA BIC Czech Republic — Technology Showcase", date: "2024", location: "Česká republika", type: "Inovační program", desc: "Stratosferická polohovací technologie a systém AVPS pro čisté zpracování prezentované v rámci programu ESA Business Incubation Centre Czech Republic.", technologies: ["PATRON", "AVPS", "Stratosferické aplikace"], image: "/assets/products/patron/patron-dark-2.png" },
     ],
   },
@@ -170,9 +181,12 @@ export default function AboutPage() {
                 <p>{t.whoP3}</p>
               </div>
             </div>
-            <div className="relative h-full min-h-[420px] rounded-lg overflow-hidden border border-white/10">
-              <Image src="/assets/team/hikade-spacetech-taiwan.jpeg" alt="Hikade Technologies at International SpaceTech Startups event" fill className="object-cover" />
-            </div>
+            <MuteableVideo
+              src="/assets/video/hikade-intro.mp4"
+              poster="/assets/video/hikade-intro-poster.jpg"
+              containerClassName="relative w-full aspect-video self-center rounded-lg overflow-hidden border border-white/10 bg-black"
+              className="absolute inset-0 w-full h-full object-contain"
+            />
           </div>
         </div>
       </section>
@@ -324,6 +338,14 @@ export default function AboutPage() {
                 <p className="text-xs text-white leading-relaxed">
                   <span className="text-white font-semibold">ESA BIC</span> — {t.esaNote}
                 </p>
+              </div>
+              <div className="mt-6">
+                <p className="text-xs font-mono text-[#82D5CA] tracking-widest uppercase mb-3">{t.membershipsLabel}</p>
+                <div className="flex flex-wrap gap-2">
+                  {t.memberships.map((m) => (
+                    <span key={m} className="px-3 py-1.5 border border-white/10 rounded text-xs text-white bg-[#1F2019]">{m}</span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

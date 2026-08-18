@@ -3,16 +3,16 @@
 import Link from "next/link";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const capabilityIcons = ["◈", "⊞", "◫", "⊟", "⊕", "≡"];
-const capabilityIds = ["cad", "analysis", "prototyping", "embedded", "mechatronics", "documentation"];
+const capabilityIcons = ["◈", "⊞", "⊟", "⊕", "≡"];
+const capabilityIds = ["cad", "analysis", "embedded", "mechatronics", "documentation"];
 
 const T = {
   en: {
     headerBadge: "Engineering Depth",
     h1: "Technologies & Core Capabilities",
-    headerDesc: "Hikade Technologies is not a design-only office. We combine mechanical engineering, embedded systems, prototyping, testing and documentation as a single engineering team — applied to each project from concept to delivered system.",
+    headerDesc: "Hikade Technologies is not a design-only office. We combine mechanical engineering, embedded systems, testing and documentation as a single engineering team — applied to each project from concept to delivered system.",
     labQuoteBadge: "ENGINEERING PHILOSOPHY",
-    labQuote: "From rapid prototyping to validated systems — the full engineering cycle in one team.",
+    labQuote: "From concept to validated systems — the full engineering cycle in one team.",
     validationBadge: "Validation-Oriented Engineering",
     validationH2: "Validation is part of the design logic, not the final step",
     validationP1: "Hikade Technologies designs systems with testing and validation in mind from the beginning. For aerospace-relevant, HAPS, vacuum, clean-environment and industrial R&D systems, validation is not a final formality but part of the design logic.",
@@ -34,11 +34,6 @@ const T = {
         items: ["Static structural and stress analysis", "Strain, displacement and buckling analysis", "Contact and dynamic analysis", "Modal and harmonic analysis", "Thermal analysis and thermal management", "Topology optimization", "Kinematics and mechanism analysis", "Mechanical system optimization"],
       },
       {
-        title: "Rapid Prototyping",
-        desc: "Rapid prototyping at Hikade Technologies means the complete development cycle — not just printing a part. It includes design, manufacturing, assembly, bring-up, functional testing, iteration and next prototype. The goal is a working functional system in the shortest possible time.",
-        items: ["Fast development cycles and iterative design", "3D printing for functional and structural models", "CNC machining and precision milling", "Surface treatment and finishing", "Laboratory assembly and integration", "Functional bring-up and integration testing", "Prototype refinement and iteration", "Early customer validation"],
-      },
-      {
         title: "Embedded Control & Firmware",
         desc: "Embedded control is developed as part of the complete mechanical-electrical system, not as a separate software task. Control architecture, communication interfaces, safety logic and actuator integration are designed together with the mechanical structure from the start.",
         items: ["Embedded firmware development", "Real-time control and state machines", "RS-485, Ethernet and other communication interfaces", "Watchdog logic and safety / fault-state handling", "Data acquisition and signal processing", "Communication with drives and sensors", "Control interfaces and bootloader concepts", "Hardware-software integration and commissioning"],
@@ -58,9 +53,9 @@ const T = {
   cs: {
     headerBadge: "Technická hloubka",
     h1: "Technologie a klíčové schopnosti",
-    headerDesc: "Hikade Technologies není pouze projekční kancelář. Kombinujeme strojní inženýrství, vestavěné systémy, prototypování, testování a dokumentaci jako jeden inženýrský tým — aplikovaný na každý projekt od konceptu po dodaný systém.",
+    headerDesc: "Hikade Technologies není pouze projekční kancelář. Kombinujeme strojní inženýrství, vestavěné systémy, testování a dokumentaci jako jeden inženýrský tým — aplikovaný na každý projekt od konceptu po dodaný systém.",
     labQuoteBadge: "INŽENÝRSKÁ FILOZOFIE",
-    labQuote: "Od rychlého prototypování po validované systémy — kompletní vývojový cyklus v jednom týmu.",
+    labQuote: "Od konceptu po validované systémy — kompletní vývojový cyklus v jednom týmu.",
     validationBadge: "Validačně orientované inženýrství",
     validationH2: "Validace je součástí návrhové logiky, nikoli posledním krokem",
     validationP1: "Hikade Technologies navrhuje systémy s ohledem na testování a validaci od samého začátku. U systémů relevantních pro letectví, HAPS, vakuum, čistá prostředí a průmyslový výzkum není validace pouhá formalita, ale součást návrhové logiky.",
@@ -80,11 +75,6 @@ const T = {
         title: "Výpočtové analýzy",
         desc: "Simulace a výpočtové analýzy snižují riziko návrhu, urychlují vývojové cykly a pomáhají ověřovat konstrukční rozhodnutí před prvním prototypem. Analýzy slouží k optimalizaci hmotnosti, ověření tuhosti, nalezení kritických cest zatížení a identifikaci módů selhání.",
         items: ["Statická strukturální a napěťová analýza", "Analýza přetvoření, deformací a vzpěru", "Kontaktní a dynamická analýza", "Modální a harmonická analýza", "Tepelná analýza a tepelný management", "Topologická optimalizace", "Kinematická analýza mechanismů", "Optimalizace mechanického systému"],
-      },
-      {
-        title: "Rychlé prototypování",
-        desc: "Rychlé prototypování v Hikade Technologies znamená kompletní vývojový cyklus — nejen tisk součásti. Zahrnuje návrh, výrobu, montáž, oživení, funkční testování, iteraci a další prototyp. Cílem je funkční systém v co nejkratším čase.",
-        items: ["Rychlé vývojové cykly a iterativní design", "3D tisk funkčních a strukturálních modelů", "CNC obrábění a přesné frézování", "Povrchová úprava a dokončování", "Laboratorní montáž a integrace", "Funkční oživení a integrační testování", "Zdokonalování a iterace prototypu", "Raná zákaznická validace"],
       },
       {
         title: "Vestavěné řídicí systémy a firmware",

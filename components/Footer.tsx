@@ -115,8 +115,8 @@ export default function Footer() {
             <div className="mt-8 p-4 border border-[#82D5CA]/20 rounded bg-[#82D5CA]/5">
               <p className="text-xs text-white leading-relaxed">
                 {lang === "en"
-                  ? "Supported by ESA BIC and Czech innovation programs."
-                  : "Podporováno programem ESA BIC a českými inovačními programy."}
+                  ? "Member of ESA BIC, the Czech-German Chamber of Industry and Commerce and InnovX."
+                  : "Členem ESA BIC, Česko-německé obchodní a průmyslové komory a InnovX."}
               </p>
             </div>
           </div>

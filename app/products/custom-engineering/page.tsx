@@ -49,7 +49,7 @@ export default function CustomEngineeringPage() {
               <div className="mt-8">
                 <h3 className="text-sm font-mono text-white mb-4 tracking-widest uppercase">Typical Use Cases</h3>
                 <div className="flex flex-wrap gap-2">
-                  {["Custom test benches", "Measurement systems", "Industrial prototypes", "Mechatronic assemblies", "Automated workstations", "Control systems", "Special fixtures", "Rapid prototyping", "R&D support", "Small-series technical devices", "Validation equipment"].map((u) => (
+                  {["Custom test benches", "Measurement systems", "Industrial prototypes", "Mechatronic assemblies", "Automated workstations", "Control systems", "Special fixtures", "R&D support", "Small-series technical devices", "Validation equipment"].map((u) => (
                     <span key={u} className="px-3 py-1.5 bg-[#1F2019] border border-white/10 rounded text-xs text-white">{u}</span>
                   ))}
                 </div>

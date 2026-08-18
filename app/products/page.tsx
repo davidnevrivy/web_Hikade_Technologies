@@ -22,8 +22,8 @@ export default function ProductsPage() {
             </h1>
             <p className="text-lg text-white max-w-2xl mb-10">
               {en
-                ? "Validated engineering systems and custom technology solutions for HAPS, aerospace, clean processing and industrial R&D applications. Purpose-built two-axis gimbal systems for high-altitude platform stations operating at 18–25 km altitude."
-                : "Validované inženýrské systémy a zakázková technologická řešení pro HAPS, letectví, čisté zpracování a průmyslové R&D aplikace. Dvouosé gimbalové systémy navržené pro platformy HAPS operující ve výšce 18–25 km."}
+                ? "Validated engineering systems and custom technology solutions for HAPS, aerospace, clean processing and industrial R&D applications. Purpose-built two-axis gimbal systems for high-altitude platform stations operating at 16–23 km altitude."
+                : "Validované inženýrské systémy a zakázková technologická řešení pro HAPS, letectví, čisté zpracování a průmyslové R&D aplikace. Dvouosé gimbalové systémy navržené pro platformy HAPS operující ve výšce 16–23 km."}
             </p>
           </div>
 
@@ -50,8 +50,8 @@ export default function ProductsPage() {
                 </div>
                 <p className="text-sm text-white leading-relaxed mb-4 flex-1">
                   {en
-                    ? "Configurable two-axis gimbal for HAPS payloads up to 18 kg. Purpose-built for 18–25 km altitude with low-pressure tribology and embedded real-time control."
-                    : "Konfigurovatelný dvouosý gimbal pro HAPS payloady až 15 kg. Navržen pro výšku 18–25 km s tribologií při nízkém tlaku a vestavěným řízením v reálném čase."}
+                    ? "Configurable two-axis gimbal for HAPS payloads up to 18 kg. Purpose-built for 16–23 km altitude with low-pressure tribology and embedded real-time control."
+                    : "Konfigurovatelný dvouosý gimbal pro HAPS payloady až 15 kg. Navržen pro výšku 16–23 km s tribologií při nízkém tlaku a vestavěným řízením v reálném čase."}
                 </p>
                 <div className="grid grid-cols-2 gap-2 mb-3">
                   {[

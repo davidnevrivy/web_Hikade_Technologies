@@ -17,7 +17,7 @@ const specs = [
   { param: "Number of axes", value: "2", note: "Azimuth + elevation" },
   { param: "Control", value: "Embedded control", note: "Interface-specific" },
   { param: "Environment", value: "Low pressure / low temperature relevant design", note: "Validation scope dependent" },
-  { param: "Status", value: "Development platform / TRL ~5", note: "Not flight-proven" },
+  { param: "Status", value: "Active development platform", note: "Not flight-proven" },
 ];
 
 const applications = [
@@ -115,7 +115,7 @@ export default function PatronPage() {
             </div>
             <div className="mt-8 p-4 border border-[#82D5CA]/20 rounded bg-[#82D5CA]/5">
               <p className="text-xs text-white leading-relaxed">
-                <span className="text-white font-mono">NOTE:</span> PATRON is a development platform approximately at TRL 5. Parameters may vary depending on configuration, customer requirements and validation scope. The system is not presented as flight-proven.
+                <span className="text-white font-mono">NOTE:</span> PATRON is an active development platform. Parameters may vary depending on configuration, customer requirements and validation scope. The system is not presented as flight-proven.
               </p>
             </div>
           </div>
