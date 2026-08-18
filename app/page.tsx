@@ -195,7 +195,7 @@ export default function HomePage() {
               <div className="mt-10 grid grid-cols-4 gap-3 border-t border-white/10 pt-7">
                 {[
                   { val: "16–23 km",     label: t.stat1 },
-                  { val: "−82/80 °C", label: t.stat2 },
+                  { val: "−80/80 °C", label: t.stat2 },
                   { val: "3–1000 kPa",   label: t.stat3 },
                   { val: "15–95 %",      label: t.stat4 },
                 ].map((s) => (
