@@ -11,7 +11,7 @@ const T = {
     heroTitle1: "Stratospheric Gimbals",
     heroTitle2: "for HAPS & Stratospheric Applications",
     heroTagline: "Precision two-axis gimbal platforms for the stratosphere",
-    heroSub1: "Precision two-axis gimbal platforms built for the stratosphere. PATRON handles payloads up to 15 kg at 16–23 km altitude. BEETLE delivers the same core technology for lighter, more compact missions — both designed for HAPS.",
+    heroSub1: "Precision two-axis gimbal platforms built for the stratosphere. PATRON handles payloads up to 15 kg at 16–25 km altitude. BEETLE delivers the same core technology for lighter, more compact missions — both designed for HAPS.",
     heroSub2: "",
     cta1: "Explore Portfolio", cta2: "About Us", cta3: "Request Consultation",
     stat1: "Flight Level", stat2: "Temperature", stat3: "Pressure", stat4: "Humidity",
@@ -73,7 +73,7 @@ const T = {
     heroTitle1: "Stratosférické gimbaly",
     heroTitle2: "pro HAPS a stratosferické aplikace",
     heroTagline: "Přesné dvouosé gimbalové platformy pro stratosféru",
-    heroSub1: "Přesné dvouosé gimbalové platformy konstruované pro stratosféru. PATRON nese payloady až 15 kg ve výšce 16–23 km. BEETLE přináší stejnou technologii pro lehčí a kompaktnější mise — obě platformy navrženy pro HAPS.",
+    heroSub1: "Přesné dvouosé gimbalové platformy konstruované pro stratosféru. PATRON nese payloady až 15 kg ve výšce 16–25 km. BEETLE přináší stejnou technologii pro lehčí a kompaktnější mise — obě platformy navrženy pro HAPS.",
     heroSub2: "",
     cta1: "Prozkoumat portfolio", cta2: "O nás", cta3: "Technická konzultace",
     stat1: "Letová hladina", stat2: "Teplota", stat3: "Tlak", stat4: "Vlhkost",
@@ -194,9 +194,9 @@ export default function HomePage() {
               </div>
               <div className="mt-10 grid grid-cols-4 gap-3 border-t border-white/10 pt-7">
                 {[
-                  { val: "16–23 km",     label: t.stat1 },
+                  { val: "16–25 km",     label: t.stat1 },
                   { val: "−80/80 °C", label: t.stat2 },
-                  { val: "3–1000 kPa",   label: t.stat3 },
+                  { val: "2.5–10 kPa",   label: t.stat3 },
                   { val: "15–95 %",      label: t.stat4 },
                 ].map((s) => (
                   <div key={s.val}>
