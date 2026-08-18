@@ -16,7 +16,7 @@ const T = {
     cta3: "Request Consultation",
     stats: [
       { val: "16–23 km", label: "Flight level" },
-      { val: "−82 / +80 °C", label: "Operating temperature" },
+      { val: "−82/80 °C", label: "Operating temperature" },
       { val: "3–1000 kPa", label: "Operating pressure" },
       { val: "15–95 %", label: "Humidity" },
     ],
@@ -85,7 +85,7 @@ const T = {
     challengesP: "Stratospheric operation imposes constraints that cannot be addressed with off-the-shelf components or conventional design approaches. Every challenge below drives specific engineering decisions.",
     challenges: [
       { title: "Operating Pressure Range", desc: "Operating pressure range of 3–1000 kPa across flight, ground handling and storage conditions. Tribology, sealing, outgassing and thermal management all change fundamentally at the low end of this range." },
-      { title: "Operating Temperature Range", desc: "Operating temperature range of −82 to +80 °C. Material selection, lubrication type, bearing preload, actuator characteristics and electronics behaviour are all temperature-dependent." },
+      { title: "Operating Temperature Range", desc: "Operating temperature range of −82 to 80 °C. Material selection, lubrication type, bearing preload, actuator characteristics and electronics behaviour are all temperature-dependent." },
       { title: "Limited Convection", desc: "Negligible convective heat transfer at low pressure. Thermal management must rely on conduction and radiation — driving structural and electronics design." },
       { title: "Mass Constraints", desc: "Strict payload mass budgets on stratospheric platforms. Every structural element, motor, encoder, cable and connector must be justified by the mass it adds." },
       { title: "Limited Power Budget", desc: "Solar or battery-limited platforms impose hard power caps. Efficient actuator selection, drive electronics and control logic are not optional." },
@@ -137,7 +137,7 @@ const T = {
     cta3: "Požádat o konzultaci",
     stats: [
       { val: "16–23 km", label: "Letová hladina" },
-      { val: "−82 / +80 °C", label: "Provozní teplota" },
+      { val: "−82/80 °C", label: "Provozní teplota" },
       { val: "3–1000 kPa", label: "Provozní tlak" },
       { val: "15–95 %", label: "Vlhkost" },
     ],
@@ -206,7 +206,7 @@ const T = {
     challengesP: "Stratosferické operace implikují omezení, která nelze řešit pomocí komerčních komponent nebo konvenčních návrhových přístupů. Každá níže uvedená výzva vede ke konkrétním inženýrským rozhodnutím.",
     challenges: [
       { title: "Rozsah provozního tlaku", desc: "Provozní tlak v rozsahu 3–1000 kPa napříč letovými, pozemními a skladovacími podmínkami. Tribologie, těsnění, odplynování a tepelný management se v dolní části tohoto rozsahu fundamentálně mění." },
-      { title: "Rozsah provozní teploty", desc: "Provozní teplota v rozsahu −82 až +80 °C. Volba materiálů, typ mazání, předpětí ložisek, charakteristiky pohonů a chování elektroniky jsou závislé na teplotě." },
+      { title: "Rozsah provozní teploty", desc: "Provozní teplota v rozsahu −82 až 80 °C. Volba materiálů, typ mazání, předpětí ložisek, charakteristiky pohonů a chování elektroniky jsou závislé na teplotě." },
       { title: "Omezená konvekce", desc: "Zanedbatelný konvektivní přenos tepla při nízkém tlaku. Tepelný management musí spoléhat na vedení a záření — to ovlivňuje design konstrukce i elektroniky." },
       { title: "Hmotnostní omezení", desc: "Přísné hmotnostní rozpočty payloadu na stratosferických platformách. Každý konstrukční prvek, motor, enkodér, kabel a konektor musí být hmotnostně odůvodněn." },
       { title: "Omezený výkonový rozpočet", desc: "Solárně nebo bateriově omezené platformy stanoví pevné limity příkonu. Efektivní výběr pohonů, silové elektroniky a řídicí logiky není volitelný." },
